@@ -1,13 +1,11 @@
-
-
 <!DOCTYPE HTML>
 <!-- saved from url=(0034)http://www.gaohuang.net/ -->
-<!DOCTYPE html PUBLIC "" ""><!-- Lab of GaoHuang from THU --><HTML lang="en-us"><HEAD><META 
-content="IE=11.0000" http-equiv="X-UA-Compatible">
-
+<!DOCTYPE html PUBLIC "" ""><!-- Lab of GaoHuang from THU -->
+<HTML lang="en-us"><HEAD><META content="IE=11.0000" http-equiv="X-UA-Compatible">
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<TITLE>Yizeng Han Homepage</TITLE>     
-<!-- <SCRIPT src="Gao%20Huang%20Homepage_files/jquery-3.1.1.slim.min.js"></SCRIPT> -->
+<TITLE>Yizeng Han Homepage</TITLE>   
+<LINK href="bootstrap.min.css" rel="stylesheet">  
+<SCRIPT src="jquery-3.1.1.slim.min.js"></SCRIPT>
 
 <STYLE type="text/css">
         /* @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic"); */
@@ -27,7 +25,7 @@ content="IE=11.0000" http-equiv="X-UA-Compatible">
             height: auto;
             width: 100%;
             margin-left: 0;
-            background: rgb(72,62,244);
+            background: rgb(153,87,157);
             opacity: 0.8;
             position: fixed;
             top: 0;
@@ -143,7 +141,7 @@ content="IE=11.0000" http-equiv="X-UA-Compatible">
         h1,
         .paperlo,
         .paperhi-only {
-            color: rgb(40,32,183);
+            color: rgb(153,87,157);
         }
 
         .text_container h2:hover {
@@ -222,7 +220,7 @@ content="IE=11.0000" http-equiv="X-UA-Compatible">
             -webkit-box-shadow: 3px 3px 6px #888;
             box-shadow: 3px 3px 6px #888; */
             /*height: 120px;*/
-            width: 300px;
+            width: 160px;
             margin-top: auto;
             margin-left: 5px;
             margin-bottom: auto;
@@ -421,7 +419,10 @@ content="IE=11.0000" http-equiv="X-UA-Compatible">
  <!-- <LI id="contact-nav"><SPAN>Contact</SPAN>
   <LI>
   <LI id="publication-nav"><SPAN>Publications</SPAN></LI>
-  <LI><A href="http://www.gaohuang.net/#top">Home</A></LI> --></UL></DIV>
+  <LI><A href="http://www.gaohuang.net/#top">Home</A></LI> -->
+</UL>
+</DIV>
+
 <DIV class="content">
 <DIV id="container">
 <TABLE width="100%">
@@ -429,82 +430,81 @@ content="IE=11.0000" http-equiv="X-UA-Compatible">
   <TR>
     <TD width="60%">
       <DIV id="info" width="">
-      <H1><BR>Yizeng Han</H1><BR>
-      <P><B>Ph.D Candidate</B><BR>
-      Department of Automation, Tsinghua University.
-        </P>
-        <h2>Education</h2>
+      <H1><br>Yizeng Han</H1><br>
+      <P><B>Ph.D Candidate</B><br>Department of Automation, Tsinghua University.</P>
+      <h2>Education</h2>
       <Li>Ph.D, Tsinghua University, 2018-present</Li><Li>B.E., Tsinghua University, 2014-2018</Li>
       <br>
-    </DIV></TD>
+    </DIV>
+    </TD>
     <TD width="40%">
       <DIV id="photo" style="margin-left: 15%; float: right;"><IMG height="200" 
-      id="portrait" src="figures/hyz.jpeg">
-             </DIV></TD></TR></TBODY></TABLE>
+      id="portrait" src="figures/hyz.jpeg"></DIV>
+    </TD>
+  </TR>
+  </TBODY>
+</TABLE>
 
 <h2>Research Experience</h2>
-    Intern, Georgia Institute of Technology, 06/2017 - 08/2017
-<!-- <ul> -->
+    <li>Intern, Georgia Institute of Technology, 06/2017 - 08/2017</li>
+    <br>
 
-    <h2>Research Interest</h2>
-    <!-- <ul> -->
+<h2>Research Interest</h2>
     My research focuses on machine learning and computer vision, in particular deep learning, eﬃcient inference and dynamic neural networks.
-
-    <br>            <br>
-
-
-
+    <br>
+    <br>
 
 <a name="publications"></a>
 <DIV class="papers-container">
-<H2 class="paperlo">Recent Publications &amp; Preprints  (<a href="https://scholar.google.com/citations?user=25mubAsAAAAJ&hl=en">Google Scholar</a>)<br>
+    <H2 class="paperlo">Recent Publications &amp; Preprints (<a href="https://scholar.google.com/citations?user=25mubAsAAAAJ&hl=en">Google Scholar</a>)
+        <br>
+        <SPAN id="paper-show">
+            <!-- (<SPAN id="show-selected">show selected</SPAN> /  
+                <SPAN id="show-by-date">show all by date</SPAN> / 
+                <SPAN id="book-chapters">book chapters</SPAN>) -->
+        </SPAN>       
+    </H2><!-- <h5 class="paperhi paperhi-only">Representative Publications</h5> --> 
 
-    <SPAN id="paper-show"><!-- (<SPAN 
-id="show-selected">show selected</SPAN> /                         <SPAN id="show-by-date">show 
-all by date</SPAN> / <SPAN id="book-chapters">book chapters</SPAN>) --></SPAN>       
-          </H2><!-- <h5 class="paperhi paperhi-only">Representative Publications</h5> --> 
+    <DIV class="paper-selected">  
+        <!-- (<a href="https://scholar.google.com/citations?user=-P9LwcgAAAAJ&amp;hl=en">Full publication list on Google Scholar</a>) -->
+        <br>
+        <DIV class="publication media paperhi">
+            <IMG class="papericon" src="figures/survey.jpg">
+            <DIV class="media-body ">
+                <A class="paper-title" href="https://arxiv.org/pdf/2102.04906.pdf"><B>Dynamic Neural Networks: A Survey.</B></A>
+                <br/><b>Yizeng Han</b>*, Gao Huang*, Shiji Song, Le Yang, Honghui Wang, Yulin Wang.
+            </DIV>
+        </DIV>
 
-<DIV class="paper-selected">  
+        <DIV class="publication media paperhi">
+            <IMG class="papericon" src="figures/RANet.gif">
+            <DIV class="media-body ">
+                <A class="paper-title" href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_Resolution_Adaptive_Networks_for_Efficient_Inference_CVPR_2020_paper.pdf"><B>Resolution Adaptive Networks for Efficient Inference.</B></A>[<A href="https://github.com/yangle15/RANet-pytorch"    target="_blank">code</A>]
+                <br/>Le Yang*, <b>Yizeng Han</b>*, Xi Chen*, Shiji Song, Jifeng Dai, Gao Huang.
+                <br/><I>IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR </b>) 2020.
+                <br/><I>* Equal Contribution. </I>
+            </DIV> 
+        </DIV>
+    </DIV>
 
-     <!-- (<a href="https://scholar.google.com/citations?user=-P9LwcgAAAAJ&amp;hl=en">Full publication list on Google Scholar</a>) -->
-<BR>
+    <!-- <DIV class="text_container visible"> -->
+    <H2 id="awards">Awards</H2>
+    <DIV>
+        <UL>
+            <li>Comprehensive Merit Scholarship, 2017, 2016 at Tsinghua University.</li> 
+            <li>Academic Excellence Scholarship, 2015 at Tsinghua University,.</li> 
+        </UL>
+    </DIV>
 
-    <IMG class="papericon" src="figures/survey.jpg">
-        <DIV class="media-body "><A class="paper-title" href="https://arxiv.org/pdf/2102.04906.pdf"><B>Dynamic Neural Networks: A Survey.</B></A>
-                <BR><b>Yizeng Han</b>*, Gao Huang*, Shiji Song, Le Yang, Honghui Wang, Yulin Wang.
-        <BR>--------------------------------------------------------------------------------</DIV>
-
-    <IMG class="papericon" src="figures/RANet.gif">
-        <DIV class="media-body "><A class="paper-title" href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_Resolution_Adaptive_Networks_for_Efficient_Inference_CVPR_2020_paper.pdf"><B>Resolution Adaptive Networks for Efficient Inference.</B></A>
-            [<A href="https://github.com/yangle15/RANet-pytorch"    target="_blank">code</A>]
-                <BR><b>Le Yang</b>*, Yizeng Han*, Xi Chen*, Shiji Song, Jifeng Dai, Gao Huang.
-                      <BR><I>IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR </b>) 2020.<br></I>
-        <BR>--------------------------------------------------------------------------------</DIV> 
-
-    <!-- </i><br><br></div></div></div> -->
-    <br><br>
-    <i>* Equal Contribution. </i>
-    <br><br>
-<!--
-
-
-
-<!-- <DIV class="text_container visible"> -->
-<H2 id="awards">Awards</H2>
-<DIV>
-<UL>
-<li>Comprehensive Merit Scholarship, 2017, 2016 at Tsinghua University.</li> 
-<li>Academic Excellence Scholarship, 2015 at Tsinghua University,.</li> 
+    <H2 id="contact">Contact</H2>
+    <DIV>
+        <UL>
+            <LI> hanyz18 at mails dot tsinghua dot edu dot cn.</LI>
+            <LI> 616 Centre Main Building, Tsinghua University, Beijing 100084, China.</LI>
+        </UL>
+    </DIV>
 
 </DIV>
-
-<H2 id="contact">Contact</H2>
-<DIV>
-<UL>
-<LI> hanyz18 at mails dot tsinghua dot edu dot cn.</LI>
-<LI> 616 Centre Main Building, Tsinghua University, Beijing 100084, China.</LI>
-</UL></DIV>
-<!-- </DIV> -->
 
 
 </BODY></HTML>
