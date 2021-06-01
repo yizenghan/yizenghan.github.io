@@ -469,10 +469,12 @@
         <!-- (<a href="https://scholar.google.com/citations?user=-P9LwcgAAAAJ&amp;hl=en">Full publication list on Google Scholar</a>) -->
         <br>
         <DIV class="publication media paperhi">
-            <IMG class="papericon" src="figures/survey.jpg">
+            <IMG class="papericon" src="figures/survey.png">
             <DIV class="media-body ">
-                <A class="paper-title" href="https://arxiv.org/pdf/2102.04906.pdf"><B>Dynamic Neural Networks: A Survey.</B></A> [<A href="https://mp.weixin.qq.com/s/TG_HBAR7Jrec4X02sxNGEA"    target="_blank">智源社区</A>][<A href="https://jmq.h5.xeknow.com/s/2H6ZSj">机器之心-在线讲座</A>]
+                <A class="paper-title" href="https://arxiv.org/pdf/2102.04906.pdf"><B>Dynamic Neural Networks: A Survey.</B></A> [<A href="https://mp.weixin.qq.com/s/TG_HBAR7Jrec4X02sxNGEA"    target="_blank">智源社区</A>][<A href="https://jmq.h5.xeknow.com/s/2H6ZSj">机器之心-在线讲座</A>][<A href="https://www.bilibili.com/video/BV19B4y1A7Wy?from=search&seid=12254026542403915477">Bilibili</A>]
                 <br/><b>Yizeng Han</b>*, Gao Huang*, Shiji Song, Le Yang, Honghui Wang, Yulin Wang.
+                <br/><I>Arxiv Preprint.</I>
+                <br/>Dynamic neural network is an emerging research topic in deep learning. Compared to static models which have fixed computational graphs and parameters at the inference stage, dynamic networks can adapt their structures or parameters to different inputs, leading to notable advantages in terms of accuracy, computational efficiency, adaptiveness, etc. In this survey, we comprehensively review this rapidly developing area by dividing dynamic networks into three main categories: 1) sample-wise dynamic models that process each sample with data-dependent architectures or parameters; 2) spatial-wise dynamic networks that conduct adaptive computation with respect to different spatial locations of image data; and 3) temporal-wise dynamic models that perform adaptive inference along the temporal dimension for sequential data such as videos and texts. The important research problems of dynamic networks, e.g., architecture design, decision making scheme, optimization technique and applications, are reviewed systematically. Finally, we discuss the open problems in this field together with interesting future research directions.
             </DIV>
         </DIV>
 
@@ -481,7 +483,18 @@
             <DIV class="media-body ">
                 <A class="paper-title" href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_Resolution_Adaptive_Networks_for_Efficient_Inference_CVPR_2020_paper.pdf"><B>Resolution Adaptive Networks for Efficient Inference.</B></A> [<A href="https://github.com/yangle15/RANet-pytorch"    target="_blank">code</A>]
                 <br/>Le Yang*, <b>Yizeng Han*</b>, Xi Chen*, Shiji Song, Jifeng Dai, Gao Huang.
-                <br/><I>IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR </b>) 2020.
+                <br/><I>IEEE Conference on Computer Vision and Pattern Recognition (<b>CVPR </b>) 2020.</I>
+                <br/>Adaptive inference is an effective mechanism to achieve a dynamic tradeoff between accuracy and computational cost in deep networks. Existing works mainly exploit architecture redundancy in network depth or width. In this paper, we focus on spatial redundancy of input samples and propose a novel Resolution Adaptive Network (RANet), which is inspired by the intuition that low-resolution representations are sufficient for classifying “easy” inputs containing large objects with prototypical features, while only some “hard” samples need spatially detailed information. In RANet, the input images are first routed to a lightweight sub-network that efficiently extracts low-resolution representations, and those samples with high prediction confidence will exit early from the network without being further processed. Meanwhile, high-resolution paths in the network maintain the capability to recognize the “hard” samples. Therefore, RANet can effectively reduce the spatial redundancy involved in inferring high-resolution input- s. Empirically, we demonstrate the effectiveness of the pro- posed RANet on the CIFAR-10, CIFAR-100 and ImageNet datasets in both the anytime prediction setting and the budgeted batch classification setting.
+            </DIV> 
+        </DIV>
+
+        <DIV class="publication media paperhi">
+            <IMG class="papericon" src="figures/adafocus.png">
+            <DIV class="media-body ">
+                <A class="paper-title" href="https://arxiv.org/pdf/2105.03245.pdf"><B>Adaptive Focus for Efficient Video Recognition.</B></A>
+                <br/>Yulin Wang, Zhaoxi Chen, Haojun Jiang, Shiji Song, <b>Yizeng Han</b>, and Gao Huang.
+                <br/><I>Arxiv Preprint.</I>
+                <br/>In this paper, we explore the spatial redundancy in video recognition with the aim to improve the computational efficiency. Extensive experiments on five benchmark datasets, i.e., ActivityNet, FCVID, Mini-Kinetics, Something-Something V1&V2, demonstrate that our method is significantly more efficient than the competitive baselines.
             </DIV> 
         </DIV>
     </DIV>
