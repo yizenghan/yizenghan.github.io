@@ -213,6 +213,11 @@
             color: black;
             text-decoration: none;
         }
+        .img_box{
+            width: 300px;
+            height: 300px;
+            float: left;   
+        }
 
         .papericon {
             /* border-radius: 8px; */
@@ -220,10 +225,7 @@
             -webkit-box-shadow: 3px 3px 6px #888;
             box-shadow: 3px 3px 6px #888; */
             /*height: 120px;*/
-            width: 160px;
-            margin-top: auto;
-            margin-left: 5px;
-            margin-bottom: auto;
+            width: 270px;
         }
 
         .media {
@@ -233,11 +235,11 @@
 
         .media-body {
             margin-top: 5px;
-            padding-left: 20px;
+            display: inline;
         }
 
         .publication {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .papers-selected .publication {
@@ -299,6 +301,9 @@
 
         .visible>div {
             display: block;
+        }
+        .clear {
+            clear: both;
         }
 </STYLE>
      
@@ -469,42 +474,57 @@
         <!-- (<a href="https://scholar.google.com/citations?user=-P9LwcgAAAAJ&amp;hl=en">Full publication list on Google Scholar</a>) -->
         <br>
         <DIV class="publication media paperhi">
-            <IMG class="papericon" src="figures/survey.png">
+            <DIV class="img_box"><IMG class="papericon" src="figures/survey.png"></DIV>
             <DIV class="media-body ">
                 <A class="paper-title" href="https://arxiv.org/pdf/2102.04906.pdf"><B>Dynamic Neural Networks: A Survey.</B></A> [<A href="https://mp.weixin.qq.com/s/TG_HBAR7Jrec4X02sxNGEA"    target="_blank">智源社区</A>][<A href="https://jmq.h5.xeknow.com/s/2H6ZSj">机器之心-在线讲座</A>][<A href="https://www.bilibili.com/video/BV19B4y1A7Wy?from=search&seid=12254026542403915477">Bilibili</A>]
                 <br/><b>Yizeng Han</b>*, Gao Huang*, Shiji Song, Le Yang, Honghui Wang, Yulin Wang.
                 <br/><I>IEEE Transactions on Pattern Analysis and Machine Intelligence (<b><font color="red">TPAMI</font></b>, IF=16.39), 2021</I>
                 <br/>Dynamic neural network is an emerging research topic in deep learning. Compared to static models which have fixed computational graphs and parameters at the inference stage, dynamic networks can adapt their structures or parameters to different inputs, leading to notable advantages in terms of accuracy, computational efficiency, adaptiveness, etc. In this survey, we comprehensively review this rapidly developing area. The important research problems of dynamic networks, e.g., architecture design, decision making scheme, optimization technique and applications, are reviewed systematically. Finally, we discuss the open problems in this field together with interesting future research directions.
             </DIV>
+            <DIV class="clear"></DIV>
         </DIV>
 
         <DIV class="publication media paperhi">
-            <IMG class="papericon" src="figures/RANet.gif">
+            <DIV class="img_box"><IMG class="papericon" src="figures/SAR_fig1.png"></DIV>
+            <DIV class="media-body ">
+                <A class="paper-title" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9609974"><B>Spatially Adaptive Feature Refinement for Efficient Inference.</B></A> 
+                <br/><b>Yizeng Han</b>, Gao Huang, Shiji Song, Le Yang, Yitian Zhang, Haojun Jiang.
+                <br/><I>IEEE Transactions on Image Processing (<b>TIP</b>, IF=10.86), 2021</I>
+                <br/> We propose a novel Spatially Adaptive feature Refinement (SAR) approach to perform efficient inference by adaptively fusing information from two branches: one conducts standard convolution on input features at a lower spatial resolution, and the other one selectively refines a set of regions at the original resolution. The two branches complement each other in feature learning, and both of them evoke much less computation than standard convolution. Experiments on CIFAR and ImageNet classification, COCO object detection and PASCAL VOC semantic segmentation tasks validate that SAR can consistently improve the network performance and efficiency.
+            </DIV>
+            <DIV class="clear"></DIV>
+        </DIV>
+
+        <DIV class="publication media paperhi">
+            <DIV class="img_box"><IMG class="papericon" src="figures/RANet.gif"></DIV>
             <DIV class="media-body ">
                 <A class="paper-title" href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_Resolution_Adaptive_Networks_for_Efficient_Inference_CVPR_2020_paper.pdf"><B>Resolution Adaptive Networks for Efficient Inference.</B></A> [<A href="https://github.com/yangle15/RANet-pytorch"    target="_blank">code</A>]
                 <br/>Le Yang*, <b>Yizeng Han*</b>, Xi Chen*, Shiji Song, Jifeng Dai, Gao Huang.
                 <br/><I>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>) 2020.</I>
-                <br/>In this paper, we focus on spatial redundancy of input samples and propose a novel Resolution Adaptive Network (RANet), which is inspired by the intuition that low-resolution representations are sufficient for classifying “easy” inputs containing large objects with prototypical features, while only some “hard” samples need spatially detailed information. Empirically, we demonstrate the effectiveness of the pro- posed RANet on the CIFAR-10, CIFAR-100 and ImageNet datasets in both the anytime prediction setting and the budgeted batch classification setting.
+                <br/>We focus on the spatial redundancy of images, and propose a novel Resolution Adaptive Network (RANet), which is inspired by the intuition that low-resolution representations are sufficient for classifying “easy” inputs, while only some “hard” samples need spatially detailed information. Empirically, we demonstrate the effectiveness of the proposed RANet on the CIFAR-10, CIFAR-100 and ImageNet datasets in both the anytime prediction setting and the budgeted batch classification setting.
             </DIV> 
+            <DIV class="clear"></DIV>
         </DIV>
 
         <DIV class="publication media paperhi">
-            <IMG class="papericon" src="figures/adafocus.png">
+            <DIV class="img_box"><IMG class="papericon" src="figures/adafocus.png"></DIV>
             <DIV class="media-body ">
                 <A class="paper-title" href="https://arxiv.org/pdf/2105.03245.pdf"><B>Adaptive Focus for Efficient Video Recognition.</B></A> [<A href="https://github.com/blackfeather-wang/AdaFocus"    target="_blank">code</A>]
                 <br/>Yulin Wang, Zhaoxi Chen, Haojun Jiang, Shiji Song, <b>Yizeng Han</b>, and Gao Huang.
                 <br/><I>IEEE/CVF International Conference on Computer Vision (<b>ICCV <font color="red">Oral</font></b>) 2021.</I>
                 <br/>In this paper, we explore the spatial redundancy in video recognition with the aim to improve the computational efficiency. Extensive experiments on five benchmark datasets, i.e., ActivityNet, FCVID, Mini-Kinetics, Something-Something V1&V2, demonstrate that our method is significantly more efficient than the competitive baselines.
             </DIV> 
+            <DIV class="clear"></DIV>
         </DIV>
 
         <DIV class="publication media paperhi">
-            <IMG class="papericon" src="figures/camloss.png">
+            <DIV class="img_box"><IMG class="papericon" src="figures/camloss.png"></DIV>
             <DIV class="media-body ">
                 <A class="paper-title" href="https://arxiv.org/pdf/2109.01359.pdf"><B>Towards Learning Spatially Discriminative Feature Representations.</B></A> 
                 <br/>Chaofei Wang*, Jiayu Xiao*, <b>Yizeng Han</b>, Qisen Yang, Shiji Song, Gao Huang.
-                <br/><I>IEEE/CVF International Conference on Computer Vision (<b>ICCV</b>) 2021.</I><br/>We propose a novel loss function, termed as CAM-loss, to constrain the embedded feature maps with the class activation maps (CAMs) which indicate the spatially discriminative regions of an image for particular categories. Experimental results show that CAM-loss is applicable to a variety of network structures and can be combined with mainstream regularization methods to improve the performance of image classification. The strong generalization ability of CAM-loss is validated in the transfer learning and few shot learning tasks. Based on CAM-loss, we also propose a novel CAAM-CAM matching knowledge distillation method. This method directly uses the CAM generated by the teacher network to supervise the CAAM generated by the student network, which effectively improves the accuracy and convergence rate of the student network.
+                <br/><I>IEEE/CVF International Conference on Computer Vision (<b>ICCV</b>) 2021.</I><br/>We propose CAM-loss to constrain the embedded feature maps with the class activation maps (CAMs) which indicate the spatially discriminative regions of an image for particular categories. Experimental results show that CAM-loss is applicable to a variety of network structures and can be combined with mainstream regularization methods to improve the performance of image classification. The strong generalization ability of CAM-loss is validated in transfer learning and few shot learning tasks.
             </DIV> 
+            <DIV class="clear"></DIV>
         </DIV>
     </DIV>
     <i>* Equal Contribution. </i>
