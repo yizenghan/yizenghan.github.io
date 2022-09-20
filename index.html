@@ -461,7 +461,7 @@
 
 <h2>News</h2>
     <li>09/2022: Our work (latency-aware spatial-wise dynamic networks) is accepted by <b>NeurIPS</b> 2022. </li>
-    <li>07/2022: Our work (learning to weight samples of dynamic early-exiting networks) is accepted by <b>ECCV</b> 2022. </li>
+    <!-- <li>07/2022: Our work (learning to weight samples of dynamic early-exiting networks) is accepted by <b>ECCV</b> 2022. </li> -->
     <br>
     <br>
 
@@ -502,9 +502,20 @@
         </DIV>
 
         <DIV class="publication media paperhi">
+            <DIV class="img_box"><IMG class="papericon" src="figures/L2W-DEN.jpg"></DIV>
+            <DIV class="media-body ">
+                <A class="paper-title" href="https://www.arxiv.org/pdf/2209.08310.pdf"><B>Learning to Weight Samples for Dynamic Early-exiting Networks.</B></A> [<A href="https://www.github.com/yangle15/RANet-pytorch"    target="_blank">code</A>]
+                <br/><b>Yizeng Han*</b>, Yifan Pu*, Zihang Lai, Chaofei Wang, Shiji Song, Junfen Cao, Wenhui Huang, Chao Deng, Gao Huang.
+                <br/><I>European Conference on Computer Vision (<b>ECCV</b>), 2022</I>
+                <br/> In this paper, we propose to bridge the gap between training and testing of dynamic early-exiting networks by sample weighting. Intuitively, easy samples, which generally exit early in the network during inference, should contribute more to training early classifiers. The training of hard samples (mostly exit from deeper layers), however, should be emphasized by the late classifiers. Our work proposes to adopt a weight prediction network to weight the loss of different training samples at each exit. This weight prediction network and the backbone model are jointly optimized under a meta-learning framework with a novel optimization objective. By bringing the adaptive behavior during inference into the training phase, we show that the proposed weighting mechanism consistently improves the trade-off between classification accuracy and inference efficiency.
+            </DIV>
+            <DIV class="clear"></DIV>
+        </DIV>
+
+        <DIV class="publication media paperhi">
             <DIV class="img_box"><IMG class="papericon" src="figures/RANet.gif"></DIV>
             <DIV class="media-body ">
-                <A class="paper-title" href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_Resolution_Adaptive_Networks_for_Efficient_Inference_CVPR_2020_paper.pdf"><B>Resolution Adaptive Networks for Efficient Inference.</B></A> [<A href="https://github.com/yangle15/RANet-pytorch"    target="_blank">code</A>]
+                <A class="paper-title" href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_Resolution_Adaptive_Networks_for_Efficient_Inference_CVPR_2020_paper.pdf"><B>Resolution Adaptive Networks for Efficient Inference.</B></A> [<A href="https://www.github.com/LeapLabTHU/L2W-DEN"    target="_blank">code</A>]
                 <br/>Le Yang*, <b>Yizeng Han*</b>, Xi Chen*, Shiji Song, Jifeng Dai, Gao Huang.
                 <br/><I>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>) 2020.</I>
                 <br/>We focus on the spatial redundancy of images, and propose a novel Resolution Adaptive Network (RANet), which is inspired by the intuition that low-resolution representations are sufficient for classifying “easy” inputs, while only some “hard” samples need spatially detailed information. Empirically, we demonstrate the effectiveness of the proposed RANet on the CIFAR-10, CIFAR-100 and ImageNet datasets in both the anytime prediction setting and the budgeted batch classification setting.
@@ -515,7 +526,7 @@
         <DIV class="publication media paperhi">
             <DIV class="img_box"><IMG class="papericon" src="figures/adafocus.png"></DIV>
             <DIV class="media-body ">
-                <A class="paper-title" href="https://arxiv.org/pdf/2105.03245.pdf"><B>Adaptive Focus for Efficient Video Recognition.</B></A> [<A href="https://github.com/blackfeather-wang/AdaFocus"    target="_blank">code</A>]
+                <A class="paper-title" href="https://www.arxiv.org/pdf/2105.03245.pdf"><B>Adaptive Focus for Efficient Video Recognition.</B></A> [<A href="https://github.com/blackfeather-wang/AdaFocus"    target="_blank">code</A>]
                 <br/>Yulin Wang, Zhaoxi Chen, Haojun Jiang, Shiji Song, <b>Yizeng Han</b>, and Gao Huang.
                 <br/><I>IEEE/CVF International Conference on Computer Vision (<b>ICCV <font color="red">Oral</font></b>) 2021.</I>
                 <br/>In this paper, we explore the spatial redundancy in video recognition with the aim to improve the computational efficiency. Extensive experiments on five benchmark datasets, i.e., ActivityNet, FCVID, Mini-Kinetics, Something-Something V1&V2, demonstrate that our method is significantly more efficient than the competitive baselines.
