@@ -469,10 +469,10 @@
 
 
 <h2>News</h2>
-    <li>07/2023: Our work (Dynamic Perceiver for efficient visual recognition) is accepted by <b>ICCV</b> 2023.</li>
+    <li>07/2023: Three works are accepted by <b>ICCV</b> 2023.</li>
     <li>10/2022: Awarded by <b>National Scholarship</b>, Ministry of Education of China.</li>
     <li>09/2022: Our work (Latency-aware spatial-wise dynamic networks) is accepted by <b>NeurIPS</b> 2022. </li>
-    <!-- <li>07/2022: Our work (learning to weight samples of dynamic early-exiting networks) is accepted by <b>ECCV</b> 2022. </li> -->
+    <li>07/2022: Our work (learning to weight samples of dynamic early-exiting networks) is accepted by <b>ECCV</b> 2022. </li>
     <br>
     <!-- <br> -->
 
@@ -507,11 +507,22 @@
         <br>
         
         <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 0px;">
+            <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/survey.png"  style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+            <DIV class="media-body ">
+                <A class="paper-title" href="https://arxiv.org/pdf/2102.04906.pdf"><B>Dynamic Neural Networks: A Survey.</B></A> [<A href="https://mp.weixin.qq.com/s/TG_HBAR7Jrec4X02sxNGEA"    target="_blank">智源社区</A>][<A href="https://jmq.h5.xeknow.com/s/2H6ZSj">机器之心-在线讲座</A>][<A href="https://www.bilibili.com/video/BV19B4y1A7Wy?from=search&seid=12254026542403915477">Bilibili</A>][<A href="papers/动态神经网络研究概述.pdf">slides</A>]
+                <br/><b>Yizeng Han</b>*, Gao Huang*, Shiji Song, Le Yang, Honghui Wang, Yulin Wang.
+                <br/><I>IEEE Transactions on Pattern Analysis and Machine Intelligence (<b><font color="red">TPAMI</font></b>, IF=24.314), 2021</I>
+                <br/>In this survey, we comprehensively review the rapidly developing area, dynamic neural networks. The important research problems, e.g., architecture design, decision making scheme, and optimization technique, are reviewed systematically. We also discuss the open problems in this field together with interesting future research directions.
+            </DIV>
+            <DIV class="clear"></DIV>
+        </DIV>
+
+        <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 0px;">
             <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/Dyn_Perceiver.jpg" style="margin: 0; padding: 0; vertical-align: middle"></DIV>
             <DIV class="media-body ">
                 <A class="paper-title" href="https://arxiv.org/pdf/2306.11248v1.pdf"><B>Dynamic Perceiver for Efficient Visual Recognition.</B></A> [<A href="https://github.com/leaplabthu/dynamic_perceiver"    target="_blank">code</A>] 
                 <br/><b>Yizeng Han*</b>, Dongchen Han*, Zeyu Liu, Yulin Wang, Xuran Pan, Yifan Pu, Chao Deng, Junlan Feng, Shiji Song, Gao Huang.
-                <br/><I>IEEE/CVF International Conference on Computer Vision (<b>ICCV</b>) 2023.</I>
+                <br/><I>IEEE/CVF International Conference on Computer Vision (<b>ICCV</b>), 2023.</I>
                 <br/> In this paper, we propose Dynamic Perceiver (Dyn-Perceiver), a two-branch structure to explicitly decouple the feature extraction process and the early classification task. We show that early classifiers can be constructed in the classification branch without harming the performance of the last classifier. Experiments on ImageNet demonstrate that Dynamic Perceiver significantly outperforms existing state-of-the-art methods in terms of the trade-off between accuracy and efficiency. Dyn-Perceiver is also a general framework, which can be conveniently implemented on top of any visual backbones.
             </DIV>
             <DIV class="clear"></DIV>
@@ -541,18 +552,6 @@
         
 
         <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 0px;">
-            <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/survey.png"  style="margin: 0; padding: 0; vertical-align: middle"></DIV>
-            <DIV class="media-body ">
-                <A class="paper-title" href="https://arxiv.org/pdf/2102.04906.pdf"><B>Dynamic Neural Networks: A Survey.</B></A> [<A href="https://mp.weixin.qq.com/s/TG_HBAR7Jrec4X02sxNGEA"    target="_blank">智源社区</A>][<A href="https://jmq.h5.xeknow.com/s/2H6ZSj">机器之心-在线讲座</A>][<A href="https://www.bilibili.com/video/BV19B4y1A7Wy?from=search&seid=12254026542403915477">Bilibili</A>][<A href="papers/动态神经网络研究概述.pdf">slides</A>]
-                <br/><b>Yizeng Han</b>*, Gao Huang*, Shiji Song, Le Yang, Honghui Wang, Yulin Wang.
-                <br/><I>IEEE Transactions on Pattern Analysis and Machine Intelligence (<b><font color="red">TPAMI</font></b>, IF=24.314), 2021</I>
-                <br/>In this survey, we comprehensively review the rapidly developing area, dynamic neural networks. The important research problems, e.g., architecture design, decision making scheme, and optimization technique, are reviewed systematically. We also discuss the open problems in this field together with interesting future research directions.
-            </DIV>
-            <DIV class="clear"></DIV>
-        </DIV>
-
-
-        <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 0px;">
             <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/SAR_fig1.png"  style="margin: 0; padding: 0; vertical-align: middle"></DIV>
             <DIV class="media-body ">
                 <A class="paper-title" href="papers/SAR.pdf"><B>Spatially Adaptive Feature Refinement for Efficient Inference.</B></A> 
@@ -571,6 +570,16 @@
                 <br/>Le Yang*, <b>Yizeng Han*</b>, Xi Chen*, Shiji Song, Jifeng Dai, Gao Huang.
                 <br/><I>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>) 2020.</I>
                 <br/>We focus on the spatial redundancy of images, and propose a novel Resolution Adaptive Network (RANet), which is inspired by the intuition that low-resolution representations are sufficient for classifying “easy” inputs, while only some “hard” samples need spatially detailed information. Empirically, we demonstrate the effectiveness of the proposed RANet in both the anytime prediction setting and the budgeted batch classification setting.
+            </DIV> 
+            <DIV class="clear"></DIV>
+        </DIV>
+        
+        <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 0px;">
+            <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/ARC.png"  style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+            <DIV class="media-body ">
+                <A class="paper-title" href="https://arxiv.org/pdf/2303.07820.pdf"><B>Adaptive Rotated Convolution for Rotated Object Detection.</B></A> 
+                <br/>Yifan Pu*, Yiru Wang*, Zhuofan Xia, <b>Yizeng Han</b>, Yulin Wang, Weihao Gan, Zidong Wang, Shiji Song, Gao Huang.
+                <br/><I>IEEE/CVF International Conference on Computer Vision (<b>ICCV</b>) 2023.</I><br/>We propose adaptive rotated convolution (ARC) for rotated object detection. In the proposed approach, the convolution kernels rotate adaptively according to different object orientations in the images. The ARC module can be plugged into any backbone networks with convolution layer. Our work achievs SOTA performance on the DOTA benchmark.
             </DIV> 
             <DIV class="clear"></DIV>
         </DIV>
