@@ -1,0 +1,695 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<HTML lang="en-us"><HEAD><META content="IE=11.0000" http-equiv="X-UA-Compatible">
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Yizeng Han Homepage</TITLE>   
+<LINK href="bootstrap.min.css" rel="stylesheet">  
+<SCRIPT src="jquery-3.1.1.slim.min.js"></SCRIPT>
+
+<STYLE type="text/css">
+        /* @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic"); */
+
+        body {
+            /* font-family:"Roboto",Helvetica,Arial,sans-serif; */
+            /* font-family: Arial, Helvetica, sans-serif; */
+            /* font-family: "Times New Roman",Georgia,Serif; */
+            font-family: "Helvetica", Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: normal;
+            background-color: #ffffff;
+        }
+
+        .navigation {
+            height: auto;
+            width: 100%;
+            margin-left: 0;
+            background: #8F4B8D;
+            opacity: 0.9;
+            position: fixed;
+            top: 0;
+        }
+
+        .navigation ul {
+            width: auto;
+            list-style-type: none;
+            white-space: nowrap;
+            margin-left: 22%;
+            padding: 0;
+        }
+
+        .navigation li {
+            float: right;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 2%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #name-nav {
+            float: left;
+            position: relative;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 3px;
+            overflow: hidden;
+            font-size: 120%;
+            text-decoration: none;
+        }
+
+        .navigation li a,
+        .navigation li span {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 3px;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .navigation li a:hover {
+            text-decoration: underline;
+        }
+
+        .navigation li span:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        b {
+            font-weight: 600;
+        }
+
+        .content {
+            width: 100%;
+            padding-top: 4%;
+            /* margin : 0px auto; */
+            background-color: #ffffff;
+        }
+
+        table {
+            padding: 5px;
+        }
+
+        table.pub_table,
+        td.pub_td1,
+        td.pub_td2 {
+            padding: 8px;
+            width: 850px;
+            border-collapse: separate;
+            border-spacing: 15px;
+            margin-top: -5px;
+        }
+
+        td.pub_td1 {
+            width: 50px;
+        }
+
+        td.pub_td1 img {
+            height: 120px;
+            width: 160px;
+        }
+
+        div#container {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: 15%;
+            margin-right: 15%;
+            /* width: 860px; */
+            text-align: left;
+            /* position: relative; */
+            background-color: #FFF;
+        }
+
+        div#portrait {
+            /* color: #1367a7;
+        color: rgb(34, 110, 147); */
+            height: 158px;
+        }
+
+        #portrait {
+            /* position: relative; */
+            /*margin-left: 100%;*/
+        }
+
+        h4,
+        h3,
+        h2,
+        h1,
+        .paperlo,
+        .paperhi-only {
+            color: rgb(153,87,157);
+        }
+
+        .text_container h2:hover {
+            cursor: pointer;
+        }
+
+        .paperhi-only,
+        .paperlo:hover {
+            cursor: pointer;
+        }
+
+        h2 {
+            font-size: 130%;
+        }
+
+        #paper-show {
+            color: rgb(0, 85, 170);
+            font-size: 80%;
+        }
+
+        #paper-show span:hover {
+            text-decoration: underline;
+        }
+
+        /* p
+	{
+		color: #5B5B5B;
+		margin-bottom: px;
+	}
+	p.caption
+	{
+		color: #9B9B9B;
+		text-align: left;
+		width: 600px;
+	}
+	p.caption2
+	{
+		color: #9B9B9B;
+		text-align: left;
+		width: 800px;
+	} */
+
+        #header_img {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        /* 
+        a:link,
+        a:visited {
+            color: #1367a7;
+            text-decoration: none;
+        } */
+
+        #mit_logo {
+            position: absolute;
+            left: 646px;
+            top: 14px;
+            width: 200px;
+            height: 20px;
+        }
+
+        table.pub_table tr {
+            outline: thin dotted #666666;
+        }
+
+        .paper-title {
+            color: black;
+            text-decoration: none;
+        }
+        .img_box{
+            width: 300px;
+            height: 300px;
+            float: left;   
+        }
+
+        .papericon {
+            /* border-radius: 8px; */
+            /* -moz-box-shadow: 3px 3px 6px #888;
+            -webkit-box-shadow: 3px 3px 6px #888;
+            box-shadow: 3px 3px 6px #888; */
+            /*height: 120px;*/
+            width: 270px;
+        }
+
+        .media {
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        .media-body {
+            margin-top: 0px;
+            display: inline;
+        }
+
+        .publication {
+            margin-bottom: 10px;
+        }
+
+        .papers-selected .publication {
+            display: none;
+        }
+
+        .papers-selected .book-chapters {
+            display: none;
+        }
+
+        .papers-selected #show-selected {
+            color: black;
+            text-decoration: underline;
+        }
+
+        .papers-selected .paperhi {
+            display: flex;
+        }
+
+        .papers-selected .paper-year {
+            display: none;
+        }
+
+        .papers-by-date #show-by-date {
+            color: black;
+            text-decoration: underline;
+        }
+
+        .papers-by-date .paper-selected {
+            display: none;
+        }
+
+        .papers-by-date .book-chapters {
+            display: none;
+        }
+
+        .book-chapters #book-chapters {
+            color: black;
+            text-decoration: underline;
+        }
+
+        .book-chapters .paper-selected,
+        .book-chapters .paper-year,
+        .book-chapters .publication {
+            display: none;
+        }
+
+        .book-chapters .chapter {
+            display: flex;
+        }
+
+        /* .papers-by-date .paperhi {
+            display: none;
+        } */
+
+        .hidden>div {
+            display: none;
+        }
+
+        .visible>div {
+            display: block;
+        }
+        .clear {
+            clear: both;
+        }
+</STYLE>
+     
+<SCRIPT>
+        $(document).ready(function () {
+            $('#show-selected').click(function () {
+                $('.papers-container').removeClass('papers-by-date');
+                $('.papers-container').removeClass('book-chapters');
+                $('.papers-container').addClass('papers-selected');
+            });
+
+            $('#show-by-date').click(function () {
+                $('.papers-container').removeClass('papers-selected');
+                $('.papers-container').removeClass('book-chapters');
+                $('.papers-container').addClass('papers-by-date');
+            });
+
+            $('#book-chapters').click(function () {
+                $('.papers-container').removeClass('papers-selected');
+                $('.papers-container').removeClass('papers-by-date');
+                $('.papers-container').addClass('book-chapters');
+            });
+
+            $('.papers-container').addClass('papers-selected');
+
+
+            $('.text_container').addClass("hidden");
+            $('.text_container').click(function () {
+                var $this = $(this);
+
+                // if ($this.hasClass("hidden")) {
+                //     $(this).removeClass("hidden").addClass("visible");
+
+                // } else {
+                //     $(this).removeClass("visible").addClass("hidden");
+                // }
+            });
+
+            // document.querySelector("#news-nav").onclick = function () {
+            //     document.querySelector("#news").scrollIntoView({
+            //         block: "center",
+            //         behavior: "smooth"
+            //     });
+            // }
+            // publications
+            document.querySelector("#publication-nav").onclick = function () {
+                document.querySelector(".paperlo").scrollIntoView({
+                    block: "center",
+                    behavior: "smooth"
+                });
+            }
+            // awards
+            document.querySelector("#award-nav").onclick = function () {
+                document.querySelector("#award").scrollIntoView({
+                    block: "center",
+                    behavior: "smooth"
+                });
+            }
+            // talks
+            document.querySelector("#talk-nav").onclick = function () {
+                document.querySelector("#talk").scrollIntoView({
+                    block: "center",
+                    behavior: "smooth"
+                });
+            }
+            // students
+            document.querySelector("#student-nav").onclick = function () {
+                document.querySelector("#student").scrollIntoView({
+                    block: "center",
+                    behavior: "smooth"
+                });
+            }
+            // more
+            document.querySelector("#more-nav").onclick = function () {
+                document.querySelector("#more").scrollIntoView({
+                    block: "center",
+                    behavior: "smooth"
+                });
+            }
+
+        });
+</SCRIPT>
+ 
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001">
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?85819d0bd906cafe9ed67ce601c2e750";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</HEAD>
+
+<BODY id="top">
+<DIV class="navigation">
+<UL>
+<!--  <LI id="name-nav"></LI>
+ <LI id="more-nav"><SPAN>More</SPAN></LI>
+  <LI id="talk-nav"><SPAN>Talks</SPAN>
+  <LI>
+  <LI id="award-nav"><SPAN>Awards</SPAN>
+  <LI> -->
+  <li class="nav-item"><a href="#contact">Contact</a></li>
+  <!-- <li class="nav-item"><a href="#talks">Talks</a></li> -->
+  <!--<li class="nav-item"><a href="#students">Students</a></li> -->
+  <li class="nav-item"><a href="#awards">Awards</a></li>
+  <li class="nav-item"><a href="#representativeWorks">Representative Publications</a></li>
+  <li class="nav-item"><a href="#recentWorks">Recent Works</a></li>
+  <li class="nav-item"><a href="#top">Home</a></li>
+  <!-- <LI><A href="http://www.yizenghan.top/#top">Home</A></LI> -->
+</UL>
+</DIV>
+
+<DIV class="content">
+<DIV id="container">
+<TABLE width="100%">
+  <TBODY>
+  <TR>
+    <TD width="70%">
+      <DIV id="info" width="">
+      <H1><br>Yizeng Han</H1><br>
+      <h2>Bio (<a href="https://scholar.google.com/citations?user=25mubAsAAAAJ&hl=en">Google Scholar</a>) (<a href="files/CV-Yizeng.pdf">C.V.</a>)</h2>
+      <P><B>Ph.D Candidate, Department of Automation, Tsinghua University</B>, advised by Prof. <a href="http://www.gaohuang.net/">Gao Huang</a> and Prof. <a href="http://www.au.tsinghua.edu.cn/info/1075/1590.htm">Shiji Song</a>.
+
+        <h2>Research Interest</h2>
+        My research focuses on deep learning and computer vision, in particular <a href="https://arxiv.org/pdf/2102.04906.pdf">dynamic neural networks</a> and efficient learning/inference of deep models in resource-constrained scenarios</b>.<br>
+        <font color="green">Recently, I am interested in directions related to efficient/dynamic multi-modal LLM and generative AI. </font>
+        <br>
+        <br>
+
+        
+    </DIV>
+    </TD>
+    <TD width="30%">
+      <DIV id="photo" style="margin-left: 15%; float: right;"><IMG height="200" 
+      id="portrait" src="figures/hanyz.JPG"></DIV>
+    </TD>
+  </TR>
+  </TBODY>
+</TABLE>
+
+
+<h2>Education</h2>
+<DIV style="font-style:normal"><UL>
+<Li>Ph.D, Tsinghua University, 2018 - present.</Li>
+<Li>B.E., Tsinghua University, 2014 - 2018.</Li>
+</UL></DIV>
+
+<H2 id="contact" style="font-style:normal">Contact</H2>
+<DIV style="font-style:normal">
+<UL>
+    <LI> hanyz18 at mails dot tsinghua dot edu dot cn.</LI>
+    <LI> 616 Centre Main Building, Tsinghua University, Beijing 100084, China.</LI>
+</UL>
+</DIV>
+
+<h2>Research Experience</h2>
+<DIV style="font-style:normal">
+<UL>
+<li>Intern, Megvii Technology (Foundation Model Group, advisor: <a href="https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en">Xiangyu Zhang</a>), 04/2023 - 12/2023</li>
+<li>Intern, Georgia Institute of Technology (advisor: <a href="https://coe.northeastern.edu/people/abowd-gregory/">Gregory D. Abowd</a>), 06/2017 - 08/2017</li>
+</UL>
+</DIV>
+<br>
+
+
+<h2>News</h2>
+<DIV style="font-style:normal">
+    <UL>
+    <li>02/2024: Two works (<A href="https://arxiv.org/pdf/2312.10103.pdf">GSVA: Generalized Segmentation via Multimodal Large Language Models</A> and <A href="https://arxiv.org/pdf/2312.12198.pdf">Mask Grounding for Referring Image Segmentation</A>) are accepted by <b>CVPR</b> 2024.</li>
+    <li>12/2023: Our work (<A href="https://arxiv.org/pdf/2309.00399.pdf">Fine-grained Recognition with Learnable Semantic Data Augmentation</A>) is accepted by <I>IEEE Transactions on Image Processing</I> <b>(TIP)</b>.</li>
+    <!-- <li>10/2023: Awarded by <b>Comprehensive Merit Scholarship</b>, Tsinghua University, 2023.</li> -->
+    <!-- <li>07/2023: Three works are accepted by <b>ICCV</b> 2023.</li> -->
+    <!-- <li>10/2022: Awarded by <b>National Scholarship</b>, Ministry of Education of China.</li> -->
+    <!-- <li>09/2022: Our work (Latency-aware spatial-wise dynamic networks) is accepted by <b>NeurIPS</b> 2022. </li>
+    <li>07/2022: Our work (learning to weight samples of dynamic early-exiting networks) is accepted by <b>ECCV</b> 2022. </li> -->
+    </UL>
+    </DIV>
+    <br>
+
+<H2 id="awards" style="font-style:normal">Awards</H2>    
+<DIV style="font-style:normal">
+    <UL>
+    <li><b>National Scholarship</b>, Ministry of Education of China, 2022</li>
+    <li><b>Comprehensive Merit Scholarship</b>, 2023, 2017, and 2016 at Tsinghua University.</li> 
+    <li>Academic Excellence Scholarship, 2015 at Tsinghua University.</li> 
+</UL>
+</DIV>
+<br>
+<br>    
+
+<a name="publications"></a>
+<DIV class="papers-container">
+    <H2 id="publications" class="paperlo">Selected Papers (<a href="https://scholar.google.com/citations?user=25mubAsAAAAJ&hl=en">Full publication list on Google Scholar</a>)
+        <br>
+        <SPAN id="paper-show">
+            <!-- (<SPAN id="show-selected">show selected</SPAN> /  
+                <SPAN id="show-by-date">show all by date</SPAN> / 
+                <SPAN id="book-chapters">book chapters</SPAN>) -->
+        </SPAN>       
+    </H2>
+
+    <br>
+    <h5 id="recentWorks" class="paperhi paperhi-only">Recent Works</h5>
+    <br>
+
+    <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+        <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/LAUDNet.png" style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+        <DIV class="media-body ">
+            <A class="paper-title" href="https://www.arxiv.org/pdf/2308.15949.pdf"><B>Latency-aware Unified Dynamic Networks for Efficient Image Recognition.</B></A> [<A href="https://www.github.com/leaplabthu/laudnet"    target="_blank">code</A>] 
+            <br/><b>Yizeng Han</b>*,  Zeyu Liu*, Zhihang Yuan*, Yifan Pu, Chaofei Wang, Shiji Song, Gao Huang.
+            <br/><I>Arxiv Preprint, 2024.</I>
+            <br/> We propose Latency-aware Unified Dynamic Networks (LAUDNet), a comprehensive framework that amalgamates three cornerstone dynamic
+            paradigms—spatially-adaptive computation, dynamic layer skipping, and dynamic channel skipping—under a unified formulation.
+        </DIV>
+        <DIV class="clear"></DIV>
+    </DIV>
+
+    <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+        <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/GSVA.png" style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+        <DIV class="media-body ">
+            <A class="paper-title" href="https://arxiv.org/pdf/2312.10103.pdf"><B>GSVA: Generalized Segmentation via Multimodal Large Language Models.</B></A> [<A href="https://github.com/LeapLabTHU/GSVA"    target="_blank">code</A>]
+            <br/>Zhuofan Xia, Dongchen Han, <B>Yizeng Han</B>, Xuran Pan, Shiji Song, Gao Huang.
+            <br/><I>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2024.</I>
+            <br/> We propose Generalized Segmentation Vision Assistant (GSVA) to address the issues of multi-object and empty-object in Generalized Referring Expression Segmentation (GRES).
+        </DIV>
+        <DIV class="clear"></DIV>
+    </DIV>
+
+    <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+        <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/MaskGround.png" style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+        <DIV class="media-body ">
+            <A class="paper-title" href="https://arxiv.org/pdf/2312.12198.pdf"><B>Mask Grounding for Referring Image Segmentation.</B></A> 
+            <br/>Yong Xien Chng, Henry Zheng, <B>Yizeng Han</B>, Xuchong Qiu, Gao Huang.
+            <br/><I>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2024.</I>
+            <br/> We introduce a novel Mask Grounding auxiliary task that significantly improves visual grounding within language features, by explicitly teaching the model to learn fine-grained correspondence between masked textual tokens and their matching visual objects.
+        </DIV>
+        <DIV class="clear"></DIV>
+    </DIV>
+
+    
+
+    <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+        <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/meta_isda.png"  style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+        <DIV class="media-body ">
+            <A class="paper-title" href="https://arxiv.org/pdf/2309.00399.pdf"><B>Fine-grained Recognition with Learnable Semantic
+                Data Augmentation.</B></A>
+            <br/>Yifan Pu*, <b>Yizeng Han*</b>, Yulin Wang, Junlan Feng, Chao Deng, Gao Huang.
+            <br/><I>IEEE Transactions on Image Processing (<b>TIP</b>) 2023.</I>
+            <br/>We propose diversifying the training data at the feature space to alleviate the discriminative region loss problem in fine-grained image recognition. Specifically, we produce diversified augmented samples by translating image features along semantically meaningful directions.
+             The semantic directions are estimated with a sample-wise covariance prediction network.
+        </DIV> 
+        <DIV class="clear"></DIV>
+    </DIV>
+
+    <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+        <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/agent.png" style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+        <DIV class="media-body ">
+            <A class="paper-title" href="https://arxiv.org/pdf/2312.08874.pdf"><B>Agent Attention: On the Integration of Softmax and Linear Attention.</B></A> [<A href="https://github.com/LeapLabTHU/Agent-Attention"    target="_blank">code</A>] 
+            <br/>Dongchen Han, Tianzhu Ye, <b>Yizeng Han</b>, Zhuofan Xia, Shiji Song, Gao Huang.
+            <br/><I>Arxiv Preprint, 2024.</I>
+            <br/> We propose Agent Attention, a linear attention mechanism in vision recognition and generation. Notably, agent attention has shown remarkable performance in high-resolution scenarios, owning to its linear attention nature. 
+        </DIV>
+        <DIV class="clear"></DIV>
+    </DIV>
+
+    <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+        <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/ARC.png"  style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+        <DIV class="media-body ">
+            <A class="paper-title" href="https://arxiv.org/pdf/2303.07820.pdf"><B>Adaptive Rotated Convolution for Rotated Object Detection.</B></A> 
+            <br/>Yifan Pu*, Yiru Wang*, Zhuofan Xia, <b>Yizeng Han</b>, Yulin Wang, Weihao Gan, Zidong Wang, Shiji Song, Gao Huang.
+            <br/><I>IEEE/CVF International Conference on Computer Vision (<b>ICCV</b>) 2023.</I><br/>We propose adaptive rotated convolution (ARC) for rotated object detection. In the proposed approach, the convolution kernels rotate adaptively according to different object orientations in the images. The ARC module can be plugged into any backbone networks with convolution layer. Our work achievs SOTA performance on the DOTA benchmark.
+        </DIV> 
+        <DIV class="clear"></DIV>
+    </DIV>
+
+    <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+        <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/Flatten.png"  style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+        <DIV class="media-body ">
+            <A class="paper-title" href="https://arxiv.org/pdf/2308.00442.pdf"><B>FLatten Transformer: Vision Transformer using Focused Linear Attention.</B></A> 
+            <br/>Dongchen Han*, Xuran Pan*, <b>Yizeng Han</b>, Shiji Song, Gao Huang.
+            <br/><I>IEEE/CVF International Conference on Computer Vision (<b>ICCV</b>) 2023.</I><br/>we propose a novel focused linear attention module. By addressing the limitations of previous linear attention methods from focus ability and feature diversity perspectives, our module achieves an impressive combination of high efficiency and expressive capability.
+        </DIV> 
+        <DIV class="clear"></DIV>
+    </DIV>
+
+    <br>
+    <h5 id="representativeWorks" class="paperhi paperhi-only">Representative Publications</h5> 
+    <br>
+
+    <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+        <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/survey.png"  style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+        <DIV class="media-body ">
+            <A class="paper-title" href="https://arxiv.org/pdf/2102.04906.pdf"><B>Dynamic Neural Networks: A Survey.</B></A> [<A href="https://mp.weixin.qq.com/s/TG_HBAR7Jrec4X02sxNGEA"    target="_blank">智源社区</A>][<A href="https://jmq.h5.xeknow.com/s/2H6ZSj">机器之心-在线讲座</A>][<A href="https://www.bilibili.com/video/BV19B4y1A7Wy?from=search&seid=12254026542403915477">Bilibili</A>][<A href="papers/动态神经网络研究概述.pdf">slides</A>]
+            <br/><b>Yizeng Han</b>*, Gao Huang*, Shiji Song, Le Yang, Honghui Wang, Yulin Wang.
+            <br/><I>IEEE Transactions on Pattern Analysis and Machine Intelligence (<b><font color="red">TPAMI</font></b>, IF=24.314), 2021</I>
+            <br/>In this survey, we comprehensively review the rapidly developing area, dynamic neural networks. The important research problems, e.g., architecture design, decision making scheme, and optimization technique, are reviewed systematically. We also discuss the open problems in this field together with interesting future research directions.
+        </DIV>
+        <DIV class="clear"></DIV>
+    </DIV>
+
+    <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+        <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/SAR_fig1.png"  style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+        <DIV class="media-body ">
+            <A class="paper-title" href="papers/SAR.pdf"><B>Spatially Adaptive Feature Refinement for Efficient Inference.</B></A> 
+            <br/><b>Yizeng Han</b>, Gao Huang, Shiji Song, Le Yang, Yitian Zhang, Haojun Jiang.
+            <br/><I>IEEE Transactions on Image Processing (<b>TIP</b>, IF=11.041), 2021</I>
+            <br/> We propose to perform efficient inference by adaptively fusing information from two branches: one conducts standard convolution on input features at a lower resolution, and the other one selectively refines a set of regions at the original resolution. Experiments on classification, object detection and semantic segmentation validate that SAR can consistently improve the network performance and efficiency.
+        </DIV>
+        <DIV class="clear"></DIV>
+    </DIV>
+
+    <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+        <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/Dyn_Perceiver.jpg" style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+        <DIV class="media-body ">
+            <A class="paper-title" href="https://arxiv.org/pdf/2306.11248v1.pdf"><B>Dynamic Perceiver for Efficient Visual Recognition.</B></A> [<A href="https://github.com/leaplabthu/dynamic_perceiver"    target="_blank">code</A>] 
+            <br/><b>Yizeng Han</b>*, Dongchen Han*, Zeyu Liu, Yulin Wang, Xuran Pan, Yifan Pu, Chao Deng, Junlan Feng, Shiji Song, Gao Huang.
+            <br/><I>IEEE/CVF International Conference on Computer Vision (<b>ICCV</b>), 2023.</I>
+            <br/> We propose Dynamic Perceiver (Dyn-Perceiver), a general framework which can be conveniently implemented on top of any visual backbones. It explicitly decouples feature extraction and early classification. We show that early classifiers can be constructed in the classification branch without harming the performance of the last classifier. Experiments demonstrate that Dyn-Perceiver significantly outperforms existing state-of-the-art methods in terms of the trade-off between accuracy and efficiency.
+        </DIV>
+        <DIV class="clear"></DIV>
+    </DIV>
+
+    <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+        <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/LASNet.jpg"  style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+        <DIV class="media-body ">
+            <A class="paper-title" href="https://arxiv.org/pdf/2210.06223.pdf"><B>Latency-aware Spatial-wise Dynamic Networks.</B></A> [<A href="https://github.com/LeapLabTHU/LASNet"    target="_blank">code</A>] [<A href="files/NeurIPS2022_LASNet_slide.pdf"    target="_blank">slide</A>] [<A href="files/NeurIPS2022_poster.pdf"    target="_blank">poster</A>]
+            <br/><b>Yizeng Han</b>*, Zhihang Yuan*, Yifan Pu*, Chenhao Xue, Shiji Song, Guangyu Sun, Gao Huang.
+            <br/><I>Conference on Neural Information Processing Systems (<b>NeurIPS</b>), 2022</I>
+            <br/> In this paper, we use a latency predictor to guide both algorithm design and scheduling optimization of spatial-wise dynamic networks on various hardware platforms. We show that "coarse-grained" spatially adaptive computation can effectively reduce the memory access cost and shows superior efficiency than pixel-level dynamic operations.
+        </DIV>
+        <DIV class="clear"></DIV>
+    </DIV>
+
+    <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+        <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/L2W-DEN.jpg"  style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+        <DIV class="media-body ">
+            <A class="paper-title" href="https://www.arxiv.org/pdf/2209.08310.pdf"><B>Learning to Weight Samples for Dynamic Early-exiting Networks.</B></A> [<A href="https://github.com/LeapLabTHU/L2W-DEN"    target="_blank">code</A>][<A href="files/eccv2022_L2W-DEN.pdf"    target="_blank">slides</A>][<A href="files/4295.pdf"    target="_blank">poster</A>]
+            <br/><b>Yizeng Han</b>*, Yifan Pu*, Zihang Lai, Chaofei Wang, Shiji Song, Junfen Cao, Wenhui Huang, Chao Deng, Gao Huang.
+            <br/><I>European Conference on Computer Vision (<b>ECCV</b>), 2022</I>
+            <br/> In this paper, we propose to bridge the gap between training and testing of dynamic early-exiting networks by sample weighting. By bringing the adaptive behavior during inference into the training phase, we show that the proposed weighting mechanism consistently improves the trade-off between classification accuracy and inference efficiency.
+        </DIV>
+        <DIV class="clear"></DIV>
+    </DIV>
+    
+
+    <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+        <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/RANet.gif"  style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+        <DIV class="media-body ">
+            <A class="paper-title" href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_Resolution_Adaptive_Networks_for_Efficient_Inference_CVPR_2020_paper.pdf"><B>Resolution Adaptive Networks for Efficient Inference.</B></A> [<A href="https://github.com/yangle15/RANet-pytorch"    target="_blank">code</A>]
+            <br/>Le Yang*, <b>Yizeng Han*</b>, Xi Chen*, Shiji Song, Jifeng Dai, Gao Huang.
+            <br/><I>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>) 2020.</I>
+            <br/>We focus on the spatial redundancy of images, and propose a novel Resolution Adaptive Network (RANet), which is inspired by the intuition that low-resolution representations are sufficient for classifying “easy” inputs, while only some “hard” samples need spatially detailed information. Empirically, we demonstrate the effectiveness of the proposed RANet in both the anytime prediction setting and the budgeted batch classification setting.
+        </DIV> 
+        <DIV class="clear"></DIV>
+    </DIV>
+
+        
+        <!-- <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+            <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/adafocus.png"  style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+            <DIV class="media-body ">
+                <A class="paper-title" href="https://www.arxiv.org/pdf/2105.03245.pdf"><B>Adaptive Focus for Efficient Video Recognition.</B></A> [<A href="https://github.com/blackfeather-wang/AdaFocus"    target="_blank">code</A>]
+                <br/>Yulin Wang, Zhaoxi Chen, Haojun Jiang, Shiji Song, <b>Yizeng Han</b>, and Gao Huang.
+                <br/><I>IEEE/CVF International Conference on Computer Vision (<b>ICCV <font color="red">Oral</font></b>) 2021.</I>
+                <br/>In this paper, we explore the spatial redundancy in video recognition with the aim to improve the computational efficiency. Extensive experiments on five benchmark datasets, i.e., ActivityNet, FCVID, Mini-Kinetics, Something-Something V1&V2, demonstrate that our method is significantly more efficient than the competitive baselines.
+            </DIV> 
+            <DIV class="clear"></DIV>
+        </DIV> -->
+
+        <!-- <DIV class="publication media paperhi" style="display: flex; align-items: flex-start; margin-bottom: 10px;">
+            <DIV class="img_box" style="margin: 0; padding: 0;"><IMG class="papericon" src="figures/camloss.png"  style="margin: 0; padding: 0; vertical-align: middle"></DIV>
+            <DIV class="media-body ">
+                <A class="paper-title" href="https://arxiv.org/pdf/2109.01359.pdf"><B>Towards Learning Spatially Discriminative Feature Representations.</B></A> 
+                <br/>Chaofei Wang*, Jiayu Xiao*, <b>Yizeng Han</b>, Qisen Yang, Shiji Song, Gao Huang.
+                <br/><I>IEEE/CVF International Conference on Computer Vision (<b>ICCV</b>) 2021.</I><br/>We propose CAM-loss to constrain the embedded feature maps with the class activation maps (CAMs) which indicate the spatially discriminative regions of an image for particular categories. Experimental results show that CAM-loss is applicable to a variety of network structures and can be combined with mainstream regularization methods to improve the performance of image classification.
+            </DIV> 
+            <DIV class="clear"></DIV>
+        </DIV> -->
+    </DIV>
+    <i>* Equal Contribution. </i>
+    <br></DIV><br>
+
+    
+</DIV>
+</BODY>
+</HTML>
