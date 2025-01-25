@@ -167,7 +167,7 @@
             <br>
             🌟 My research focuses on deep learning and computer vision, in particular <a href="https://arxiv.org/pdf/2102.04906.pdf" style="color: red;"><b>dynamic neural networks</b></a> and efficient learning/inference of deep models in resource-constrained scenarios.
             <br>
-            🔥 Recently, I am interested in directions related to Efficient/Dynamic <a href="https://arxiv.org/pdf/2412.03324" style="color: red;"><b>Vision Language Model (VLM)</b></a> and <a href="https://arxiv.org/pdf/2410.03456" style="color: red;"><b>Visual Generation</b></a>.
+            🔥 Recently, I am interested in directions related to Efficient/Dynamic <a href="https://arxiv.org/abs/2412.03324" style="color: red;"><b>Vision Language Model (VLM)</b></a> and <a href="https://arxiv.org/pdf/2410.03456" style="color: red;"><b>Visual Generation</b></a>.
             <br>
             🧐 I'm also interested in fundamental machine learning problems, such as <a href="https://arxiv.org/pdf/2402.13505.pdf" style="color: blue;"><b>semi-supervised long-tailed learning</b></a> and  <a href="https://arxiv.org/pdf/2309.00399.pdf" style="color: blue;"><b>fine-grained learning</b></a>.
             <h3>📚 Education</h3>
@@ -199,6 +199,7 @@
     <div id="news-section">
         <h2>🔥 News</h2>
         <DIV><UL>
+            <li>01/2025: 🎉 Our work (<A href="https://arxiv.org/pdf/2410.03456">DyDiT</A>) is accepted at <b>ICLR</b> 2025.</li>
             <li>11/2024: 🎉 First Prize of CSIG Natural Science Award (中国图象图形学会自然科学奖一等奖).</li>
             <li>09/2024: 🎉 Five works are accepted at <b>NeurIPS 2024</b>.</li>
             <li>07/2024: 🎉 Four works are accepted at <b>ECCV 2024</b>.</li>
@@ -224,15 +225,30 @@
         </div>
         <div id="recent-works" class="subsection-content active">
             <!-- Insert recent works here -->
-            
+            <div class="paper-item">
+                <img src="figures/DyDiT.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        Dynamic Diffusion Transformer
+                        <span class="links">
+                            <a href="https://arxiv.org/pdf/2410.03456" target="_blank">[PDF]</a>
+                            <a href="https://github.com/nus-hpc-ai-lab/dynamic-diffusion-transformer" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p>Wangbo Zhao, <b>Yizeng Han</b>, Jiasheng Tang, Kai Wang, Yibing Song, Gao Huang, Fan Wang, Yang You</p>
+                    <p><I>The International Conference on Learning Representations (<b>ICLR</b>), 2025.</I></p>
+                    <p>We propose to dynamically adjust the computation of DiT in different timesteps and spatial locations of images. The computation of DiT-XL could be saved by 50% without sacrificing generation quality.</p>
+                </div>
+            </div>
+
             <div class="paper-item">
                 <img src="figures/SGL.png" alt="Paper Image">
                 <div class="paper-details">
                     <h3>
                         A Stitch in Time Saves Nine: Small VLM is a Precise Guidance for accelerating Large VLMs
                         <span class="links">
-                            <a href="https://arxiv.org/pdf/2412.03324" target="_blank">[PDF]</a>
-                            <!-- <a href="https://github.com/NUS-HPC-AI-Lab/Dynamic-Tuning" target="_blank">[Code]</a> -->
+                            <a href="https://arxiv.org/pdf/2410.03456" target="_blank">[PDF]</a>
+                            <a href="https://github.com/NUS-HPC-AI-Lab/SGL" target="_blank">[Code]</a>
                         </span>
                     </h3>
                     <p>Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Zhikai Li, Yibing Song, Kai Wang, Zhangyang Wang, Yang You</p>
@@ -241,21 +257,7 @@
                 </div>
             </div>
 
-            <div class="paper-item">
-                <img src="figures/DyDiT.png" alt="Paper Image">
-                <div class="paper-details">
-                    <h3>
-                        Dynamic Diffusion Transformer
-                        <span class="links">
-                            <a href="https://arxiv.org/pdf/2410.03456" target="_blank">[PDF]</a>
-                            <!-- <a href="https://github.com/NUS-HPC-AI-Lab/Dynamic-Tuning" target="_blank">[Code]</a> -->
-                        </span>
-                    </h3>
-                    <p>Wangbo Zhao, <b>Yizeng Han</b>, Jiasheng Tang, Kai Wang, Yibing Song, Gao Huang, Fan Wang, Yang You</p>
-                    <p><I>Arxiv Preprint, 2024.</I></p>
-                    <p>We propose to dynamically adjust the computation of DiT in different timesteps and spatial locations of images. The computation of DiT-XL could be saved by 50% without sacrificing generation quality.</p>
-                </div>
-            </div>
+            
 
             <div class="paper-item">
                 <img src="figures/DyT.png" alt="Paper Image">
@@ -563,6 +565,22 @@
                     <p><I>IEEE Transactions on Pattern Analysis and Machine Intelligence (<b><font color="red">TPAMI</font></b>, IF=24.314), 2024</I></p>
                     <p>We propose Latency-aware Unified Dynamic Networks (LAUDNet), a comprehensive framework that amalgamates three cornerstone dynamic
                         paradigms—spatially-adaptive computation, dynamic layer skipping, and dynamic channel skipping—under a unified formulation.</p>
+                </div>
+            </div>
+            
+            <div class="paper-item">
+                <img src="figures/DyDiT.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        Dynamic Diffusion Transformer
+                        <span class="links">
+                            <a href="https://arxiv.org/pdf/2410.03456" target="_blank">[PDF]</a>
+                            <a href="https://github.com/nus-hpc-ai-lab/dynamic-diffusion-transformer" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p>Wangbo Zhao, <b>Yizeng Han</b>, Jiasheng Tang, Kai Wang, Yibing Song, Gao Huang, Fan Wang, Yang You</p>
+                    <p><I>The International Conference on Learning Representations (<b>ICLR</b>), 2025.</I></p>
+                    <p>We propose to dynamically adjust the computation of DiT in different timesteps and spatial locations of images. The computation of DiT-XL could be saved by 50% without sacrificing generation quality.</p>
                 </div>
             </div>
 
