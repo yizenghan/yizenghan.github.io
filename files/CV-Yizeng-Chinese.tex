@@ -1,0 +1,477 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: If you find that it says                                     %%
+%%                                                                    %%
+%%                           1 of ??                                  %%
+%%                                                                    %%
+%% at the bottom of your first page, this means that the AUX file     %%
+%% was not available when you ran LaTeX on this source. Simply RERUN  %%
+%% LaTeX to get the ``??'' replaced with the number of the last page  %%
+%% of the document. The AUX file will be generated on the first run   %%
+%% of LaTeX and used on the second run to fill in all of the          %%
+%% references.                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[10.5pt, UTF8]{ctexart}
+
+% The automated optical recognition software used to digitize resume
+% information works best with fonts that do not have serifs. This
+% command uses a sans serif font throughout. Uncomment both lines (or at
+% least the second) to restore a Roman font (i.e., a font with serifs).
+%\usepackage{times}
+%\renewcommand{\familydefault}{\sfdefault}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+\usepackage{comment}
+
+\usepackage{ textcomp }
+\usepackage{ amssymb }
+
+% Simpler bibsection for CV sections
+% (thanks to natbib for inspiration)
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em} %1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}%[1][\enskip\textbullet]
+        {\begin{enumerate}{%
+%        {\begin{list}{}{%
+%       \setlength{\leftmargin}{\bibhang}%
+       \setlength{\leftmargin}{-2em}%
+%       \setlength{\itemindent}{-\leftmargin}%
+       \setlength{\itemindent}{-2em}%
+       \setlength{\itemsep}{\bibsep}%
+        %\setlength{\parsep}{\z@}%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{enumerate}\vspace{-.6\baselineskip}}
+%        {\end{list}\vspace{-.6\baselineskip}}
+\makeatother
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.1in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=0.75in,               % 1 inch margins
+            includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+%\usepackage[paper=a4paper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=30.5mm,    % Length of section titles
+%            marginparsep=1.5mm,       % Space between titles and text
+%            margin=25mm,              % 25mm margins
+%            includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+\usepackage[shortlabels]{enumitem}
+
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{5in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+% (optional argument typesets an object right-justified across from name
+%  as well)
+%
+% Usage: \makeheading{name}
+%        OR
+%        \makeheading[right_object]{name}
+%
+% Place at top of document. It should be the first thing.
+% If ``right_object'' is provided in the square-braced optional
+% argument, it will be right justified on the same line as ``name'' at
+% the top of the CV. For example:
+%
+%       \makeheading[\emph{Curriculum vitae}]{Your Name}
+%
+% will put an emphasized ``Curriculum vitae'' at the top of the document
+% as a title. Likewise, a picture could be included:
+%
+%   \makeheading[\includegraphics[height=1.5in]{my_picutre}]{Your Name}
+%
+% the picture will be flush right across from the name.
+\newcommand{\makeheading}[2][]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+             {\large \bfseries #2 \hfill #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+\renewcommand{\section}[1]{\pagebreak[3]%
+    \hyphenpenalty=10000%
+    \vspace{1.3\baselineskip}%
+    \phantomsection\addcontentsline{toc}{section}{#1}%
+    \noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\raggedright #1}}}%
+    \vspace{-\baselineskip}\par}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*]}{\end{itemize}%
+         \vspace{-.6\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=1em,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+        {\end{itemize}}
+
+% An environment IDENTICAL to innerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{loneinnerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+        {\end{itemize}\vspace{-.6\baselineskip}}
+
+\newenvironment{bibsection1}[1][\enskip\textbullet]%
+        {\begin{enumerate}[#1,leftmargin=1em,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+        {\end{enumerate}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+
+% Uses hyperref to link DOI
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+% For \url{SOME_URL}, links SOME_URL to the url SOME_URL
+\providecommand*\url[1]{\href{#1}{#1}}
+% Same as above, but pretty-prints SOME_URL in teletype fixed-width font
+\renewcommand*\url[1]{\href{#1}{\texttt{#1}}}
+
+% For \email{ADDRESS}, links ADDRESS to the url mailto:ADDRESS
+\providecommand*\email[1]{\href{mailto:#1}{#1}}
+% Same as above, but pretty-prints ADDRESS in teletype fixed-width font
+%\renewcommand*\email[1]{\href{mailto:#1}{\texttt{#1}}}
+
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    \TeX}}
+\providecommand\BibTeX{{B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    \TeX}}
+\providecommand\Matlab{\textsc{Matlab}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{sloppypar}
+\vspace{.1in}
+\makeheading{韩益增}\\
+
+% \vskip -0.2in
+\section{联系方式}
+
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table.
+%
+% ALSO: \rcollength is the width of the right column of the table
+%       (adjust it to your liking; default is 1.85in).
+%
+\newlength{\rcollength}\setlength{\rcollength}{2.7 in}%
+
+% \begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+% %\href{http://www.cse.osu.edu/}%
+% %     {Department of Computer Science and Engineering} & \\
+% %\href{http://www.osu.edu/}{The Ohio State University}
+% 350 Gates Hall   &\emph{Phone:} 607-280-9549 \\
+% Cornell University     &\emph{Email:} \email{gh349@cornell.edu}\\
+% %{\emph{Web:} \url{http://www.cs.cornell.edu/ \texttildelow gaohuang}}\\
+% Ithaca, NY, 14850, USA& {\emph{Web:} \href{http://www.cs.cornell.edu/~gaohuang}{www.cs.cornell.edu/$\sim$gaohuang}}
+% \end{tabular}
+
+
+\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+        %\href{http://www.cse.osu.edu/}%
+        %     {Department of Computer Science and Engineering} & \\
+        %\href{http://www.osu.edu/}{The Ohio State University}
+        阿里巴巴达摩院 &\emph{邮箱:} \email{hanyizeng.hyz@alibaba-inc.com} \\
+        % 中国北京, 100084 & \emph{电话}: (+86)18800127138 \\
+        %{\emph{Web:} \url{http://www.cs.cornell.edu/ \texttildelow gaohuang}}\\
+        北京 & {\emph{个人主页:} \href{http://www.yizenghan.top}{www.yizenghan.top}}
+\end{tabular}
+
+
+%Insert text here if you want to
+%\begin{innerlist}
+%\item More information and auxiliary documents can be found at\\\url{http://www.tedpavlic.com/facjobsearch/}
+%\end{innerlist}
+% \vskip -0.1in
+\section{研究领域}
+深度学习和计算机视觉，尤其是资源受限场景下的高效学习和动态神经网络。
+
+% \section{Current Appointment}
+% \textbf{Assistant Professor}, \textbf{Tsinghua University} \hfill {\textbf{2018 - Present}}\\
+% Department of Automation
+% \vskip -0.15in
+\section{教育经历}
+
+%\href{http://www.tsinghua.edu.cn/publish/newthuen/}
+{\textbf{博士}, \textbf{清华大学自动化系}}  \hfill{\textbf{2018 - 2024}}\\
+%\begin{outerlist}
+%\item[] Ph.D.,
+%{Department of Automation}\\
+  %                   {Control Science and Engineering}\\
+%         \emph{Dissertation}: {Chance Constrained Programming for Machine Learning}\\
+         \emph{导师}:
+                   {宋士吉}, {黄高 (DenseNet 一作，CVPR 2017 最佳论文奖)}
+%              \href{http://www.biostat.umn.edu/~sudiptob/}
+                %    {Gao Huang}
+%\end{outerlist}
+
+% \vspace{.05in}
+{\textbf{本科}, \textbf{清华大学自动化系}}  \hfill{\textbf{2014 - 2018}}\\
+%\begin{outerlist}
+%\item[]
+%             {School of Automation Science and Electrical Engineering}\\
+             GPA 排名: $38/141$
+
+% \vskip -0.1in
+\section{实习经历}
+\textbf{旷视科技，基础模型组} \hfill {\textbf{04/2023 - 12/2023}}\\
+\emph{导师}: 张祥雨 (ResNet 二作，ShuffleNet 一作，CVPR 2016 最佳论文奖)
+
+\textbf{佐治亚理工，人机交互学院} \hfill {\textbf{06/2017 - 8/2017}}\\
+\emph{导师}: Gregory D Abowd
+
+%\end{outerlist}
+
+
+% \vskip -0.15in
+
+\section{奖励与荣誉}
+\begin{innerlist}
+        \item[-] 中国图象图形学会自然科学奖一等奖 \hfill{2024}
+        \item[-] 清华大学优秀毕业生 \hfill{2024}
+        \item[-] 清华大学优秀博士学位论文 \hfill{2024}
+        \item[-] 北京市优秀毕业生 \hfill{2024}
+        \item[-] 研究生综合奖学金, 清华大学 \hfill{2023}
+        \item[-] 国家奖学金, 教育部 \hfill{2022}
+        \item[-] 综合优秀奖学金, 清华大学 \hfill{2017}
+        \item[-] 综合优秀奖学金, 清华大学 \hfill{2016}
+        \item[-] 学业优秀奖学金, 清华大学 \hfill{2015}
+\end{innerlist}
+
+
+
+
+% \vskip -0.1in
+\section{已发表论文}
+% \vspace{-.1in}
+
+% \textbf{Conference Publications}
+
+\begin{bibsection}
+        \item \textbf{Yizeng Han}*, {Gao Huang*}, Shiji Song, Le Yang, Honghui Wang, Yulin Wang. Dynamic neural networks: a survey. \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence} (\textbf{TPAMI}), 2021.
+        \item \textbf{Yizeng Han}*, Zeyu Liu*, Zhihang Yuan*, Yifan Pu, Gao Huang, Shiji Song. Latency-aware Unified Dynamic Networks For Efficient Image Recognition. \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence} (\textbf{TPAMI}), 2024.
+        \item \textbf{Yizeng Han}, {Gao Huang}, Shiji Song, Le Yang, Yitian Zhang, Haojun Jiang. Spatially adaptive feature refinement for efficient inference. \emph{IEEE Transactions on Image Processing} (\textbf{TIP}), 2021.
+        \item \textbf{Yizeng Han}*, Dongchen Han*, Zeyu Liu, Yulin Wang, Xuran Pan, Yifan Pu, Chao Deng, Junlan Feng, Shiji Song, Gao Huang. Dynamic Perceiver for Efficient Visual Recognition. \emph{International Conference on Computer Vision} (\textbf{ICCV}), 2023.
+        \item \textbf{Yizeng Han}*, {Zhihang Yuan*}, {Yifan Pu*}, Chenhao Xue, Shiji Song, Guangyu Sun, Gao Huang. Latency-aware Spatial-wise Dynamic Networks. \emph{Conference on Neural Information Processing Systems} (\textbf{NeurIPS}), 2022.
+        \item \textbf{Yizeng Han}*, {Yifan Pu*}, Zihang Lai, Chaofei Wang, Shiji Song, Junfeng Cao, Wenhui Huang, Chao Deng, Gao Huang. Learning to Weight Samples for Dynamic Early-exiting Networks. \emph{European Conference on Computer Vision} (\textbf{ECCV}), 2022.
+        \item Wangbo Zhao, \textbf{Yizeng Han}, Jiasheng Tang, Kai Wang, Yibing Song, Gao Huang, Fan Wang, Yang You. Dynamic Diffusion Transformer. \emph{International Conference on Learning Representations} (\textbf{ICLR}), 2025.
+        \item {Le Yang*}, \textbf{Yizeng Han}*, Xi Chen, Shiji Song, Jifeng Dai, Gao Huang. Resolution adaptive networks for efficient inference. \emph{Conference on Computer Vision and Pattern Recognition} (\textbf{CVPR}), 2020.
+        \item Yifan Pu*, \textbf{Yizeng Han}*,  Yulin Wang, Junlan Feng, Chao Deng, Gao Huang. Fine-grained Recognition with Learnable Semantic Data Augmentation. \emph{IEEE Transactions on Image Processing} (\textbf{TIP}), 2023.
+        \item Chaoqun Du*, \textbf{Yizeng Han}*, Gao Huang. SimPro: A Simple Probabilistic Framework Towards Realistic Long-Tailed Semi-Supervised Learning. \emph{International Conference on Machine Learning} (\textbf{ICML}), 2024.
+        \item Wangbo Zhao, Jiasheng Tang, \textbf{Yizeng Han}, Yibing Song, Kai Wang, Gao Huang, Fan Wang, Yang You. Dynamic Tuning Towards Parameter and Inference Efficiency for ViT Adaptation. \emph{Conference on Neural Information Processing Systems} (\textbf{NeurIPS}), 2024.
+        \item Dongchen Han, Ziyi Wang, Zhuofan Xia, \textbf{Yizeng Han}, Yifan Pu, Chunjiang Ge, Jun Song, Shiji Song, Bo Zheng, Gao Huang. Demystify Mamba in Vision: A Linear Attention Perspective. \emph{Conference on Neural Information Processing Systems} (\textbf{NeurIPS}), 2024.
+        \item Dongchen Han, Yifan Pu, Zhuofan Xia, \textbf{Yizeng Han}, Xuran Pan, Xiu Li, Jiwen Lu, Shiji Song, Gao Huang. Bridging the Divide: Reconsidering Softmax and Linear Attention. \emph{Conference on Neural Information Processing Systems} (\textbf{NeurIPS}), 2024.
+        \item Zanlin Ni, Yulin Wang, Renping Zhou, \textbf{Yizeng Han}, Jiayi Guo, Zhiyuan Liu, Yuan Yao, Gao Huang. ENAT: Rethinking Spatial-temporal Interactions in Token-based Image Synthesis. \emph{Conference on Neural Information Processing Systems} (\textbf{NeurIPS}), 2024.
+        \item Yang Yue, Yulin Wang, Bingyi Kang, \textbf{Yizeng Han}, Shenzhi Wang, Shiji Song, Jiashi Feng, Gao Huang. Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution.  \emph{Conference on Neural Information Processing Systems} (\textbf{NeurIPS}), 2024.
+        \item Le Yang, Ziwei Zheng, \textbf{Yizeng Han}, Shiji Song, Gao Huang, Fan Li. OStr-DARTS: Differentiable Neural Architecture Search based on Operation Strength. \emph{IEEE Transactions on Cybernetics}, 2024.
+        \item Dongchen Han*, Tianzhu Ye*, \textbf{Yizeng Han}, Zhuofan Xia, Shiji Song, Gao Huang. Agent Transformer: On the Integration of Softmax and Linear Attention. \emph{European Conference on Computer Vision} (\textbf{ECCV}), 2024.
+        \item Jiangshan Wang, Yifan Pu, Yiru Wang, \textbf{Yizeng Han}, Jiayi Guo, Xiu Li, Gao Huang, GRA: Detecting Oriented Objects through Group-wise Rotating and Attention. \emph{European Conference on Computer Vision} (\textbf{ECCV}), 2024.
+        \item Le Yang, Ziwei Zheng, \textbf{Yizeng Han}, Hao Cheng, Shiji Song, Gao Huang, Fan Li. DyFADet: Dynamic Feature Aggregation for Temporal Action Detection. \emph{European Conference on Computer Vision} (\textbf{ECCV}), 2024.
+        \item Yifan Pu, Zhuofan Xia, Jiayi Guo, Dongchen Han, Qixiu Li, Duo Li, Yuhui Yuan, Ji Li, \textbf{Yizeng Han}, Shiji Song, Gao Huang, Xiu Li. Efficient Diffusion Transformer with Step-wise Dynamic Attention Mediators. \emph{European Conference on Computer Vision} (\textbf{ECCV}), 2024.
+        \item Zhuofan Xia, Dongchen Han, \textbf{Yizeng Han}, Xuran Pan, Shiji Song, Gao Huang. GSVA: Generalized Segmentation via Multimodal Large Language Models. \emph{Conference on Computer Vision and Pattern Recognition} (\textbf{CVPR}), 2024.
+        \item Yong Xien Chng, Henry Zheng, \textbf{Yizeng Han}, Xuchong Qiu, Gao Huang. Mask Grounding for Referring Image Segmentation. \emph{Conference on Computer Vision and Pattern Recognition} (\textbf{CVPR}), 2024.
+        \item Yulin Wang, Yang Yue, Rui Lu, \textbf{Yizeng Han}, Shiji Song,  Gao Huang. EfficientTrain++: Generalized Curriculum Learning for Efficient Visual Backbone Training. \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence} (\textbf{TPAMI}), 2024.
+        \item Dongchen Han, Xuran Pan, \textbf{Yizeng Han}, Shiji Song, Gao Huang. FLatten Transformer: Vision Transformer using Focused Linear Attention. \emph{International Conference on Computer Vision} (\textbf{ICCV}), 2023.
+        \item Yifan Pu, Yiru Wang, Zhuofan Xia, \textbf{Yizeng Han}, Yulin Wang, Weihao Gan, Zidong Wang, Shiji Song, Gao Huang. Adaptive Rotated Convolution for Rotated Object Detection. \emph{International Conference on Computer Vision} (\textbf{ICCV}), 2023.
+        \item Yulin Wang, Zhaoxi Chen, Haojun Jiang, Shiji Song, \textbf{Yizeng Han}, G Huang. Adaptive Focus for Efficient Video Recognition. \emph{International Conference on Computer Vision} (\textbf{ICCV, Oral}), 2021.
+        \item Chaofei Wang, Jiayu Xiao, \textbf{Yizeng Han}, Qisen Yang, Shiji Song, Gao Huang. Towards learning spatially discriminative feature representations. \emph{International Conference on Computer Vision} (\textbf{ICCV}), 2021.
+        \item Le Yang, Xiaoli Gong, Zhengwei Wu, \textbf{Yizeng Han}, Lijun He, Fan Li. Dark-channel mixed attention based neural networks for smoke detection in fog environment. \emph{ACM International Joint Conference on Pervasive and Ubiquitous Computing} (\textbf{UbiComp}), 2021.
+        \item Cheng Zhang, Qiuyue Xue, Anandghan Waghmare, Ruichen Meng, Sumeet Jain, \textbf{Yizeng Han}, Xinyu Li, Kenneth Cunefare, Thomas Ploetz, Thad Starner, Omer Inan, Gregory D Abowd. FingerPing: Recognizing fine-grained hand poses using active acoustic on-body sensing. \emph{Proceedings of the CHI Conference on Human Factors in Computing Systems}, 2018.
+        % \item 
+\end{bibsection}
+
+\section{投稿与预印}
+\vspace{-.1275in}
+\begin{bibsection}
+        \item Wangbo Zhao*, Yizeng Han*, Jiasheng Tang, Zhikai Li, Yibing Song, Kai Wang, Zhangyang Wang, Yang You. A Stitch in Time Saves Nine: Small VLM is a Precise Guidance for accelerating Large VLMs. \emph{Arxiv}, 2024.
+        % \item Wangbo Zhao, Yizeng Han, Jiasheng Tang, Kai Wang, Yibing Song, Gao Huang, Fan Wang, Yang You. Dynamic Dsiffusion Transformer. \emph{Arxiv}, 2024.
+\end{bibsection}
+
+% \end{bibsection}
+
+\halfblankline
+
+% \textbf{Technical Reports and Preprints}
+% \begin{bibsection}
+% \setcounter{enumi}{29}
+% \item Geoff Pleiss*, Danlu Chen*, Gao Huang, Tongcheng Li, Laurens van der Maaten and Kilian Q. Weinberger. Memory-Efficient Implementation of DenseNets. \emph{Technical Report}, 2017.
+% \end{bibsection}
+
+% \halfblankline \\
+\quad\textbf{* 共同一作}
+
+% \vskip -0.1in
+\section{受邀演讲}
+\begin{innerlist}
+        %\begin{itemize}
+        \item[-] 阿里达摩院 \hfill{10/2022}
+        \item[-] 华为 \hfill{01/2022}
+        \item[-] 机器之心 \hfill{03/2021}
+\end{innerlist}
+
+% \vskip -0.1in
+\section{研究项目}
+\begin{innerlist}
+        \item[-] 面向资源受限场景的动态神经网络网络及其可解释性研究, 清华大学 \hfill{2020 - 2022}
+        \item[-] 达芬奇芯片友好的神经网络架构设计, 清华大学 \hfill{2020 - 2022}
+        \item[-] 面向深度学习的自适应推理方法研究, 清华大学 \hfill{2019 - 2020}
+        % \item[-] Dynamic reconfiguration, human-machine integration and intelligent interaction, dynamic scheduling technology for unmanned processing production line, Tsinghua University, 2019 - Present
+\end{innerlist}
+
+% \vskip -0.1in
+
+
+% \vskip -0.1in
+\section{学术兼职}
+% AAAI 2025\textbf{会议程序委员会成员}\\
+% 智源社区{动态神经网络研究小组}发起人\\
+以下学术会议或期刊的\textbf{审稿人}
+\begin{innerlist}
+        \item[-] IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)
+        \item[-] International Journal of Computer Vision (IJCV)
+        \item[-] IEEE Transactions on Neural Networks and Learning Systems (TNNLS)
+        \item[-] IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)
+        \item[-] International Conference on Machine Learning (ICML)
+        \item[-] Conference on Neural Information Processing Systems (NeurIPS)
+        \item[-] International Conference on Learning Representations (ICLR)
+        \item[-] Conference on Computer Vision and Pattern Recognition (CVPR)
+        \item[-] International Conference on Computer Vision (ICCV)
+        \item[-] European Conference on Computer Vision (ECCV)
+        \item[-] The Association for the Advancement of Artificial Intelligence (AAAI)
+        \item[-] Pattern Recognition (PR)
+        \item[-] International Conference on Image and Graphics (ICIG)
+\end{innerlist}
+
+% \section{Skills}
+% Computer Programming:
+% %
+% \begin{innerlist}
+%         \item[-] Python, C, C$+$$+$, Java, \Matlab~and others.
+% \end{innerlist}
+
+\halfblankline
+
+\end{sloppypar}
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% End CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------%
+% The following is copyright and licensing information for
+% redistribution of this LaTeX source code; it also includes a liability
+% statement. If this source code is not being redistributed to others,
+% it may be omitted. It has no effect on the function of the above code.
+%----------------------------------------------------------------------%
+% Copyright (c) 2007, 2008, 2009, 2010, 2011 by Theodore P. Pavlic
+%
+% Unless otherwise expressly stated, this work is licensed under the
+% Creative Commons Attribution-Noncommercial 3.0 United States License. To
+% view a copy of this license, visit
+% http://creativecommons.org/licenses/by-nc/3.0/us/ or send a letter to
+% Creative Commons, 171 Second Street, Suite 300, San Francisco,
+% California, 94105, USA.
+%
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+% OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+% IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+% CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+% TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+% SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+%----------------------------------------------------------------------%
