@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.5.21)  25 JAN 2025 09:29
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.5.21)  5 DEC 2025 17:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/yizenghan/Seafile/Academic/找工作/简历/CV-Yizeng-Chinese
-(/Users/yizenghan/Seafile/Academic/找工作/简历/CV-Yizeng-Chinese.tex
+**/Users/yizenghan/yizenghan.github.io/files/CV-Yizeng-Chinese
+(/Users/yizenghan/yizenghan.github.io/files/CV-Yizeng-Chinese.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06> (/usr/local/texlive/2020/texmf-dist/tex/latex/ctex/ctexart.cls (/usr/local/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2020-03-06 L3 programming layer (loader) 
@@ -45,8 +45,8 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 File: ctexopts.cfg 2019/05/29 v2.4.16 Option configuration file (CTEX)
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-(/usr/local/texlive/2020/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count173
 \c@section=\count174
@@ -186,9 +186,7 @@ File: zhnumber-utf8.cfg 2019/04/07 v2.7 Chinese numerals with UTF8 encoding
 File: ctex-scheme-chinese-article.def 2019/05/29 v2.4.16 Chinese scheme for article (CTEX)
  (/usr/local/texlive/2020/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
 File: ctex-name-utf8.cfg 2019/05/29 v2.4.16 Caption with encoding UTF8 (CTEX)
-)) (/usr/local/texlive/2020/texmf-dist/tex/latex/ctex/ctex-c5size.clo
-File: ctex-c5size.clo 2019/05/29 v2.4.16 c5size option (CTEX)
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-fandol.def
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-fandol.def
 File: ctex-fontset-fandol.def 2019/05/29 v2.4.16 Fandol fonts definition (CTEX)
 
 
@@ -402,12 +400,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 134.
 Package hyperref Info: Option `breaklinks' set `true' on input line 134.
-
-
-LaTeX Warning: Unused global option(s):
-    [10.5pt].
-
-(./CV-Yizeng-Chinese.aux)
+ (./CV-Yizeng-Chinese.aux)
 \openout1 = `CV-Yizeng-Chinese.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 239.
@@ -509,12 +502,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \topmargin=-55.06749pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
 * \marginparwidth=79.49744pt
 * \marginparsep=3.61371pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -570,33 +563,38 @@ Overfull \hbox (18.0pt too wide) in paragraph at lines 266--275
 [1
 
 ] [2]
-Underfull \hbox (badness 3323) in paragraph at lines 369--370
-[]\TU/lmr/m/n/10.53937 Yulin Wang, Yang Yue, Rui Lu, \TU/lmr/bx/n/10.53937 Yizeng Han\TU/lmr/m/n/10.53937 , Shiji Song, Gao Huang.
+Underfull \hbox (badness 1147) in paragraph at lines 369--370
+[]\TU/lmr/m/n/10.95 Zhuofan Xia, Dongchen Han, \TU/lmr/bx/n/10.95 Yizeng Han\TU/lmr/m/n/10.95 , Xuran Pan, Shiji Song, Gao
  []
 
-[3] [4] 
+[3]
+Underfull \hbox (badness 1424) in paragraph at lines 371--372
+[]\TU/lmr/m/n/10.95 Yulin Wang, Yang Yue, Rui Lu, \TU/lmr/bx/n/10.95 Yizeng Han\TU/lmr/m/n/10.95 , Shiji Song, Gao Huang.
+ []
+
+[4] 
 AED: lastpage setting LastPage
 [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 451.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 451.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 454.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 454.
  (./CV-Yizeng-Chinese.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 451.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 451.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 454.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 454.
 Package rerunfilecheck Info: File `CV-Yizeng-Chinese.out' has not changed.
 (rerunfilecheck)             Checksum: 158BA564E5DCB13823FEAD3483C03D4C;786.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 451.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 454.
  ) 
 Here is how much of TeX's memory you used:
- 15982 strings out of 479418
- 339307 string characters out of 5884585
- 626969 words of memory out of 5000000
- 33282 multiletter control sequences out of 15000+600000
- 535803 words of font info for 58 fonts, out of 8000000 for 9000
+ 15984 strings out of 479418
+ 338976 string characters out of 5884585
+ 626524 words of memory out of 5000000
+ 33284 multiletter control sequences out of 15000+600000
+ 537596 words of font info for 62 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 58i,13n,81p,856b,547s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,13n,81p,858b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on CV-Yizeng-Chinese.pdf (5 pages).
