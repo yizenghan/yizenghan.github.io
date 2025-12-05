@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.5.21)  5 DEC 2025 17:54
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.5.21)  5 DEC 2025 17:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -562,31 +562,31 @@ Overfull \hbox (18.0pt too wide) in paragraph at lines 266--275
 
 [1
 
-] [2]
-Underfull \hbox (badness 1147) in paragraph at lines 369--370
+] [2] [3]
+Underfull \hbox (badness 1147) in paragraph at lines 370--371
 []\TU/lmr/m/n/10.95 Zhuofan Xia, Dongchen Han, \TU/lmr/bx/n/10.95 Yizeng Han\TU/lmr/m/n/10.95 , Xuran Pan, Shiji Song, Gao
  []
 
-[3]
-Underfull \hbox (badness 1424) in paragraph at lines 371--372
+
+Underfull \hbox (badness 1424) in paragraph at lines 372--373
 []\TU/lmr/m/n/10.95 Yulin Wang, Yang Yue, Rui Lu, \TU/lmr/bx/n/10.95 Yizeng Han\TU/lmr/m/n/10.95 , Shiji Song, Gao Huang.
  []
 
 [4] 
 AED: lastpage setting LastPage
 [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 454.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 454.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 455.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 455.
  (./CV-Yizeng-Chinese.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 454.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 454.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 455.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 455.
 Package rerunfilecheck Info: File `CV-Yizeng-Chinese.out' has not changed.
 (rerunfilecheck)             Checksum: 158BA564E5DCB13823FEAD3483C03D4C;786.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 454.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 455.
  ) 
 Here is how much of TeX's memory you used:
  15984 strings out of 479418
@@ -595,6 +595,6 @@ Here is how much of TeX's memory you used:
  33284 multiletter control sequences out of 15000+600000
  537596 words of font info for 62 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 58i,13n,81p,858b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,13n,81p,858b,547s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on CV-Yizeng-Chinese.pdf (5 pages).
