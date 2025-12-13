@@ -1,0 +1,613 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" "">
+<HTML lang="en-us">
+<HEAD>
+    <META content="IE=11.0000" http-equiv="X-UA-Compatible">
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Yizeng Han's Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .menu-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #003366; /* or any color you prefer */
+            color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-end; /* Align menu items to the right */
+            align-items: center;
+            z-index: 1000; /* Ensure the menu bar is above other content */
+        }
+        .menu-bar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: 600;
+        }
+        .bio-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .bio-content {
+            width: calc(100% - 360px);
+        }
+        .profile-info {
+            width: 300px;
+            text-align: center;
+        }
+        .profile-info img {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            border-radius: 16px;
+        }
+        .links a {
+            display: inline-block;
+            color: #636e72;
+            font-size: 30px;
+            margin: 1px 0px;
+        }
+        .papers-section {
+            margin-top: 40px;
+        }
+        h2 {
+            position: relative; /* Required for absolute positioning of the pseudo-element */
+            padding-bottom: 10px; /* Adds some space between the title text and the line */
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+
+        h2::after {
+            content: ""; /* Required for pseudo-elements */
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0; /* Aligns the line at the bottom of the element */
+            height: 1px; /* Height of the line */
+            background-color: #999999; /* Cool color for the line, matching your chosen h2 color */
+        }
+        .bio-section h3{
+            color: #0056b3;
+        }
+        /* .papers-section h2, .bio-content h2 {
+            color: #0056b3;
+            margin-bottom: 20px;
+        } */
+        .subsection-selector {
+            cursor: pointer;
+            background-color: #0056b3;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 8px;
+            margin-right: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .subsection-selector:hover, .subsection-selector.active {
+            background-color: #004080;
+        }
+        .subsection-content {
+            display: none;
+        }
+        .subsection-content.active {
+            display: block;
+        }
+        .paper-item {
+            background-color: #e2e2e2;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .paper-item img {
+            width: 240px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .paper-details {
+            flex-grow: 1;
+        }
+        .paper-details h3 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .paper-details h3 a {
+            margin-left: 5px;
+            font-size: 1.0rem;
+            color: #0984e3;
+            font-weight: bold;
+        }
+        .paper-details p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu-bar">
+    <a href="#bio-section">Bio</a>
+    <a href="#news-section">News</a>
+    <a href="#papers-section">Selected Papers</a>
+    <a href="#awards-section">Awards</a>
+    <a href="#contact-section">Contact</a>
+</div>
+
+<div class="container">
+    <div class="bio-section" id="bio-section">
+        <div class="bio-content">
+            <h1><font color="0056b3">Yizeng Han (韩益增)</font></h1>
+            <h2>🧑‍🎓 Bio</h2>
+            <p>I'm a research scientist at Alibaba DAMO Academy, Beijing, China. I received by Ph.D degree in the Department of Automation, Tsinghua University, advised by Prof. <a href="http://www.gaohuang.net/">Gao Huang</a> and Prof. <a href="http://www.au.tsinghua.edu.cn/info/1075/1590.htm">Shiji Song</a>. Download my C.V. here: <a href="files/CV-Yizeng.pdf"> English</a> / <a href="files/CV-Yizeng-Chinese.pdf"> 简体中文</a>.
+            <br>
+            <br>
+            🌟 My research focuses on deep learning, computer vision and medical AI, in particular <a href="https://arxiv.org/pdf/2102.04906.pdf" style="color: red;"><b>dynamic neural networks</b></a> and efficient learning/inference of deep models in resource-constrained scenarios.
+            <br>
+            <br>
+            🔥 Recently, I am interested in directions related to Efficient/Dynamic <a href="https://arxiv.org/pdf/2412.03324" style="color: red;"><b>Vision Language Model (VLM)</b></a>, <a href="https://arxiv.org/pdf/2504.06803" style="color: red;"><b>Visual Generation</b></a>, and scalable medical AI systems.
+            <br>
+            <br>
+            🧐 I'm also interested in fundamental machine learning problems, such as <a href="https://arxiv.org/pdf/2402.13505.pdf" style="color: blue;"><b>semi-supervised long-tailed learning</b></a> and  <a href="https://arxiv.org/pdf/2309.00399.pdf" style="color: blue;"><b>fine-grained learning</b></a>.
+            <h3>📚 Education</h3>
+            <!-- <p>List your educational history and achievements.</p> -->
+            <DIV><UL>
+                <Li>Ph.D, Tsinghua University, 2018 - 2024.</Li>
+                <Li>B.E., Tsinghua University, 2014 - 2018.</Li>
+            </UL></DIV>
+
+            <h3>💡 Research Experience</h3>
+            <DIV><UL>
+                <li>Research Intern, Megvii Technology (Foundation Model Group, advisor: <a href="https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en">Xiangyu Zhang</a>), 04/2023 - 12/2023</li>
+                <li>Research Intern, Georgia Institute of Technology (advisor: <a href="https://coe.northeastern.edu/people/abowd-gregory/">Gregory D. Abowd</a>), 06/2017 - 08/2017</li>
+            </UL></DIV>
+            
+
+        </div>
+        <div class="profile-info">
+            <img src="figures/hanyz.JPG" alt="Your Photo">
+            <div class="links">
+                <a href="mailto:hanyizeng.hyz@alibaba-inc.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://scholar.google.com/citations?user=25mubAsAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://github.com/yizenghan" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/%E7%9B%8A%E5%A2%9E-%E9%9F%A9-b300492b0/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="news-section">
+        <h2>🔥 News</h2>
+        <DIV><UL>
+            <li>09/2025: 🎉 Our work (<A href="https://arxiv.org/abs/2509.15333">AdaptiveNN</A>) is accepted by <b><font color="red">Nature Machine Intelligence</font></b>!</li>
+            <li>09/2025: 🎉 Our work (<A href="https://arxiv.org/abs/2506.04648">FPSAttention</A>) is accepted at <b>NeurIPS 2025 (Highlight)</b>!</li>
+            <li>02/2025: 🎉 Our work (<A href="https://arxiv.org/pdf/2412.03324">SGL</A>) is accepted at <b>CVPR</b> 2025.</li>
+            <li>01/2025: 🎉 Our work (<A href="https://arxiv.org/pdf/2410.03456">DyDiT</A>) is accepted at <b>ICLR</b> 2025.</li>
+            <li>11/2024: 🎉 First Prize of CSIG Natural Science Award (中国图象图形学会自然科学奖一等奖).</li>
+            <li>09/2024: 🎉 Five works are accepted at <b>NeurIPS 2024</b>.</li>
+            <li>07/2024: 🎉 Four works are accepted at <b>ECCV 2024</b>.</li>
+            <li>06/2024: 🎉 Awarded by <b>Outstanding Graduate of Tsinghua University (清华大学优秀毕业生), Outstanding Doctoral Dissertation of Tsinghua University (清华大学优秀博士学位论文), Outstanding Graduate of Beijing (北京市优秀毕业生)</b>.</li>
+            <li>05/2024: 🎉 Our work (<A href="https://arxiv.org/pdf/2405.08768">EfficientTrain++</A>) is accepted at <b><font color="red">TPAMI</font></b>!</li>
+            <li>05/2024: 🎉 Our work (<A href="https://arxiv.org/pdf/2402.13505.pdf">SimPro</A>) is accepted at <b>ICML</b> 2024.</li>
+            <li>04/2024: 🎉 Our work (<A href="https://www.arxiv.org/pdf/2308.15949.pdf">LAUDNet</A>) is accepted at <b><font color="red">TPAMI</font></b>!</li>
+            <li>02/2024: 🎉 Two works (<A href="https://arxiv.org/pdf/2312.10103.pdf">GSVA</A> and <A href="https://arxiv.org/pdf/2312.12198.pdf">Mask Grounding</A>) are accepted at <b>CVPR</b> 2024.</li>
+            <li>12/2023: 🎉 Our work (<A href="https://arxiv.org/pdf/2309.00399.pdf">Learnable Semantic Data Augmentation</A>) is accepted at <b>TIP</b>.</li>
+            <li>10/2023: 🎉 Awarded by <b>Comprehensive Excellence Scholarship (综合奖学金)</b>, Tsinghua University, 2023.</li>
+            <li>07/2023: 🎉 Three works are accepted by <b>ICCV</b> 2023.</li>
+            <li>10/2022: 🎉 Awarded by <b>National Scholarship (国家奖学金)</b>, Ministry of Education of China.</li>
+            <!-- <li>09/2022: Our work (Latency-aware spatial-wise dynamic networks) is accepted by <b>NeurIPS</b> 2022. </li>
+            <li>07/2022: Our work (learning to weight samples of dynamic early-exiting networks) is accepted by <b>ECCV</b> 2022. </li> -->
+        </UL></DIV>
+    </div>
+
+    <div class="papers-section" id="papers-section">
+        <h2>📄 Selected Papers (<a href="https://scholar.google.com/citations?user=25mubAsAAAAJ&hl=en">Full publication list on Google Scholar</a>)</h2>
+        <div>
+            <span class="subsection-selector active" data-target="recent-works" onclick="showSection('recent-works')">Recent Works</span>
+            <span class="subsection-selector" data-target="representative-publications" onclick="showSection('representative-publications')">Representative Publications</span>
+        </div>
+
+        <div id="recent-works" class="subsection-content active">
+            <!-- Insert recent works here -->
+            <div class="paper-item">
+                <img src="figures/DyDiT++.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        DyDiT++: Dynamic Diffusion Transformers for Efficient Visual Generation
+                        <span class="links">
+                            <a href="https://arxiv.org/pdf/2504.06803" target="_blank">[PDF]</a>
+                            <a href="https://github.com/alibaba-damo-academy/DyDiT" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p>Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Kai Wang, Hao Luo, Yibing Song, Gao Huang, Fan Wang, Yang You</p>
+                    <p><I>Arxiv Preprint, 2025.</I></p>
+                    <p>We extend DyDiT to T2I (DyFLUX) and video generation. Moreover, LoRA finetuning is supported.</p>
+                </div>
+            </div>
+            
+            <div class="paper-item">
+                <img src="figures/rapid3.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        RAPID^3: Tri-Level Reinforced Acceleration Policies for Diffusion Transformer
+                        <span class="links">
+                            <a href="https://arxiv.org/abs/2509.22323" target="_blank">[PDF]</a>
+                        </span>
+                    </h3>
+                    <p>Wangbo Zhao, <b>Yizeng Han</b>, Zhiwei Tang, Jiasheng Tang, Pengfei Zhou, Kai Wang, Bohan Zhuang, Zhangyang Wang, Fan Wang, Yang You</p>
+                    <p><I>Arxiv Preprint, 2025.</I></p>
+                </div>
+            </div>
+
+            <div class="paper-item">
+                <img src="figures/inferix.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        Inferix: A Block-Diffusion based Next-Generation Inference Engine for World Simulation
+                        <span class="links">
+                            <a href="https://arxiv.org/abs/2511.20714" target="_blank">[PDF]</a>
+                            <a href="https://github.com/alibaba-damo-academy/Inferix" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p>Inferix Team: Tianyu Feng, <b>Yizeng Han</b>, Jiahao He, Yuanyu He, Xi Lin, Teng Liu, Hanfeng Lu, Jiasheng Tang, Wei Wang, Zhiyuan Wang, Jichao Wu, Mingyang Yang, Yinghao Yu, Zeyu Zhang, Bohan Zhuang</p>
+                    <p><I>Arxiv Preprint, 2025.</I></p>
+                </div>
+            </div>
+
+            <div class="paper-item">
+                <img src="figures/blockvid.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        BlockVid: Block Diffusion for High-Quality and Consistent Minute-Long Video Generation
+                        <span class="links">
+                            <a href="https://www.arxiv.org/abs/2511.22973" target="_blank">[PDF]</a>
+                            <a href="https://github.com/alibaba-damo-academy/Inferix" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p>Zeyu Zhang, Shuning Chang, Yuanyu He, <b>Yizeng Han</b>, Jiasheng Tang, Fan Wang, Bohan Zhuang</p>
+                    <p><I>Arxiv Preprint, 2025.</I></p>
+                </div>
+            </div>
+
+
+
+            <div class="paper-item">
+                <img src="figures/AdaptiveNN.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        Emulating Human-like Adaptive Vision for Efficient and Flexible Machine Visual Perception
+                        <span class="links">
+                            <a href="https://arxiv.org/abs/2509.15333" target="_blank">[PDF]</a>
+                            <a href="https://github.com/LeapLabTHU/AdaptiveNN" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p>Yulin Wang, Yang Yue, Yang Yue, Huanqian Wang, Haojun Jiang, <b>Yizeng Han</b>, Zanlin Ni, Yifan Pu, Minglei Shi, Rui Lu, Qisen Yang, Andrew Zhao, Zhuofan Xia, Shiji Song, Gao Huang</p>
+                    <p><I>Nature Machine Intelligence, 2025.</I></p>
+                    <!-- <p>We extend DyDiT to T2I (DyFLUX) and video generation. Moreover, LoRA finetuning is supported.</p> -->
+                </div>
+            </div>
+
+            <div class="paper-item">
+                <img src="figures/FPSAttention.jpg" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        FPSAttention: Training-Aware FP8 and Sparsity Co-Design for Fast Video Diffusion
+                        <span class="links">
+                            <a href="https://arxiv.org/abs/2506.04648" target="_blank">[PDF]</a>
+                            <a href="https://fps.ziplab.co/" target="_blank">[Project]</a>
+                        </span>
+                    </h3>
+                    <p>Akide Liu, Zeyu Zhang, Zhexin Li, Xuehai Bai, <b>Yizeng Han</b>, Jiasheng Tang, Yuanjie Xing, Jichao Wu, Mingyang Yang, Weihua Chen, Jiahao He, Yuanyu He, Fan Wang, Gholamreza Haffari, Bohan Zhuang</p>
+                    <p><I>NeurIPS (Highlight), 2025.</I></p>
+                    <!-- <p>We extend DyDiT to T2I (DyFLUX) and video generation. Moreover, LoRA finetuning is supported.</p> -->
+                </div>
+            </div>
+            <div class="paper-item">
+                <img src="figures/SGL.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        A Stitch in Time Saves Nine: Small VLM is a Precise Guidance for accelerating Large VLMs
+                        <span class="links">
+                            <a href="https://arxiv.org/pdf/2412.03324" target="_blank">[PDF]</a>
+                            <a href="https://github.com/NUS-HPC-AI-Lab/SGL" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p>Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Zhikai Li, Yibing Song, Kai Wang, Zhangyang Wang, Yang You</p>
+                    <p><I>The Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2025.</I></p>
+                    <p>We propose to use a small VLM to guide the visual token pruning in a large VLM. Meanwhile, the small VLM can also perform dynamic early exiting to further improve the inference efficiency.</p>
+                </div>
+            </div>
+            
+            
+
+            
+
+            <div class="paper-item">
+                <img src="figures/DyT.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        Dynamic Tuning Towards Parameter and Inference Efficiency for ViT Adaptation
+                        <span class="links">
+                            <a href="https://arxiv.org/pdf/2403.11808" target="_blank">[PDF]</a>
+                            <a href="https://github.com/NUS-HPC-AI-Lab/Dynamic-Tuning" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p>Wangbo Zhao, Jiasheng Tang, <b>Yizeng Han</b>, Yibing Song, Kai Wang, Gao Huang, Fan Wang, Yang You</p>
+                    <p><I>Conference on Neural Information Processing Systems (<b>NeurIPS</b>), 2024.</I></p>
+                    <p>We propose to adapt static ViT to dynamic ViT via parameter-efficient fine-tuning without full-parameter tuning.</p>
+                </div>
+            </div>
+
+            
+
+            </div> -->
+            
+
+            <div class="paper-item">
+                <img src="figures/Deer.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution
+                        <span class="links">
+                            <a href="https://arxiv.org/pdf/2411.02359" target="_blank">[PDF]</a>
+                            <a href="https://github.com/yueyang130/DeeR-VLA" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p>Yang Yue, Yulin Wang, Bingyi Kang, <b>Yizeng Han</b>, Shenzhi Wang, Shiji Song, Jiashi Feng, Gao Huang</p>
+                    <p><I>Conference on Neural Information Processing Systems (<b>NeurIPS</b>), 2024.</I></p>
+                    <p>We propose dynamic early exiting in Robot MLLMs.</p>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div id="representative-publications" class="subsection-content">
+            <!-- Insert representative publications here -->
+            <div class="paper-item">
+                <img src="figures/survey.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        Dynamic Neural Networks: A Survey
+                        <span class="links">
+                            <a href="https://arxiv.org/pdf/2102.04906.pdf" target="_blank">[PDF]</a>
+                            <a href="https://mp.weixin.qq.com/s/TG_HBAR7Jrec4X02sxNGEA" target="_blank">[智源社区]</a>
+                            <a href="https://jmq.h5.xeknow.com/s/2H6ZSj" target="_blank">[机器之心-在线讲座]</a>
+                            <a href="https://www.bilibili.com/video/BV19B4y1A7Wy?from=search&seid=12254026542403915477" target="_blank">[Bilibili]</a>
+                            <a href="files/动态神经网络研究概述.pdf" target="_blank">[Slides]</a>
+                        </span>
+                    </h3>
+                    <p><b>Yizeng Han</b>*, Gao Huang*, Shiji Song, Le Yang, Honghui Wang, Yulin Wang</p>
+                    <p><I>IEEE Transactions on Pattern Analysis and Machine Intelligence (<b><font color="red">TPAMI</font></b>, IF=24.314), 2021</I></p>
+                    <p>In this survey, we comprehensively review the rapidly developing area, dynamic neural networks. The important research problems, e.g., architecture design, decision making scheme, and optimization technique, are reviewed systematically. We also discuss the open problems in this field together with interesting future research directions.</p>
+                </div>
+            </div>            
+            
+            <div class="paper-item">
+                <img src="figures/LAUDNet.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        Latency-aware Unified Dynamic Networks for Efficient Image Recognition
+                        <span class="links">
+                            <a href="https://www.arxiv.org/pdf/2308.15949.pdf" target="_blank">[PDF]</a>
+                            <a href="https://www.github.com/leaplabthu/laudnet" target="_blank">[Code]</a>
+                            <a href="https://mp.weixin.qq.com/s/OtK8f1zZ1wMyfSHXSxS15g" target="_blank">[将门创投]</a>
+                        </span>
+                    </h3>
+                    <p><b>Yizeng Han</b>*,  Zeyu Liu*, Zhihang Yuan*, Yifan Pu, Chaofei Wang, Shiji Song, Gao Huang</p>
+                    <p><I>IEEE Transactions on Pattern Analysis and Machine Intelligence (<b><font color="red">TPAMI</font></b>, IF=24.314), 2024</I></p>
+                    <p>We propose Latency-aware Unified Dynamic Networks (LAUDNet), a comprehensive framework that amalgamates three cornerstone dynamic
+                        paradigms—spatially-adaptive computation, dynamic layer skipping, and dynamic channel skipping—under a unified formulation.</p>
+                </div>
+            </div>
+            
+            <div class="paper-item">
+                <img src="figures/SGL.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        A Stitch in Time Saves Nine: Small VLM is a Precise Guidance for accelerating Large VLMs
+                        <span class="links">
+                            <a href="https://arxiv.org/pdf/2412.03324" target="_blank">[PDF]</a>
+                            <a href="https://github.com/NUS-HPC-AI-Lab/SGL" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p>Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Zhikai Li, Yibing Song, Kai Wang, Zhangyang Wang, Yang You</p>
+                    <p><I>The Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2025.</I></p>
+                    <p>We propose to use a small VLM to guide the visual token pruning in a large VLM. Meanwhile, the small VLM can also perform dynamic early exiting to further improve the inference efficiency.</p>
+                </div>
+            </div>
+
+            <div class="paper-item">
+                <img src="figures/DyDiT.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        Dynamic Diffusion Transformer
+                        <span class="links">
+                            <a href="https://arxiv.org/pdf/2410.03456" target="_blank">[PDF]</a>
+                            <a href="https://github.com/nus-hpc-ai-lab/dynamic-diffusion-transformer" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p>Wangbo Zhao, <b>Yizeng Han</b>, Jiasheng Tang, Kai Wang, Yibing Song, Gao Huang, Fan Wang, Yang You</p>
+                    <p><I>The International Conference on Learning Representations (<b>ICLR</b>), 2025.</I></p>
+                    <p>We propose to dynamically adjust the computation of DiT in different timesteps and spatial locations of images. The computation of DiT-XL could be saved by 50% without sacrificing generation quality.</p>
+                </div>
+            </div>
+
+            <div class="paper-item">
+                <img src="figures/Dyn_Perceiver.jpg" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        Dynamic Perceiver for Efficient Visual Recognition
+                        <span class="links">
+                            <a href="https://arxiv.org/pdf/2306.11248v1.pdf" target="_blank">[PDF]</a>
+                            <a href="https://github.com/LeapLabTHU/Dynamic_Perceiver" target="_blank">[Code]</a>
+                            <a href="https://www.youtube.com/watch?v=ap9IY0oPwWQ" target="_blank">[Youtube]</a>
+                        </span>
+                    </h3>
+                    <p><b>Yizeng Han</b>*, Dongchen Han*, Zeyu Liu, Yulin Wang, Xuran Pan, Yifan Pu, Chao Deng, Junlan Feng, Shiji Song, Gao Huang</p>
+                    <p><I>IEEE/CVF International Conference on Computer Vision (<b>ICCV</b>), 2023</I></p>
+                    <p>We propose Dynamic Perceiver (Dyn-Perceiver), a general framework which can be conveniently implemented on top of any visual backbones. It explicitly decouples feature extraction and early classification. We show that early classifiers can be constructed in the classification branch without harming the performance of the last classifier. Experiments demonstrate that Dyn-Perceiver significantly outperforms existing state-of-the-art methods in terms of the trade-off between accuracy and efficiency.</p>
+                </div>            
+            </div>
+            
+            <div class="paper-item">
+                <img src="figures/L2W-DEN.jpg" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        Learning to Weight Samples for Dynamic Early-exiting Networks
+                        <span class="links">
+                            <a href="https://www.arxiv.org/pdf/2209.08310.pdf" target="_blank">[PDF]</a>
+                            <a href="https://github.com/LeapLabTHU/L2W-DEN" target="_blank">[Code]</a>
+                            <a href="https://www.youtube.com/watch?v=hzQ2p8APwDI&t=21s" target="_blank">[Youtube]</a>
+                        </span>
+                    </h3>
+                    <p><b>Yizeng Han</b>*, Yifan Pu*, Zihang Lai, Chaofei Wang, Shiji Song, Junfen Cao, Wenhui Huang, Chao Deng, Gao Huang</p>
+                    <p><I>European Conference on Computer Vision (<b>ECCV</b>), 2022</I></p>
+                    <p>We propose to bridge the gap between training and testing of dynamic early-exiting networks by sample weighting. By bringing the adaptive behavior during inference into the training phase, we show that the proposed weighting mechanism consistently improves the trade-off between classification accuracy and inference efficiency.</p>
+                </div>            
+            </div>
+
+            <div class="paper-item">
+                <img src="figures/LASNet.jpg" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        Latency-aware Spatial-wise Dynamic Networks
+                        <span class="links">
+                            <a href="https://arxiv.org/pdf/2210.06223.pdf" target="_blank">[PDF]</a>
+                            <a href="https://github.com/LeapLabTHU/LASNet" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p><b>Yizeng Han</b>*, Zhihang Yuan*, Yifan Pu*, Chenhao Xue, Shiji Song, Guangyu Sun, Gao Huang</p>
+                    <p><I>Conference on Neural Information Processing Systems (<b>NeurIPS</b>), 2022</I></p>
+                    <p>We use a latency predictor to guide both algorithm design and scheduling optimization of spatial-wise dynamic networks on various hardware platforms. We show that "coarse-grained" spatially adaptive computation can effectively reduce the memory access cost and shows superior efficiency than pixel-level dynamic operations.</p>
+                </div>            
+            </div>
+
+            <div class="paper-item">
+                <img src="figures/RANet.gif" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        Resolution Adaptive Networks for Efficient Inference
+                        <span class="links">
+                            <a href="https://arxiv.org/pdf/2003.07326.pdf" target="_blank">[PDF]</a>
+                            <a href="https://github.com/yangle15/RANet-pytorch" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p>Le Yang*, <b>Yizeng Han*</b>, Xi Chen*, Shiji Song, Jifeng Dai, Gao Huang</p>
+                    <p><I>IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>), 2020</I></p>
+                    <p>We focus on the spatial redundancy of images, and propose a novel Resolution Adaptive Network (RANet), which is inspired by the intuition that low-resolution representations are sufficient for classifying “easy” inputs, while only some “hard” samples need spatially detailed information. Empirically, we demonstrate the effectiveness of the proposed RANet in both the anytime prediction setting and the budgeted batch classification setting.</p>
+                </div>            
+            </div>
+
+            <div class="paper-item">
+                <img src="figures/SAR_fig1.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        Spatially Adaptive Feature Refinement for Efficient Inference
+                        <span class="links">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/9609974" target="_blank">[PDF]</a>
+                        </span>
+                    </h3>
+                    <p><b>Yizeng Han</b>, Gao Huang, Shiji Song, Le Yang, Yitian Zhang, Haojun Jiang</p>
+                    <p><I>IEEE Transactions on Image Processing (<b>TIP</b>, IF=11.041), 2021</I></p>
+                    <p>We propose to perform efficient inference by adaptively fusing information from two branches: one conducts standard convolution on inputs at a lower resolution, and the other one selectively refines a set of regions at the original resolution. Experiments on classification, object detection and semantic segmentation validate that SAR can consistently improve the network performance and efficiency.</p>
+                </div>
+            </div>
+
+            <div class="paper-item">
+                <img src="figures/simpro.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        SimPro: A Simple Probabilistic Framework Towards Realistic Long-Tailed Semi-Supervised Learning
+                        <span class="links"> 
+                            <a href="https://arxiv.org/pdf/2402.13505.pdf" target="_blank">[PDF]</a>
+                            <a href="https://github.com/LeapLabTHU/SimPro" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p>Chaoqun Du*, <b>Yizeng Han*</b>, Gao Huang</p>
+                    <p><I>International Conference on Machine Learning (<b>ICML</b>), 2024</I></p>
+                    <p>We focus on a realistic yet challenging task: addressing imbalances in labeled data while the class distribution of unlabeled data is unknown and mismatched. The proposed SimPro does not rely on any predefined assumptions about the distribution of unlabeled data.</p>
+                </div>
+            </div>
+
+            <div class="paper-item">
+                <img src="figures/meta_isda.png" alt="Paper Image">
+                <div class="paper-details">
+                    <h3>
+                        Fine-grained Recognition with Learnable Semantic Data Augmentation
+                        <span class="links">
+                            <a href="https://arxiv.org/pdf/2309.00399.pdf" target="_blank">[PDF]</a>
+                            <a href="https://github.com/LeapLabTHU/LearnableISDA" target="_blank">[Code]</a>
+                        </span>
+                    </h3>
+                    <p>Yifan Pu*, <b>Yizeng Han*</b>, Yulin Wang, Junlan Feng, Chao Deng, Gao Huang</p>
+                    <p><I>IEEE Transactions on Image Processing (<b>TIP</b>), 2023</I></p>
+                    <p>We propose diversifying the training data at the feature space to alleviate the discriminative region loss problem in fine-grained image recognition. Specifically, we produce diversified augmented samples by translating image features along semantically meaningful directions. The semantic directions are estimated with a sample-wise covariance prediction network.</p>
+                </div>
+            </div>
+            
+        
+        </div>
+
+        
+
+        <H2 id="awards-section">🎖 Awards</H2>    
+            <DIV><UL>
+                <li><b>First Prize of CSIG Natural Science Award (中国图象图形学会自然科学奖一等奖), 第四完成人, 清华大学 & 阿里巴巴达摩院, 2024</li>
+                <li><b>Outstanding Doctoral Dissertation of Tsinghua University (清华大学优秀博士学位论文)</b>, Tsinghua University, 2024</li>
+                <li><b>Outstanding Graduate of Tsinghua University (清华大学优秀毕业生)</b>, Tsinghua University, 2024</li>
+                <li><b>Outstanding Graduate of Beijing (北京市优秀毕业生)</b>, Beijing Municipal Education Commission, 2024</li>
+                <li><b>Comprehensive Excellence Scholarship (综合奖学金)</b>, Tsinghua University, 2023</li>
+                <li><b>National Scholarship (国家奖学金)</b>, Ministry of Education of China, 2022</li>
+                <li><b>Comprehensive Excellence Scholarship (综合奖学金)</b>, Tsinghua University, 2017</li> 
+                <li><b>Comprehensive Excellence Scholarship (综合奖学金)</b>, Tsinghua University, 2016</li> 
+                <li><b>Academic Excellence Scholarship (学业优秀奖学金)</b>, Tsinghua University, 2015</li> 
+        </UL></DIV>
+
+        <H2 id="contact-section">📧 Contact</H2>
+            <DIV><UL>
+                <LI> hanyizeng.hyz at alibaba-inc dot com</LI>
+                <LI> yizeng38 at gmail dot com</LI>
+                <!-- <LI> 616 Centre Main Building, Tsinghua University, Beijing 100084, China</LI> -->
+            </UL></DIV>
+    </div>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        document.querySelectorAll('.subsection-content').forEach(function(content) {
+            content.classList.remove('active');
+        });
+        document.querySelectorAll('.subsection-selector').forEach(function(selector) {
+            selector.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+        document.querySelector('[data-target="' + sectionId + '"]').classList.add('active');
+    }
+</script>
+
+</body>
+</html>
