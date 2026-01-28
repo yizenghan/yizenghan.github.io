@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.21)  9 JAN 2026 15:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.21)  28 JAN 2026 15:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -321,12 +321,12 @@ Overfull \hbox (18.0pt too wide) in paragraph at lines 265--274
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \hbox (badness 1019) in paragraph at lines 374--375
+Underfull \hbox (badness 1019) in paragraph at lines 375--376
 []\OT1/cmr/m/n/10 Zhuofan Xia, Dongchen Han, \OT1/cmr/bx/n/10 Yizeng Han\OT1/cmr/m/n/10 , Xu-ran Pan, Shiji Song, Gao Huang.
  []
 
 
-Underfull \hbox (badness 2443) in paragraph at lines 376--377
+Underfull \hbox (badness 2443) in paragraph at lines 377--378
 \OT1/cmr/m/n/10 Gen-er-al-ized Cur-ricu-lum Learn-ing for Ef-fi-cient Vi-sual Back-bone Train-ing. \OT1/cmr/m/it/10 IEEE
  []
 
@@ -349,9 +349,9 @@ Here is how much of TeX's memory you used:
  22328 multiletter control sequences out of 15000+600000
  535597 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,13n,45p,445b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,14n,45p,445b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on CV-Yizeng.pdf (4 pages, 112078 bytes).
+Output written on CV-Yizeng.pdf (4 pages, 112095 bytes).
 PDF statistics:
  144 PDF objects out of 1000 (max. 8388607)
  129 compressed objects within 2 object streams
