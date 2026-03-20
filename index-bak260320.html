@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Yizeng Han's Homepage</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            /* Tsinghua Colors & Palette */
+            --tsinghua-purple: #660874; /* Deep Purple */
+            --tsinghua-light: #f3eaf5;  /* Very faint purple for backgrounds */
+            --accent-blue: #0056b3;     /* Keep blue for standard links */
+            
+            --text-main: #2c2c2c;       /* Softer black */
+            --text-secondary: #555555;
+            --text-light: #777777;
+            
+            --bg-body: #f4f5f7;         /* Cool gray background */
+            --bg-card-top: #ffffff;
+            --bg-card-bottom: #fcfaff;  /* Subtle purple tint at bottom of cards */
+            
+            --shadow-sm: 0 2px 4px rgba(102, 8, 116, 0.05); /* Purple-tinted shadow */
+            --shadow-md: 0 6px 12px rgba(0,0,0,0.06);
+            --radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+            color: #111;
+            margin-top: 0;
+        }
+
+        /* Custom Selection Color */
+        ::selection {
+            background: var(--tsinghua-purple);
+            color: #fff;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--tsinghua-purple);
+            text-decoration: underline;
+        }
+
+        /* Navigation */
+        .menu-bar {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(102, 8, 116, 0.1); /* Subtle purple border */
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .menu-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .menu-bar a {
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .menu-bar a:hover {
+            color: var(--tsinghua-purple);
+            text-decoration: none;
+        }
+
+        .menu-bar a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--tsinghua-purple);
+            transition: width 0.3s;
+        }
+
+        .menu-bar a:hover::after {
+            width: 100%;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styling - The "Blocks" */
+        section {
+            /* Subtle Gradient Background */
+            background: linear-gradient(180deg, var(--bg-card-top) 0%, var(--bg-card-bottom) 100%);
+            padding: 45px;
+            margin-bottom: 35px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(255,255,255,0.8);
+            
+            /* The Tsinghua Purple Accent Line */
+            border-top: 4px solid var(--tsinghua-purple);
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            color: var(--text-main);
+            margin-bottom: 30px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--tsinghua-light);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        /* Icon color in titles */
+        .section-title i {
+            color: var(--tsinghua-purple);
+            font-size: 0.8em;
+        }
+
+        /* Bio Section */
+        .bio-container {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .bio-text {
+            flex: 1;
+        }
+
+        .bio-text h1 {
+            font-size: 2.4rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .bio-text h1 .chinese-name {
+            font-size: 1.8rem;
+            color: var(--tsinghua-purple); /* Highlight Chinese name in purple */
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .bio-intro {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+        }
+
+        .profile-card {
+            width: 280px;
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .profile-card img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            object-fit: cover;
+            background-color: #eee; 
+            min-height: 280px;
+            border: 4px solid #fff; /* White border like a photo */
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        .social-links a {
+            color: var(--text-light);
+            font-size: 1.4rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #fff;
+            background-color: var(--tsinghua-purple);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(102, 8, 116, 0.3);
+        }
+
+        /* Lists */
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .info-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        .info-list li::before {
+            content: '•';
+            color: var(--tsinghua-purple);
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* News Section */
+        .news-list {
+            list-style: none;
+            padding: 0;
+            max-height: 450px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        
+        /* Scrollbar styling */
+        .news-list::-webkit-scrollbar {
+            width: 6px;
+        }
+        .news-list::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 3px;
+        }
+        .news-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .news-list li {
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+            display: flex;
+            gap: 15px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .news-list li:hover {
+            background-color: rgba(102, 8, 116, 0.03); /* Very faint purple on hover */
+        }
+
+        .news-date {
+            font-family: 'Courier New', monospace;
+            font-weight: 700;
+            color: var(--tsinghua-purple);
+            min-width: 85px;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+            padding-top: 2px;
+        }
+
+        /* Papers Section */
+        .tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 35px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            padding: 8px 18px;
+            border-radius: 30px; /* Pill shape */
+            transition: all 0.3s;
+        }
+
+        .tab-btn:hover {
+            color: var(--tsinghua-purple);
+            background-color: var(--tsinghua-light);
+        }
+
+        .tab-btn.active {
+            color: #fff;
+            background-color: var(--tsinghua-purple);
+            box-shadow: 0 4px 10px rgba(102, 8, 116, 0.2);
+        }
+
+        .paper-item {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+            padding: 22px;
+            border-radius: var(--radius);
+            /* Slightly different background for inner items to separate from section bg */
+            background-color: rgba(255, 255, 255, 0.6); 
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+        }
+
+        .paper-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            border-color: rgba(102, 8, 116, 0.1);
+            background-color: #fff;
+        }
+
+        .paper-img {
+            width: 220px;
+            flex-shrink: 0;
+        }
+
+        .paper-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid rgba(0,0,0,0.05);
+            background-color: #fff;
+        }
+
+        .paper-content {
+            flex: 1;
+        }
+
+        .paper-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            line-height: 1.4;
+            color: var(--text-main);
+        }
+        
+        .paper-title .links-inline {
+            font-size: 0.8rem;
+            font-weight: normal;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .paper-authors {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .paper-authors b {
+            color: var(--tsinghua-purple);
+            font-weight: 600;
+        }
+
+        .paper-venue {
+            font-style: italic;
+            color: #444;
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+        }
+
+        .tag-links a {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border: 1px solid var(--tsinghua-purple);
+            border-radius: 4px;
+            margin-right: 8px;
+            text-decoration: none;
+            color: var(--tsinghua-purple);
+            background-color: transparent;
+            transition: all 0.2s;
+        }
+
+        .tag-links a:hover {
+            background-color: var(--tsinghua-purple);
+            color: #fff;
+            box-shadow: 0 2px 5px rgba(102, 8, 116, 0.2);
+        }
+
+        .subsection-content {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .subsection-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Awards & Contact */
+        .awards-list li {
+            margin-bottom: 12px;
+        }
+        
+        .awards-list b {
+            color: #333;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .menu-content {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .bio-container {
+                flex-direction: column-reverse;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .profile-card {
+                width: 100%;
+                max-width: 260px;
+            }
+            
+            .bio-text {
+                text-align: left;
+            }
+
+            .paper-item {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .paper-img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            section {
+                padding: 25px 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="menu-bar">
+        <div class="menu-content">
+            <a href="#bio">Bio</a>
+            <a href="#news">News</a>
+            <a href="#papers">Selected Papers</a>
+            <a href="#awards">Awards</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Bio Section -->
+        <section id="bio">
+            <div class="bio-container">
+                <div class="bio-text">
+                    <h1>Yizeng Han <span class="chinese-name">(韩益增)</span></h1>
+                    
+                    <p class="bio-intro">
+                        I'm a research scientist at Alibaba DAMO Academy, Beijing, China. I received my Ph.D degree in the Department of Automation, Tsinghua University, advised by Prof. <a href="http://www.gaohuang.net/">Gao Huang</a> and Prof. <a href="http://www.au.tsinghua.edu.cn/info/1075/1590.htm">Shiji Song</a>.
+                        <br><br>
+                        Download my C.V. here: <a href="files/CV-Yizeng.pdf"><i class="fas fa-file-pdf"></i> English</a> / <a href="files/CV-Yizeng-Chinese.pdf"><i class="fas fa-file-pdf"></i> 简体中文</a>.
+                    </p>
+
+                    <p>
+                        🌟 My research focuses on deep learning, computer vision and medical AI, in particular <a href="https://arxiv.org/pdf/2102.04906.pdf" style="color: #c0392b;"><b>dynamic neural networks</b></a> and efficient learning/inference of deep models in resource-constrained scenarios.
+                    </p>
+                    <p>
+                        🔥 Recently, I am interested in directions related to Efficient/Dynamic <a href="https://arxiv.org/pdf/2412.03324" style="color: #c0392b;"><b>Vision Language Model (VLM)</b></a>, <a href="https://arxiv.org/pdf/2504.06803" style="color: #c0392b;"><b>Visual Generation</b></a>, and scalable medical AI systems.
+                    </p>
+                    <p>
+                        🧐 I'm also interested in fundamental machine learning problems, such as <a href="https://arxiv.org/pdf/2402.13505.pdf"><b>semi-supervised long-tailed learning</b></a> and <a href="https://arxiv.org/pdf/2309.00399.pdf"><b>fine-grained learning</b></a>.
+                    </p>
+
+                    <h3>📚 Education</h3>
+                    <ul class="info-list">
+                        <li>Ph.D, Tsinghua University, 2018 - 2024.</li>
+                        <li>B.E., Tsinghua University, 2014 - 2018.</li>
+                    </ul>
+
+                    <h3>💡 Research Experience</h3>
+                    <ul class="info-list">
+                        <li>Research Intern, Megvii Technology (Foundation Model Group, advisor: <a href="https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en">Xiangyu Zhang</a>), 04/2023 - 12/2023</li>
+                        <li>Research Intern, Georgia Institute of Technology (advisor: <a href="https://coe.northeastern.edu/people/abowd-gregory/">Gregory D. Abowd</a>), 06/2017 - 08/2017</li>
+                    </ul>
+                </div>
+
+                <div class="profile-card">
+                    <img src="figures/hanyz.JPG" alt="Yizeng Han">
+                    <div class="social-links">
+                        <a href="mailto:hanyizeng.hyz@alibaba-inc.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://scholar.google.com/citations?user=25mubAsAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="https://github.com/yizenghan" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/%E7%9B%8A%E5%A2%9E-%E9%9F%A9-b300492b0/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news">
+            <h2 class="section-title"><i class="fas fa-fire-alt" style="margin-right: 10px;"></i> News</h2>
+            <ul class="news-list">
+                <li><span class="news-date">01/2026</span> <span>🎉 Our work <a href="https://arxiv.org/abs/2509.22323">RAPID^3</a> is accepted at <b><span>ICLR</span></b> 2026!</span></li>
+                <li><span class="news-date">01/2026</span> <span>🎉 Our work <a href="https://arxiv.org/pdf/2504.06803">DyDiT++</a> is accepted by <b><span style="color: #c0392b;">TPAMI</span></b>!</span></li>
+                <li><span class="news-date">12/2025</span> <span>🎉 We release a <a href="https://arxiv.org/pdf/2512.13006">Tech report</a> and a <a href="https://github.com/alibaba-damo-academy/T2I-Distill">Code base</a> for Few-Step Distillation of Text-to-Image models!</span></li>
+                <li><span class="news-date">09/2025</span> <span>🎉 Our work (<a href="https://arxiv.org/abs/2509.15333">AdaptiveNN</a>) is accepted by <b><span style="color: #c0392b;">Nature Machine Intelligence</span></b>!</span></li>
+                <li><span class="news-date">09/2025</span> <span>🎉 Our work (<a href="https://arxiv.org/abs/2506.04648">FPSAttention</a>) is accepted at <b>NeurIPS 2025 (Highlight)</b>!</span></li>
+                <li><span class="news-date">02/2025</span> <span>🎉 Our work (<a href="https://arxiv.org/pdf/2412.03324">SGL</a>) is accepted at <b>CVPR</b> 2025.</span></li>
+                <li><span class="news-date">01/2025</span> <span>🎉 Our work (<a href="https://arxiv.org/pdf/2410.03456">DyDiT</a>) is accepted at <b>ICLR</b> 2025.</span></li>
+                <li><span class="news-date">11/2024</span> <span>🎉 First Prize of CSIG Natural Science Award (中国图象图形学会自然科学奖一等奖).</span></li>
+                <li><span class="news-date">09/2024</span> <span>🎉 Five works are accepted at <b>NeurIPS 2024</b>.</span></li>
+                <li><span class="news-date">07/2024</span> <span>🎉 Four works are accepted at <b>ECCV 2024</b>.</span></li>
+                <li><span class="news-date">06/2024</span> <span>🎉 Awarded by <b>Outstanding Graduate of Tsinghua University</b>, <b>Outstanding Doctoral Dissertation</b>, and <b>Outstanding Graduate of Beijing</b>.</span></li>
+                <li><span class="news-date">05/2024</span> <span>🎉 Our work (<a href="https://arxiv.org/pdf/2405.08768">EfficientTrain++</a>) is accepted at <b><span style="color: #c0392b;">TPAMI</span></b>!</span></li>
+                <li><span class="news-date">05/2024</span> <span>🎉 Our work (<a href="https://arxiv.org/pdf/2402.13505.pdf">SimPro</a>) is accepted at <b>ICML</b> 2024.</span></li>
+                <li><span class="news-date">04/2024</span> <span>🎉 Our work (<a href="https://www.arxiv.org/pdf/2308.15949.pdf">LAUDNet</a>) is accepted at <b><span style="color: #c0392b;">TPAMI</span></b>!</span></li>
+                <li><span class="news-date">02/2024</span> <span>🎉 Two works (<a href="https://arxiv.org/pdf/2312.10103.pdf">GSVA</a> and <a href="https://arxiv.org/pdf/2312.12198.pdf">Mask Grounding</a>) are accepted at <b>CVPR</b> 2024.</span></li>
+                <li><span class="news-date">12/2023</span> <span>🎉 Our work (<a href="https://arxiv.org/pdf/2309.00399.pdf">Learnable Semantic Data Augmentation</a>) is accepted at <b>TIP</b>.</span></li>
+                <li><span class="news-date">10/2023</span> <span>🎉 Awarded by <b>Comprehensive Excellence Scholarship</b>, Tsinghua University.</span></li>
+                <li><span class="news-date">07/2023</span> <span>🎉 Three works are accepted by <b>ICCV</b> 2023.</span></li>
+                <li><span class="news-date">10/2022</span> <span>🎉 Awarded by <b>National Scholarship</b>, Ministry of Education of China.</span></li>
+            </ul>
+        </section>
+
+        <!-- Papers Section -->
+        <section id="papers">
+            <h2 class="section-title">
+                <span><i class="fas fa-scroll" style="margin-right: 10px;"></i> Selected Papers</span>
+                <a href="https://scholar.google.com/citations?user=25mubAsAAAAJ&hl=en" style="font-size: 0.9rem; margin-left: auto; font-weight: normal; color: var(--text-light);"><i class="fas fa-external-link-alt"></i> Google Scholar</a>
+            </h2>
+            
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showSection('recent-works', this)">Recent Works</button>
+                <button class="tab-btn" onclick="showSection('representative-publications', this)">Representative Publications</button>
+            </div>
+
+            <!-- Recent Works -->
+            <div id="recent-works" class="subsection-content active">
+                
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/DyDiT++.png" alt="DyDiT++">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">DyDiT++: Diffusion Transformers with Timestep and Spatial Dynamics for Efficient Visual Generation</h3>
+                        <div class="paper-authors">
+                            Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Kai Wang, Hao Luo, Yibing Song, Gao Huang, Fan Wang, Yang You
+                        </div>
+                        <div class="paper-venue">IEEE TPAMI, 2026.</div>
+                        <p style="font-size: 0.9rem; color: #555; margin-bottom: 10px;">We extend DyDiT to T2I (DyFLUX) and video generation. Moreover, LoRA finetuning is supported.</p>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/pdf/2504.06803" target="_blank">PDF</a>
+                            <a href="https://github.com/alibaba-damo-academy/DyDiT" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/rapid3.png" alt="RAPID^3">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">RAPID^3: Tri-Level Reinforced Acceleration Policies for Diffusion Transformer</h3>
+                        <div class="paper-authors">
+                            Wangbo Zhao, <b>Yizeng Han</b>, Zhiwei Tang, Jiasheng Tang, Pengfei Zhou, Kai Wang, Bohan Zhuang, Zhangyang Wang, Fan Wang, Yang You
+                        </div>
+                        <div class="paper-venue">ICLR, 2026.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/abs/2509.22323" target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/distillation_guide.png" alt="distillation">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">Few-Step Distillation for Text-to-Image Generation: A Practical Guide</h3>
+                        <div class="paper-authors">
+                            Yifan Pu*, <b>Yizeng Han*</b>, Zhiwei Tang*, Jiasheng Tang, Fan Wang, Bohan Zhuang, Gao Huang
+                        </div>
+                        <div class="paper-venue">Tech Report, 2025.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/pdf/2512.13006" target="_blank">PDF</a>
+                            <a href="https://github.com/alibaba-damo-academy/T2I-Distill" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/inferix.png" alt="Inferix">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">Inferix: A Block-Diffusion based Next-Generation Inference Engine for World Simulation</h3>
+                        <div class="paper-authors">
+                            Inferix Team: Tianyu Feng, <b>Yizeng Han</b>, Jiahao He, Yuanyu He, Xi Lin, Teng Liu, Hanfeng Lu, Jiasheng Tang, Wei Wang, Zhiyuan Wang, Jichao Wu, Mingyang Yang, Yinghao Yu, Zeyu Zhang, Bohan Zhuang
+                        </div>
+                        <div class="paper-venue">Arxiv Preprint, 2025.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/abs/2511.20714" target="_blank">PDF</a>
+                            <a href="https://github.com/alibaba-damo-academy/Inferix" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/blockvid.png" alt="BlockVid">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">BlockVid: Block Diffusion for High-Quality and Consistent Minute-Long Video Generation</h3>
+                        <div class="paper-authors">
+                            Zeyu Zhang, Shuning Chang, Yuanyu He, <b>Yizeng Han</b>, Jiasheng Tang, Fan Wang, Bohan Zhuang
+                        </div>
+                        <div class="paper-venue">Arxiv Preprint, 2025.</div>
+                        <div class="tag-links">
+                            <a href="https://www.arxiv.org/abs/2511.22973" target="_blank">PDF</a>
+                            <a href="https://github.com/alibaba-damo-academy/Inferix" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/AdaptiveNN.png" alt="AdaptiveNN">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">Emulating Human-like Adaptive Vision for Efficient and Flexible Machine Visual Perception</h3>
+                        <div class="paper-authors">
+                            Yulin Wang, Yang Yue, Yang Yue, Huanqian Wang, Haojun Jiang, <b>Yizeng Han</b>, Zanlin Ni, Yifan Pu, Minglei Shi, Rui Lu, Qisen Yang, Andrew Zhao, Zhuofan Xia, Shiji Song, Gao Huang
+                        </div>
+                        <div class="paper-venue">Nature Machine Intelligence, 2025.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/abs/2509.15333" target="_blank">PDF</a>
+                            <a href="https://github.com/LeapLabTHU/AdaptiveNN" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/FPSAttention.jpg" alt="FPSAttention">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">FPSAttention: Training-Aware FP8 and Sparsity Co-Design for Fast Video Diffusion</h3>
+                        <div class="paper-authors">
+                            Akide Liu, Zeyu Zhang, Zhexin Li, Xuehai Bai, <b>Yizeng Han</b>, Jiasheng Tang, Yuanjie Xing, Jichao Wu, Mingyang Yang, Weihua Chen, Jiahao He, Yuanyu He, Fan Wang, Gholamreza Haffari, Bohan Zhuang
+                        </div>
+                        <div class="paper-venue">NeurIPS (Highlight), 2025.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/abs/2506.04648" target="_blank">PDF</a>
+                            <a href="https://fps.ziplab.co/" target="_blank">Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/SGL.png" alt="SGL">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">A Stitch in Time Saves Nine: Small VLM is a Precise Guidance for accelerating Large VLMs</h3>
+                        <div class="paper-authors">
+                            Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Zhikai Li, Yibing Song, Kai Wang, Zhangyang Wang, Yang You
+                        </div>
+                        <div class="paper-venue">CVPR, 2025.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/pdf/2412.03324" target="_blank">PDF</a>
+                            <a href="https://github.com/NUS-HPC-AI-Lab/SGL" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/DyT.png" alt="DyT">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">Dynamic Tuning Towards Parameter and Inference Efficiency for ViT Adaptation</h3>
+                        <div class="paper-authors">
+                            Wangbo Zhao, Jiasheng Tang, <b>Yizeng Han</b>, Yibing Song, Kai Wang, Gao Huang, Fan Wang, Yang You
+                        </div>
+                        <div class="paper-venue">NeurIPS, 2024.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/pdf/2403.11808" target="_blank">PDF</a>
+                            <a href="https://github.com/NUS-HPC-AI-Lab/Dynamic-Tuning" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/Deer.png" alt="Deer">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution</h3>
+                        <div class="paper-authors">
+                            Yang Yue, Yulin Wang, Bingyi Kang, <b>Yizeng Han</b>, Shenzhi Wang, Shiji Song, Jiashi Feng, Gao Huang
+                        </div>
+                        <div class="paper-venue">NeurIPS, 2024.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/pdf/2411.02359" target="_blank">PDF</a>
+                            <a href="https://github.com/yueyang130/DeeR-VLA" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Representative Publications -->
+            <div id="representative-publications" class="subsection-content">
+                
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/survey.png" alt="Survey">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">Dynamic Neural Networks: A Survey</h3>
+                        <div class="paper-authors">
+                            <b>Yizeng Han</b>*, Gao Huang*, Shiji Song, Le Yang, Honghui Wang, Yulin Wang
+                        </div>
+                        <div class="paper-venue">IEEE TPAMI, 2021.</div>
+                        <p style="font-size: 0.9rem; color: #555;">In this survey, we comprehensively review the rapidly developing area, dynamic neural networks.</p>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/pdf/2102.04906.pdf" target="_blank">PDF</a>
+                            <a href="https://mp.weixin.qq.com/s/TG_HBAR7Jrec4X02sxNGEA" target="_blank">智源社区</a>
+                            <a href="files/动态神经网络研究概述.pdf" target="_blank">Slides</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/DyDiT++.png" alt="DyDiT++">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">DyDiT++: Diffusion Transformers with Timestep and Spatial Dynamics for Efficient Visual Generation</h3>
+                        <div class="paper-authors">
+                            Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Kai Wang, Hao Luo, Yibing Song, Gao Huang, Fan Wang, Yang You
+                        </div>
+                        <div class="paper-venue">IEEE TPAMI, 2026.</div>
+                        <p style="font-size: 0.9rem; color: #555; margin-bottom: 10px;">We extend DyDiT to T2I (DyFLUX) and video generation. Moreover, LoRA finetuning is supported.</p>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/pdf/2504.06803" target="_blank">PDF</a>
+                            <a href="https://github.com/alibaba-damo-academy/DyDiT" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/LAUDNet.png" alt="LAUDNet">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">Latency-aware Unified Dynamic Networks for Efficient Image Recognition</h3>
+                        <div class="paper-authors">
+                            <b>Yizeng Han</b>*, Zeyu Liu*, Zhihang Yuan*, Yifan Pu, Chaofei Wang, Shiji Song, Gao Huang
+                        </div>
+                        <div class="paper-venue">IEEE TPAMI, 2024.</div>
+                        <div class="tag-links">
+                            <a href="https://www.arxiv.org/pdf/2308.15949.pdf" target="_blank">PDF</a>
+                            <a href="https://www.github.com/leaplabthu/laudnet" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/SGL.png" alt="SGL">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">A Stitch in Time Saves Nine: Small VLM is a Precise Guidance for accelerating Large VLMs</h3>
+                        <div class="paper-authors">
+                            Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Zhikai Li, Yibing Song, Kai Wang, Zhangyang Wang, Yang You
+                        </div>
+                        <div class="paper-venue">CVPR, 2025.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/pdf/2412.03324" target="_blank">PDF</a>
+                            <a href="https://github.com/NUS-HPC-AI-Lab/SGL" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/DyDiT.png" alt="DyDiT">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">Dynamic Diffusion Transformer</h3>
+                        <div class="paper-authors">
+                            Wangbo Zhao, <b>Yizeng Han</b>, Jiasheng Tang, Kai Wang, Yibing Song, Gao Huang, Fan Wang, Yang You
+                        </div>
+                        <div class="paper-venue">ICLR, 2025.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/pdf/2410.03456" target="_blank">PDF</a>
+                            <a href="https://github.com/nus-hpc-ai-lab/dynamic-diffusion-transformer" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/Dyn_Perceiver.jpg" alt="Dyn_Perceiver">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">Dynamic Perceiver for Efficient Visual Recognition</h3>
+                        <div class="paper-authors">
+                            <b>Yizeng Han</b>*, Dongchen Han*, Zeyu Liu, Yulin Wang, Xuran Pan, Yifan Pu, Chao Deng, Junlan Feng, Shiji Song, Gao Huang
+                        </div>
+                        <div class="paper-venue">ICCV, 2023.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/pdf/2306.11248v1.pdf" target="_blank">PDF</a>
+                            <a href="https://github.com/LeapLabTHU/Dynamic_Perceiver" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/L2W-DEN.jpg" alt="L2W-DEN">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">Learning to Weight Samples for Dynamic Early-exiting Networks</h3>
+                        <div class="paper-authors">
+                            <b>Yizeng Han</b>*, Yifan Pu*, Zihang Lai, Chaofei Wang, Shiji Song, Junfen Cao, Wenhui Huang, Chao Deng, Gao Huang
+                        </div>
+                        <div class="paper-venue">ECCV, 2022.</div>
+                        <div class="tag-links">
+                            <a href="https://www.arxiv.org/pdf/2209.08310.pdf" target="_blank">PDF</a>
+                            <a href="https://github.com/LeapLabTHU/L2W-DEN" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/LASNet.jpg" alt="LASNet">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">Latency-aware Spatial-wise Dynamic Networks</h3>
+                        <div class="paper-authors">
+                            <b>Yizeng Han</b>*, Zhihang Yuan*, Yifan Pu*, Chenhao Xue, Shiji Song, Guangyu Sun, Gao Huang
+                        </div>
+                        <div class="paper-venue">NeurIPS, 2022.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/pdf/2210.06223.pdf" target="_blank">PDF</a>
+                            <a href="https://github.com/LeapLabTHU/LASNet" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/RANet.gif" alt="RANet">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">Resolution Adaptive Networks for Efficient Inference</h3>
+                        <div class="paper-authors">
+                            Le Yang*, <b>Yizeng Han*</b>, Xi Chen*, Shiji Song, Jifeng Dai, Gao Huang
+                        </div>
+                        <div class="paper-venue">CVPR, 2020.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/pdf/2003.07326.pdf" target="_blank">PDF</a>
+                            <a href="https://github.com/yangle15/RANet-pytorch" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/SAR_fig1.png" alt="SAR">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">Spatially Adaptive Feature Refinement for Efficient Inference</h3>
+                        <div class="paper-authors">
+                            <b>Yizeng Han</b>, Gao Huang, Shiji Song, Le Yang, Yitian Zhang, Haojun Jiang
+                        </div>
+                        <div class="paper-venue">IEEE TIP, 2021.</div>
+                        <div class="tag-links">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/9609974" target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/simpro.png" alt="SimPro">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">SimPro: A Simple Probabilistic Framework Towards Realistic Long-Tailed Semi-Supervised Learning</h3>
+                        <div class="paper-authors">
+                            Chaoqun Du*, <b>Yizeng Han*</b>, Gao Huang
+                        </div>
+                        <div class="paper-venue">ICML, 2024.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/pdf/2402.13505.pdf" target="_blank">PDF</a>
+                            <a href="https://github.com/LeapLabTHU/SimPro" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-item">
+                    <div class="paper-img">
+                        <img src="figures/meta_isda.png" alt="LearnableISDA">
+                    </div>
+                    <div class="paper-content">
+                        <h3 class="paper-title">Fine-grained Recognition with Learnable Semantic Data Augmentation</h3>
+                        <div class="paper-authors">
+                            Yifan Pu*, <b>Yizeng Han*</b>, Yulin Wang, Junlan Feng, Chao Deng, Gao Huang
+                        </div>
+                        <div class="paper-venue">IEEE TIP, 2023.</div>
+                        <div class="tag-links">
+                            <a href="https://arxiv.org/pdf/2309.00399.pdf" target="_blank">PDF</a>
+                            <a href="https://github.com/LeapLabTHU/LearnableISDA" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Awards Section -->
+        <section id="awards">
+            <h2 class="section-title"><i class="fas fa-trophy" style="margin-right: 10px;"></i> Awards</h2>
+            <ul class="info-list awards-list">
+                <li><b>First Prize of CSIG Natural Science Award (中国图象图形学会自然科学奖一等奖)</b>, 第四完成人, 清华大学 & 阿里巴巴达摩院, 2024</li>
+                <li><b>Outstanding Doctoral Dissertation of Tsinghua University (清华大学优秀博士学位论文)</b>, Tsinghua University, 2024</li>
+                <li><b>Outstanding Graduate of Tsinghua University (清华大学优秀毕业生)</b>, Tsinghua University, 2024</li>
+                <li><b>Outstanding Graduate of Beijing (北京市优秀毕业生)</b>, Beijing Municipal Education Commission, 2024</li>
+                <li><b>Comprehensive Excellence Scholarship (综合奖学金)</b>, Tsinghua University, 2023</li>
+                <li><b>National Scholarship (国家奖学金)</b>, Ministry of Education of China, 2022</li>
+                <li><b>Comprehensive Excellence Scholarship (综合奖学金)</b>, Tsinghua University, 2017</li>
+                <li><b>Comprehensive Excellence Scholarship (综合奖学金)</b>, Tsinghua University, 2016</li>
+                <li><b>Academic Excellence Scholarship (学业优秀奖学金)</b>, Tsinghua University, 2015</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-title"><i class="fas fa-envelope" style="margin-right: 10px;"></i> Contact</h2>
+            <ul class="info-list">
+                <li>hanyizeng.hyz at alibaba-inc dot com</li>
+                <li>yizeng38 at gmail dot com</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script>
+        function showSection(sectionId, btnElement) {
+            // Hide all content
+            document.querySelectorAll('.subsection-content').forEach(function(content) {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            // Show selected content
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked button
+            btnElement.classList.add('active');
+        }
+    </script>
+</body>
+</html>
