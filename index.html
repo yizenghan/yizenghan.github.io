@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Yizeng Han's Homepage</title>
+    <title>Yizeng Han — Researcher in Efficient Visual Generation</title>
+    <meta name="description" content="Yizeng Han is a researcher working on efficient visual generation, dynamic neural networks, and efficient inference.">
+    <meta name="theme-color" content="#f6f2ec">
+    <link rel="canonical" href="https://yizenghan.top/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yizeng Han — Researcher">
+    <meta property="og:description" content="Research in efficient visual generation, dynamic neural networks, and efficient inference.">
+    <meta property="og:url" content="https://yizenghan.top/">
+    <meta property="og:image" content="https://yizenghan.top/figures/hanyz.JPG">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235b294b'/%3E%3Cpath d='M15 17h9l8 14 8-14h9L36 39v10h-8V39z' fill='%23fffaf4'/%3E%3C/svg%3E">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -893,11 +903,814 @@
             }
         }
     </style>
+
+    <style id="editorial-refresh">
+        :root {
+            --primary: #64294f;
+            --primary-light: #8a456c;
+            --primary-dark: #421a35;
+            --text-main: #201c1d;
+            --text-secondary: #5d5556;
+            --text-light: #8c8282;
+            --bg-body: #f7f4ef;
+            --bg-card: #fffdf9;
+            --border: #ddd5cc;
+            --border-light: #ebe5de;
+            --radius: 3px;
+            --radius-sm: 2px;
+        }
+
+        body {
+            background:
+                linear-gradient(rgba(100, 41, 79, 0.018) 1px, transparent 1px),
+                var(--bg-body);
+            background-size: 100% 34px;
+            font-size: 15px;
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        summary:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 4px;
+        }
+
+        .nav {
+            background: rgba(247, 244, 239, 0.9);
+            border-color: rgba(115, 96, 86, 0.2);
+        }
+
+        .nav-inner,
+        .hero-content,
+        .container,
+        .footer-inner {
+            max-width: 1080px;
+        }
+
+        .nav-inner {
+            height: 58px;
+            padding: 0 38px;
+        }
+
+        .nav-brand {
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 1.12rem;
+            letter-spacing: -0.2px;
+        }
+
+        .nav-links {
+            gap: 22px;
+        }
+
+        .nav-links a {
+            padding: 6px 0 5px;
+            border-radius: 0;
+            font-size: 0.82rem;
+            letter-spacing: 0.02em;
+            border-bottom: 1px solid transparent;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: none;
+            border-bottom-color: var(--primary);
+        }
+
+        .hero {
+            min-height: 530px;
+            display: flex;
+            align-items: center;
+            background: var(--bg-body);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 58px 50% 0 auto;
+            width: 1px;
+            background: linear-gradient(transparent, rgba(100, 41, 79, 0.12), transparent);
+            transform: translateX(92px);
+        }
+
+        .hero::after {
+            width: 300px;
+            height: 300px;
+            right: -165px;
+            bottom: -215px;
+            border-color: rgba(100, 41, 79, 0.13);
+        }
+
+        .hero-content {
+            padding: 118px 38px 62px;
+            gap: 96px;
+            align-items: center;
+        }
+
+        .hero-text {
+            max-width: 660px;
+        }
+
+        .hero-greeting {
+            display: block;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .hero-name {
+            font-size: clamp(3.5rem, 6vw, 5.3rem);
+            font-weight: 600;
+            line-height: 0.92;
+            letter-spacing: -0.055em;
+            margin-bottom: 13px;
+        }
+
+        .hero-name-cn {
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 1.25rem;
+            letter-spacing: 0.14em;
+            margin-bottom: 28px;
+        }
+
+        .hero-title {
+            max-width: 620px;
+            margin-bottom: 24px;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .hero-title .positioning {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 1.42rem;
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        .hero-photo {
+            width: 230px;
+        }
+
+        .hero-photo img {
+            aspect-ratio: 4 / 5;
+            border-radius: 2px;
+            border: 0;
+            box-shadow: 18px 18px 0 #e7ded5, 0 24px 60px rgba(46, 32, 35, 0.14);
+        }
+
+        .hero-social {
+            justify-content: flex-start;
+            gap: 18px;
+            margin-top: 0;
+        }
+
+        .hero-social a {
+            width: auto;
+            height: auto;
+            border: 0;
+            border-radius: 0;
+            color: var(--text-light);
+            font-size: 0.82rem;
+            gap: 6px;
+        }
+
+        .hero-social a::after {
+            content: attr(data-label);
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .stats-bar {
+            display: none;
+        }
+
+        .container {
+            padding: 0 38px 72px;
+        }
+
+        .section-card {
+            padding: 72px 0;
+        }
+
+        .section,
+        .section.visible {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+
+        .section-title {
+            align-items: baseline;
+            margin-bottom: 34px;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.035em;
+        }
+
+        .section-title::before {
+            content: attr(data-index);
+            color: var(--primary);
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.66rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+        }
+
+        .section-title .title-line {
+            background: var(--border);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+            gap: 72px;
+        }
+
+        .about-copy p {
+            max-width: 650px;
+            font-size: 1.04rem;
+            line-height: 1.9;
+        }
+
+        .research-tags {
+            gap: 0;
+            margin: 30px 0 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .research-tag {
+            flex: 1 1 50%;
+            padding: 10px 10px 10px 0;
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 0.95rem;
+        }
+
+        .research-tag:hover {
+            background: transparent;
+            border-color: transparent;
+            color: var(--primary-light);
+        }
+
+        .profile-column + .profile-column {
+            margin-top: 28px;
+            padding-top: 26px;
+            border-top: 1px solid var(--border);
+        }
+
+        h3.sub-heading {
+            margin: 0 0 17px;
+            color: var(--primary);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 72px 1fr;
+            gap: 14px;
+            padding: 0 0 16px;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            line-height: 1.55;
+        }
+
+        .timeline-date {
+            padding-top: 2px;
+            color: var(--text-light);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .timeline-item strong {
+            display: block;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .news-list {
+            max-height: none;
+            overflow: visible;
+            padding: 0;
+        }
+
+        .news-item {
+            display: grid;
+            grid-template-columns: 92px 1fr;
+            gap: 25px;
+            padding: 13px 0;
+        }
+
+        .news-date {
+            min-width: 0;
+            color: var(--text-light);
+            font-size: 0.76rem;
+            letter-spacing: 0.04em;
+        }
+
+        .news-text {
+            color: var(--text-secondary);
+            font-size: 0.94rem;
+        }
+
+        .archive-details {
+            margin-top: 18px;
+        }
+
+        .archive-details summary {
+            width: fit-content;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            list-style: none;
+        }
+
+        .archive-details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .archive-details summary::after {
+            content: ' +';
+        }
+
+        .archive-details[open] summary::after {
+            content: ' −';
+        }
+
+        .section-title .paper-full-list {
+            margin-left: auto;
+            color: var(--text-light);
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .tabs {
+            margin-bottom: 38px;
+            border: 0;
+            gap: 22px;
+        }
+
+        .tab-btn {
+            padding: 0 0 8px;
+            font-size: 0.82rem;
+        }
+
+        #recent-works.active {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        #recent-works .paper-item {
+            display: block;
+            margin: 0;
+            padding: 0 0 22px;
+            border: 0;
+            border-radius: 0;
+        }
+
+        #recent-works .paper-item:hover,
+        #representative-publications .paper-item:hover {
+            background: transparent;
+            transform: none;
+        }
+
+        #recent-works .paper-item:nth-child(-n+3) {
+            border-bottom: 3px solid var(--text-main);
+        }
+
+        #recent-works .paper-item:nth-child(-n+3) .paper-img {
+            width: 100%;
+            margin-bottom: 19px;
+        }
+
+        #recent-works .paper-item:nth-child(-n+3) .paper-img img {
+            height: 155px;
+            padding: 8px;
+            border-radius: 2px;
+            border-color: var(--border);
+            background: var(--bg-card);
+        }
+
+        #recent-works .paper-item:nth-child(n+4) {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 185px minmax(0, 1fr);
+            gap: 26px;
+            padding: 24px 0;
+            border-top: 1px solid var(--border-light);
+        }
+
+        #recent-works .paper-item:nth-child(n+4) .paper-img {
+            width: 185px;
+        }
+
+        #recent-works .paper-item:nth-child(n+4) .paper-img img {
+            height: 110px;
+            padding: 6px;
+        }
+
+        #representative-publications .paper-item {
+            display: grid;
+            grid-template-columns: 185px minmax(0, 1fr);
+            gap: 26px;
+            margin: 0;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-light);
+            border-radius: 0;
+        }
+
+        #representative-publications .paper-img {
+            width: 185px;
+        }
+
+        #representative-publications .paper-img img {
+            height: 110px;
+            padding: 6px;
+        }
+
+        .paper-title {
+            font-size: 1.16rem;
+            font-weight: 600;
+            line-height: 1.35;
+            letter-spacing: -0.016em;
+        }
+
+        #recent-works .paper-item:nth-child(-n+3) .paper-title {
+            min-height: 3.9em;
+            font-size: 1.23rem;
+        }
+
+        .paper-authors {
+            color: var(--text-secondary);
+            font-size: 0.83rem;
+            line-height: 1.55;
+        }
+
+        .paper-venue {
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-size: 0.82rem;
+        }
+
+        .paper-desc {
+            max-width: 700px;
+            margin-bottom: 12px;
+            font-size: 0.82rem;
+        }
+
+        .tag-links {
+            gap: 13px;
+        }
+
+        .tag-links a {
+            padding: 0;
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+
+        .tag-links a:hover {
+            background: transparent;
+            border-color: transparent;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .awards-list li {
+            display: grid;
+            grid-template-columns: 58px 1fr;
+            gap: 18px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .awards-list li::before {
+            display: none;
+        }
+
+        .award-year {
+            color: var(--text-light);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        #contact .section-card {
+            padding-bottom: 58px;
+            border-bottom: 0;
+        }
+
+        .contact-intro {
+            max-width: 640px;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+            font-family: 'Newsreader', Georgia, serif;
+            font-size: 1.3rem;
+            line-height: 1.55;
+        }
+
+        .contact-item {
+            gap: 8px;
+            padding: 0 0 3px;
+            border-bottom: 1px solid var(--primary);
+            border-radius: 0;
+            font-size: 0.9rem;
+        }
+
+        .contact-icon {
+            width: auto;
+            height: auto;
+            background: transparent;
+            font-size: 0.8rem;
+        }
+
+        .footer {
+            padding: 30px 38px;
+            background: #eee8e0;
+            text-align: left;
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            margin: 0;
+            font-family: 'Newsreader', Georgia, serif;
+        }
+
+        .footer-text {
+            flex: 1;
+            margin: 0;
+        }
+
+        .footer-social {
+            display: none;
+        }
+
+        .footer-copy {
+            padding: 0;
+            border: 0;
+        }
+
+        .back-to-top {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            box-shadow: none;
+            background: var(--bg-card);
+        }
+
+        @media (max-width: 820px) {
+            .nav-inner,
+            .hero-content,
+            .container {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .nav-brand {
+                display: block;
+            }
+
+            .nav-links {
+                gap: 14px;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero::before {
+                display: none;
+            }
+
+            .hero-content {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 104px;
+                padding-bottom: 54px;
+                gap: 42px;
+                text-align: left;
+            }
+
+            .hero-name {
+                font-size: clamp(3.2rem, 13vw, 4.6rem);
+            }
+
+            .hero-photo {
+                width: min(240px, 72vw);
+                margin-left: 12px;
+            }
+
+            .hero-social {
+                flex-wrap: wrap;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 46px;
+            }
+
+            #recent-works.active {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            #recent-works .paper-item:nth-child(-n+3) {
+                grid-column: 1;
+            }
+
+            #recent-works .paper-item:nth-child(-n+3) .paper-title {
+                min-height: 0;
+            }
+        }
+
+        @media (max-width: 620px) {
+            .nav-inner {
+                height: 52px;
+                padding: 0 16px;
+                overflow-x: auto;
+            }
+
+            .nav-brand {
+                display: none;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                gap: 7px;
+            }
+
+            .nav-links a {
+                flex: 0 0 auto;
+                font-size: 0.73rem;
+            }
+
+            .hero-content,
+            .container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .hero-content {
+                padding-top: 87px;
+            }
+
+            .hero-name-cn {
+                margin-bottom: 22px;
+            }
+
+            .hero-title .positioning {
+                font-size: 1.22rem;
+            }
+
+            .hero-social {
+                gap: 14px;
+            }
+
+            .section-card {
+                padding: 52px 0;
+            }
+
+            .section-title {
+                margin-bottom: 28px;
+                font-size: 1.62rem;
+            }
+
+            .section-title .title-line {
+                display: none;
+            }
+
+            .about-copy p {
+                font-size: 0.98rem;
+            }
+
+            .research-tag {
+                flex-basis: 100%;
+                border-bottom: 1px solid var(--border-light);
+            }
+
+            .research-tag:last-child {
+                border-bottom: 0;
+            }
+
+            .timeline-item {
+                grid-template-columns: 66px 1fr;
+                gap: 10px;
+            }
+
+            .news-item {
+                grid-template-columns: 68px 1fr;
+                gap: 12px;
+            }
+
+            .section-title .paper-full-list {
+                font-size: 0;
+            }
+
+            .section-title .paper-full-list i {
+                font-size: 0.78rem;
+            }
+
+            #recent-works .paper-item:nth-child(-n+3) .paper-img img {
+                height: 145px;
+            }
+
+            #recent-works .paper-item:nth-child(n+4),
+            #representative-publications .paper-item {
+                display: block;
+                padding: 22px 0;
+            }
+
+            #recent-works .paper-item:nth-child(n+4) .paper-img,
+            #representative-publications .paper-img {
+                display: none;
+            }
+
+            .paper-title {
+                font-size: 1.08rem;
+            }
+
+            .paper-authors {
+                font-size: 0.79rem;
+            }
+
+            .tabs {
+                width: 100%;
+            }
+
+            .tab-btn {
+                flex: 1;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .awards-list li {
+                grid-template-columns: 46px 1fr;
+                gap: 10px;
+                font-size: 0.86rem;
+            }
+
+            .footer {
+                padding: 26px 20px;
+            }
+
+            .footer-inner {
+                display: block;
+            }
+
+            .footer-text {
+                margin: 3px 0 14px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .section {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <!-- Navigation -->
-    <nav class="nav" id="navbar">
+    <nav class="nav" id="navbar" aria-label="Primary navigation">
         <div class="nav-inner">
             <div class="nav-brand">Y. Han</div>
             <div class="nav-links">
@@ -914,95 +1727,83 @@
     <section class="hero" id="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <div class="hero-greeting">Welcome to my homepage</div>
+                <div class="hero-greeting">Researcher</div>
                 <h1 class="hero-name">Yizeng Han</h1>
                 <div class="hero-name-cn">韩益增</div>
                 <p class="hero-title">
-                    <strong>Researcher</strong><br>
-                    Ph.D from <a href="http://www.gaohuang.net/">Tsinghua University</a>, advised by Prof. <a href="http://www.gaohuang.net/">Gao Huang</a> and Prof. <a href="http://www.au.tsinghua.edu.cn/info/1075/1590.htm">Shiji Song</a>
+                    <span class="positioning">Building efficient and adaptive models for visual generation and inference.</span>
+                    Ph.D. from <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>, advised by Prof. <a href="http://www.gaohuang.net/">Gao Huang</a> and Prof. <a href="http://www.au.tsinghua.edu.cn/info/1075/1590.htm">Shiji Song</a>.
                 </p>
+                <div class="hero-social" aria-label="Professional profiles">
+                    <a href="mailto:yizeng38@gmail.com" title="Email" aria-label="Email" data-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                    <a href="https://scholar.google.com/citations?user=25mubAsAAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar" data-label="Scholar"><i class="fas fa-graduation-cap" aria-hidden="true"></i></a>
+                    <a href="https://github.com/yizenghan" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub" data-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/%E7%9B%8A%E5%A2%9E-%E9%9F%A9-b300492b0/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn" data-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                </div>
             </div>
 
             <div class="hero-photo">
-                <img src="figures/hanyz.JPG" alt="Yizeng Han">
-                <div class="hero-social">
-                    <a href="mailto:hanyizeng.hyz@alibaba-inc.com" title="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://scholar.google.com/citations?user=25mubAsAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="https://github.com/yizenghan" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/%E7%9B%8A%E5%A2%9E-%E9%9F%A9-b300492b0/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
+                <img src="figures/hanyz.JPG" alt="Portrait of Yizeng Han" width="230" height="288" fetchpriority="high">
             </div>
         </div>
     </section>
-
-    <!-- Stats Bar -->
-    <div class="stats-bar">
-        <div class="stats-inner">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <div class="stat-number">Ph.D</div>
-                    <div class="stat-label">Tsinghua Univ.</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Publications</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon"><i class="fas fa-star"></i></div>
-                    <div class="stat-number">4000+</div>
-                    <div class="stat-label">Citations</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon"><i class="fas fa-trophy"></i></div>
-                    <div class="stat-number">9+</div>
-                    <div class="stat-label">Awards</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="container">
 
         <!-- About Section -->
         <div class="section" id="about">
             <div class="section-card">
-                <h2 class="section-title">
+                <h2 class="section-title" data-index="01">
                     <span class="icon-wrapper"><i class="fas fa-user"></i></span>
                     About Me
                     <span class="title-line"></span>
                 </h2>
                 <div class="about-content">
-                    <p>
-                        My research focuses on <strong>deep learning</strong> and <strong>computer vision</strong>, with an emphasis on <a href="https://arxiv.org/pdf/2504.06803">efficient visual generation</a>, <a href="https://arxiv.org/pdf/2102.04906.pdf">dynamic neural networks</a>, and efficient learning and inference in resource-constrained scenarios.
-                    </p>
-                    <p>
-                        Recently, I am particularly interested in efficient and dynamic generative models for image and video generation, world simulation, and efficient inference for <a href="https://arxiv.org/pdf/2412.03324">vision-language models</a> and large language models.
-                    </p>
-                    <p>
-                        I'm also interested in fundamental machine learning problems, such as <a href="https://arxiv.org/pdf/2402.13505.pdf"><strong>semi-supervised long-tailed learning</strong></a> and <a href="https://arxiv.org/pdf/2309.00399.pdf"><strong>fine-grained learning</strong></a>.
-                    </p>
+                    <div class="about-copy">
+                        <p>
+                            My research explores how generative and multimodal models can become <strong>faster, more adaptive, and more economical</strong>. I focus on <a href="https://arxiv.org/pdf/2504.06803">efficient visual generation</a>, <a href="https://arxiv.org/pdf/2102.04906.pdf">dynamic neural networks</a>, and efficient inference for visual and language models.
+                        </p>
+                        <p>
+                            Recent work spans image and video diffusion, world simulation, VLM and LLM inference, and agentic model routing. I also maintain an interest in fundamental learning problems, including <a href="https://arxiv.org/pdf/2402.13505.pdf">long-tailed learning</a> and <a href="https://arxiv.org/pdf/2309.00399.pdf">fine-grained learning</a>.
+                        </p>
 
-                    <div class="research-tags">
-                        <span class="research-tag"><a href="https://arxiv.org/pdf/2102.04906.pdf">Dynamic Neural Networks</a></span>
-                        <span class="research-tag"><a href="https://arxiv.org/pdf/2412.03324">Efficient VLM</a></span>
-                        <span class="research-tag"><a href="https://arxiv.org/pdf/2504.06803">Visual Generation</a></span>
-                        <span class="research-tag">Efficient Inference</span>
+                        <div class="research-tags" aria-label="Research interests">
+                            <span class="research-tag"><a href="https://arxiv.org/pdf/2504.06803">Visual Generation</a></span>
+                            <span class="research-tag"><a href="https://arxiv.org/pdf/2102.04906.pdf">Dynamic Neural Networks</a></span>
+                            <span class="research-tag"><a href="https://arxiv.org/pdf/2412.03324">Efficient VLM</a></span>
+                            <span class="research-tag">Efficient Inference</span>
+                        </div>
                     </div>
 
-                    <h3 class="sub-heading">Education</h3>
-                    <ul class="info-list">
-                        <li>Ph.D, Tsinghua University, 2018 - 2024.</li>
-                        <li>B.E., Tsinghua University, 2014 - 2018.</li>
-                    </ul>
+                    <div class="profile-details">
+                        <div class="profile-column">
+                            <h3 class="sub-heading">Education</h3>
+                            <div class="timeline-item">
+                                <span class="timeline-date">2018–24</span>
+                                <span><strong>Ph.D., Tsinghua University</strong>Automation</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">2014–18</span>
+                                <span><strong>B.E., Tsinghua University</strong>Automation</span>
+                            </div>
+                        </div>
 
-                    <h3 class="sub-heading">Research Experience</h3>
-                    <ul class="info-list">
-                        <li>Research Scientist, Alibaba DAMO Academy, 07/2024 - 07/2026.</li>
-                        <li>Research Intern, Megvii Technology (Foundation Model Group, advisor: <a href="https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en">Xiangyu Zhang</a>), 04/2023 - 12/2023</li>
-                        <li>Research Intern, Georgia Institute of Technology (advisor: <a href="https://coe.northeastern.edu/people/abowd-gregory/">Gregory D. Abowd</a>), 06/2017 - 08/2017</li>
-                    </ul>
+                        <div class="profile-column">
+                            <h3 class="sub-heading">Research Experience</h3>
+                            <div class="timeline-item">
+                                <span class="timeline-date">2024–26</span>
+                                <span><strong>Research Scientist</strong>Alibaba DAMO Academy</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">2023</span>
+                                <span><strong>Research Intern, Megvii</strong>Foundation Model Group · Advisor: <a href="https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en">Xiangyu Zhang</a></span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-date">2017</span>
+                                <span><strong>Research Intern, Georgia Tech</strong>Advisor: <a href="https://coe.northeastern.edu/people/abowd-gregory/">Gregory D. Abowd</a></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1010,19 +1811,24 @@
         <!-- News Section -->
         <div class="section" id="news">
             <div class="section-card">
-                <h2 class="section-title">
+                <h2 class="section-title" data-index="02">
                     <span class="icon-wrapper"><i class="fas fa-fire-alt"></i></span>
                     News
                     <span class="title-line"></span>
                 </h2>
                 <ul class="news-list">
-                    <li class="news-item"><span class="news-date">01/2026</span> <span class="news-text">Our work <a href="https://arxiv.org/abs/2509.22323">RAPID^3</a> is accepted at <b>ICLR</b> 2026!</span></li>
-                    <li class="news-item"><span class="news-date">01/2026</span> <span class="news-text">Our work <a href="https://arxiv.org/pdf/2504.06803">DyDiT++</a> is accepted by <b><span>TPAMI</span></b>!</span></li>
-                    <li class="news-item"><span class="news-date">12/2025</span> <span class="news-text">We release a <a href="https://arxiv.org/pdf/2512.13006">Tech report</a> and a <a href="https://github.com/alibaba-damo-academy/T2I-Distill">Code base</a> for Few-Step Distillation of Text-to-Image models!</span></li>
-                    <li class="news-item"><span class="news-date">09/2025</span> <span class="news-text">Our work (<a href="https://arxiv.org/abs/2509.15333">AdaptiveNN</a>) is accepted by <b><span>Nature Machine Intelligence</span></b>!</span></li>
-                    <li class="news-item"><span class="news-date">09/2025</span> <span class="news-text">Our work (<a href="https://arxiv.org/abs/2506.04648">FPSAttention</a>) is accepted at <b>NeurIPS 2025 (Highlight)</b>!</span></li>
-                    <li class="news-item"><span class="news-date">02/2025</span> <span class="news-text">Our work (<a href="https://arxiv.org/pdf/2412.03324">SGL</a>) is accepted at <b>CVPR</b> 2025.</span></li>
-                    <li class="news-item"><span class="news-date">01/2025</span> <span class="news-text">Our work (<a href="https://arxiv.org/pdf/2410.03456">DyDiT</a>) is accepted at <b>ICLR</b> 2025.</span></li>
+                    <li class="news-item"><span class="news-date">01/2026</span> <span class="news-text"><a href="https://arxiv.org/abs/2509.22323">RAPID<sup>3</sup></a> is accepted at <b>ICLR 2026</b>.</span></li>
+                    <li class="news-item"><span class="news-date">01/2026</span> <span class="news-text"><a href="https://arxiv.org/pdf/2504.06803">DyDiT++</a> is accepted by <b>IEEE TPAMI</b>.</span></li>
+                    <li class="news-item"><span class="news-date">12/2025</span> <span class="news-text">We release a <a href="https://arxiv.org/pdf/2512.13006">technical report</a> and <a href="https://github.com/alibaba-damo-academy/T2I-Distill">codebase</a> for few-step text-to-image distillation.</span></li>
+                    <li class="news-item"><span class="news-date">09/2025</span> <span class="news-text"><a href="https://arxiv.org/abs/2509.15333">AdaptiveNN</a> is accepted by <b>Nature Machine Intelligence</b>.</span></li>
+                    <li class="news-item"><span class="news-date">09/2025</span> <span class="news-text"><a href="https://arxiv.org/abs/2506.04648">FPSAttention</a> is selected as a <b>NeurIPS 2025 Highlight</b>.</span></li>
+                    <li class="news-item"><span class="news-date">02/2025</span> <span class="news-text"><a href="https://arxiv.org/pdf/2412.03324">SGL</a> is accepted at <b>CVPR 2025</b>.</span></li>
+                    <li class="news-item"><span class="news-date">01/2025</span> <span class="news-text"><a href="https://arxiv.org/pdf/2410.03456">DyDiT</a> is accepted at <b>ICLR 2025</b>.</span></li>
+                </ul>
+
+                <details class="archive-details">
+                    <summary>Earlier news</summary>
+                    <ul class="news-list">
                     <li class="news-item"><span class="news-date">11/2024</span> <span class="news-text">First Prize of CSIG Natural Science Award (中国图象图形学会自然科学奖一等奖).</span></li>
                     <li class="news-item"><span class="news-date">09/2024</span> <span class="news-text">Five works are accepted at <b>NeurIPS 2024</b>.</span></li>
                     <li class="news-item"><span class="news-date">07/2024</span> <span class="news-text">Four works are accepted at <b>ECCV 2024</b>.</span></li>
@@ -1035,33 +1841,34 @@
                     <li class="news-item"><span class="news-date">10/2023</span> <span class="news-text">Awarded by <b>Comprehensive Excellence Scholarship</b>, Tsinghua University.</span></li>
                     <li class="news-item"><span class="news-date">07/2023</span> <span class="news-text">Three works are accepted by <b>ICCV</b> 2023.</span></li>
                     <li class="news-item"><span class="news-date">10/2022</span> <span class="news-text">Awarded by <b>National Scholarship</b>, Ministry of Education of China.</span></li>
-                </ul>
+                    </ul>
+                </details>
             </div>
         </div>
 
         <!-- Papers Section -->
         <div class="section" id="papers">
             <div class="section-card">
-                <h2 class="section-title">
+                <h2 class="section-title" data-index="03">
                     <span class="icon-wrapper"><i class="fas fa-scroll"></i></span>
                     Selected Papers
-                    <a href="https://scholar.google.com/citations?user=25mubAsAAAAJ&hl=en" target="_blank" style="font-size: 0.85rem; margin-left: auto; font-weight: 500; color: var(--text-light); display: flex; align-items: center; gap: 6px;"><i class="fas fa-external-link-alt"></i> Full List</a>
+                    <a href="https://scholar.google.com/citations?user=25mubAsAAAAJ&hl=en" target="_blank" rel="noopener" class="paper-full-list"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Full List</a>
                 </h2>
                 
-                <div class="tabs">
-                    <button class="tab-btn active" onclick="showSection('recent-works', this)">Recent Works</button>
-                    <button class="tab-btn" onclick="showSection('representative-publications', this)">Representative</button>
+                <div class="tabs" role="tablist" aria-label="Publication selection">
+                    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="recent-works" onclick="showSection('recent-works', this)">Recent Works</button>
+                    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="representative-publications" onclick="showSection('representative-publications', this)">Representative</button>
                 </div>
 
                 <!-- Recent Works -->
-                <div id="recent-works" class="subsection-content active">
+                <div id="recent-works" class="subsection-content active" role="tabpanel">
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/agent_router.png" alt="Agent-as-a-Router"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/agent_router.png" alt="Agent-as-a-Router"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Agent-as-a-Router: Agentic Model Routing for Coding Tasks</h3>
                             <div class="paper-authors">Pengfei Zhou, Zhiwei Tang, Yixing Ma, Jiasheng Tang, <b>Yizeng Han</b>, Zhenglin Wan, Fanqing Meng, Wei Wang, Bohan Zhuang, Wangbo Zhao, Yang You</div>
-                            <div class="paper-venue">Arxiv Preprint, 2026.</div>
+                            <div class="paper-venue">arXiv preprint, 2026.</div>
                             <p class="paper-desc">We formulate model routing as an agentic Context-Action-Feedback loop and introduce ACRouter and CodeRouterBench for efficient routing across frontier LLMs on coding tasks.</p>
                             <div class="tag-links">
                                 <a href="https://arxiv.org/abs/2606.22902" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
@@ -1071,11 +1878,11 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/k_forcing.png" alt="K-Forcing"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/k_forcing.png" alt="K-Forcing"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">K-Forcing: Joint Next-K-Token Decoding via Push-Forward Language Modeling</h3>
                             <div class="paper-authors">Zhiwei Tang, Yuanyu He, <b>Yizeng Han</b>, Wangbo Zhao, Jiasheng Tang, Fan Wang, Bohan Zhuang</div>
-                            <div class="paper-venue">Arxiv Preprint, 2026.</div>
+                            <div class="paper-venue">arXiv preprint, 2026.</div>
                             <p class="paper-desc">K-Forcing learns a push-forward language model for joint next-k-token decoding, achieving about 2.4-3.5x batch-serving speedup while reusing the autoregressive backbone.</p>
                             <div class="tag-links">
                                 <a href="https://arxiv.org/abs/2606.10820" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
@@ -1085,11 +1892,11 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/mesh_token.png" alt="MeshToken"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/mesh_token.png" alt="MeshToken"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Towards 3D-Aware Video Diffusion Models: Render-Free Human Motion Control with Mesh Tokenization</h3>
                             <div class="paper-authors">Jingyun Liang, Min Wei, Shikai Li, <b>Yizeng Han</b>, Hangjie Yuan, Lei Sun, Weihua Chen, Fan Wang</div>
-                            <div class="paper-venue">Arxiv Preprint, 2026.</div>
+                            <div class="paper-venue">arXiv preprint, 2026.</div>
                             <p class="paper-desc">We condition video diffusion models directly on compressed 3D human mesh tokens for render-free motion control with improved 3D structure and viewpoint awareness.</p>
                             <div class="tag-links">
                                 <a href="https://arxiv.org/abs/2606.02000" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
@@ -1099,7 +1906,7 @@
                     </div>
                     
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/DyDiT++.png" alt="DyDiT++"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/DyDiT++.png" alt="DyDiT++"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">DyDiT++: Diffusion Transformers with Timestep and Spatial Dynamics for Efficient Visual Generation</h3>
                             <div class="paper-authors">Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Kai Wang, Hao Luo, Yibing Song, Gao Huang, Fan Wang, Yang You</div>
@@ -1113,7 +1920,7 @@
                     </div>
                     
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/rapid3.png" alt="RAPID^3"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/rapid3.png" alt="RAPID^3"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">RAPID^3: Tri-Level Reinforced Acceleration Policies for Diffusion Transformer</h3>
                             <div class="paper-authors">Wangbo Zhao, <b>Yizeng Han</b>, Zhiwei Tang, Jiasheng Tang, Pengfei Zhou, Kai Wang, Bohan Zhuang, Zhangyang Wang, Fan Wang, Yang You</div>
@@ -1125,11 +1932,11 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/distillation_guide.png" alt="distillation"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/distillation_guide.png" alt="distillation"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Few-Step Distillation for Text-to-Image Generation: A Practical Guide</h3>
                             <div class="paper-authors">Yifan Pu*, <b>Yizeng Han*</b>, Zhiwei Tang*, Jiasheng Tang, Fan Wang, Bohan Zhuang, Gao Huang</div>
-                            <div class="paper-venue">Tech Report, 2025.</div>
+                            <div class="paper-venue">Technical report, 2025.</div>
                             <div class="tag-links">
                                 <a href="https://arxiv.org/pdf/2512.13006" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
                                 <a href="https://github.com/alibaba-damo-academy/T2I-Distill" target="_blank"><i class="fab fa-github"></i> Code</a>
@@ -1138,11 +1945,11 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/inferix.png" alt="Inferix"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/inferix.png" alt="Inferix"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Inferix: A Block-Diffusion based Next-Generation Inference Engine for World Simulation</h3>
                             <div class="paper-authors">Inferix Team: Tianyu Feng, <b>Yizeng Han</b>, Jiahao He, Yuanyu He, Xi Lin, Teng Liu, Hanfeng Lu, Jiasheng Tang, Wei Wang, Zhiyuan Wang, Jichao Wu, Mingyang Yang, Yinghao Yu, Zeyu Zhang, Bohan Zhuang</div>
-                            <div class="paper-venue">Arxiv Preprint, 2025.</div>
+                            <div class="paper-venue">arXiv preprint, 2025.</div>
                             <div class="tag-links">
                                 <a href="https://arxiv.org/abs/2511.20714" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
                                 <a href="https://github.com/alibaba-damo-academy/Inferix" target="_blank"><i class="fab fa-github"></i> Code</a>
@@ -1151,11 +1958,11 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/blockvid.png" alt="BlockVid"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/blockvid.png" alt="BlockVid"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">BlockVid: Block Diffusion for High-Quality and Consistent Minute-Long Video Generation</h3>
                             <div class="paper-authors">Zeyu Zhang, Shuning Chang, Yuanyu He, <b>Yizeng Han</b>, Jiasheng Tang, Fan Wang, Bohan Zhuang</div>
-                            <div class="paper-venue">Arxiv Preprint, 2025.</div>
+                            <div class="paper-venue">arXiv preprint, 2025.</div>
                             <div class="tag-links">
                                 <a href="https://www.arxiv.org/abs/2511.22973" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
                                 <a href="https://github.com/alibaba-damo-academy/Inferix" target="_blank"><i class="fab fa-github"></i> Code</a>
@@ -1164,7 +1971,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/AdaptiveNN.png" alt="AdaptiveNN"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/AdaptiveNN.png" alt="AdaptiveNN"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Emulating Human-like Adaptive Vision for Efficient and Flexible Machine Visual Perception</h3>
                             <div class="paper-authors">Yulin Wang, Yang Yue, Yang Yue, Huanqian Wang, Haojun Jiang, <b>Yizeng Han</b>, Zanlin Ni, Yifan Pu, Minglei Shi, Rui Lu, Qisen Yang, Andrew Zhao, Zhuofan Xia, Shiji Song, Gao Huang</div>
@@ -1177,7 +1984,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/FPSAttention.jpg" alt="FPSAttention"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/FPSAttention.jpg" alt="FPSAttention"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">FPSAttention: Training-Aware FP8 and Sparsity Co-Design for Fast Video Diffusion</h3>
                             <div class="paper-authors">Akide Liu, Zeyu Zhang, Zhexin Li, Xuehai Bai, <b>Yizeng Han</b>, Jiasheng Tang, Yuanjie Xing, Jichao Wu, Mingyang Yang, Weihua Chen, Jiahao He, Yuanyu He, Fan Wang, Gholamreza Haffari, Bohan Zhuang</div>
@@ -1190,7 +1997,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/SGL.png" alt="SGL"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/SGL.png" alt="SGL"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">A Stitch in Time Saves Nine: Small VLM is a Precise Guidance for accelerating Large VLMs</h3>
                             <div class="paper-authors">Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Zhikai Li, Yibing Song, Kai Wang, Zhangyang Wang, Yang You</div>
@@ -1203,7 +2010,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/DyT.png" alt="DyT"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/DyT.png" alt="DyT"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Dynamic Tuning Towards Parameter and Inference Efficiency for ViT Adaptation</h3>
                             <div class="paper-authors">Wangbo Zhao, Jiasheng Tang, <b>Yizeng Han</b>, Yibing Song, Kai Wang, Gao Huang, Fan Wang, Yang You</div>
@@ -1216,7 +2023,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/Deer.png" alt="Deer"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/Deer.png" alt="Deer"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">DeeR-VLA: Dynamic Inference of Multimodal Large Language Models for Efficient Robot Execution</h3>
                             <div class="paper-authors">Yang Yue, Yulin Wang, Bingyi Kang, <b>Yizeng Han</b>, Shenzhi Wang, Shiji Song, Jiashi Feng, Gao Huang</div>
@@ -1231,10 +2038,10 @@
                 </div>
 
                 <!-- Representative Publications -->
-                <div id="representative-publications" class="subsection-content">
+                <div id="representative-publications" class="subsection-content" role="tabpanel">
                     
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/survey.png" alt="Survey"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/survey.png" alt="Survey"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Dynamic Neural Networks: A Survey</h3>
                             <div class="paper-authors"><b>Yizeng Han</b>*, Gao Huang*, Shiji Song, Le Yang, Honghui Wang, Yulin Wang</div>
@@ -1249,7 +2056,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/DyDiT++.png" alt="DyDiT++"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/DyDiT++.png" alt="DyDiT++"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">DyDiT++: Diffusion Transformers with Timestep and Spatial Dynamics for Efficient Visual Generation</h3>
                             <div class="paper-authors">Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Kai Wang, Hao Luo, Yibing Song, Gao Huang, Fan Wang, Yang You</div>
@@ -1263,7 +2070,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/LAUDNet.png" alt="LAUDNet"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/LAUDNet.png" alt="LAUDNet"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Latency-aware Unified Dynamic Networks for Efficient Image Recognition</h3>
                             <div class="paper-authors"><b>Yizeng Han</b>*, Zeyu Liu*, Zhihang Yuan*, Yifan Pu, Chaofei Wang, Shiji Song, Gao Huang</div>
@@ -1276,7 +2083,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/SGL.png" alt="SGL"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/SGL.png" alt="SGL"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">A Stitch in Time Saves Nine: Small VLM is a Precise Guidance for accelerating Large VLMs</h3>
                             <div class="paper-authors">Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Zhikai Li, Yibing Song, Kai Wang, Zhangyang Wang, Yang You</div>
@@ -1289,7 +2096,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/DyDiT.png" alt="DyDiT"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/DyDiT.png" alt="DyDiT"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Dynamic Diffusion Transformer</h3>
                             <div class="paper-authors">Wangbo Zhao, <b>Yizeng Han</b>, Jiasheng Tang, Kai Wang, Yibing Song, Gao Huang, Fan Wang, Yang You</div>
@@ -1302,7 +2109,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/Dyn_Perceiver.jpg" alt="Dyn_Perceiver"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/Dyn_Perceiver.jpg" alt="Dyn_Perceiver"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Dynamic Perceiver for Efficient Visual Recognition</h3>
                             <div class="paper-authors"><b>Yizeng Han</b>*, Dongchen Han*, Zeyu Liu, Yulin Wang, Xuran Pan, Yifan Pu, Chao Deng, Junlan Feng, Shiji Song, Gao Huang</div>
@@ -1315,7 +2122,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/L2W-DEN.jpg" alt="L2W-DEN"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/L2W-DEN.jpg" alt="L2W-DEN"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Learning to Weight Samples for Dynamic Early-exiting Networks</h3>
                             <div class="paper-authors"><b>Yizeng Han</b>*, Yifan Pu*, Zihang Lai, Chaofei Wang, Shiji Song, Junfen Cao, Wenhui Huang, Chao Deng, Gao Huang</div>
@@ -1328,7 +2135,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/LASNet.jpg" alt="LASNet"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/LASNet.jpg" alt="LASNet"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Latency-aware Spatial-wise Dynamic Networks</h3>
                             <div class="paper-authors"><b>Yizeng Han</b>*, Zhihang Yuan*, Yifan Pu*, Chenhao Xue, Shiji Song, Guangyu Sun, Gao Huang</div>
@@ -1341,7 +2148,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/RANet.gif" alt="RANet"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/RANet.gif" alt="RANet"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Resolution Adaptive Networks for Efficient Inference</h3>
                             <div class="paper-authors">Le Yang*, <b>Yizeng Han*</b>, Xi Chen*, Shiji Song, Jifeng Dai, Gao Huang</div>
@@ -1354,7 +2161,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/SAR_fig1.png" alt="SAR"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/SAR_fig1.png" alt="SAR"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Spatially Adaptive Feature Refinement for Efficient Inference</h3>
                             <div class="paper-authors"><b>Yizeng Han</b>, Gao Huang, Shiji Song, Le Yang, Yitian Zhang, Haojun Jiang</div>
@@ -1366,7 +2173,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/simpro.png" alt="SimPro"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/simpro.png" alt="SimPro"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">SimPro: A Simple Probabilistic Framework Towards Realistic Long-Tailed Semi-Supervised Learning</h3>
                             <div class="paper-authors">Chaoqun Du*, <b>Yizeng Han*</b>, Gao Huang</div>
@@ -1379,7 +2186,7 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img src="figures/meta_isda.png" alt="LearnableISDA"></div>
+                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/meta_isda.png" alt="LearnableISDA"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Fine-grained Recognition with Learnable Semantic Data Augmentation</h3>
                             <div class="paper-authors">Yifan Pu*, <b>Yizeng Han*</b>, Yulin Wang, Junlan Feng, Chao Deng, Gao Huang</div>
@@ -1398,36 +2205,42 @@
         <!-- Awards Section -->
         <div class="section" id="awards">
             <div class="section-card">
-                <h2 class="section-title">
+                <h2 class="section-title" data-index="04">
                     <span class="icon-wrapper"><i class="fas fa-trophy"></i></span>
                     Awards
                     <span class="title-line"></span>
                 </h2>
                 <ul class="info-list awards-list">
-                    <li><b>First Prize of CSIG Natural Science Award (中国图象图形学会自然科学奖一等奖)</b>, 第四完成人, 清华大学 & 阿里巴巴达摩院, 2024</li>
-                    <li><b>Outstanding Doctoral Dissertation of Tsinghua University (清华大学优秀博士学位论文)</b>, Tsinghua University, 2024</li>
-                    <li><b>Outstanding Graduate of Tsinghua University (清华大学优秀毕业生)</b>, Tsinghua University, 2024</li>
-                    <li><b>Outstanding Graduate of Beijing (北京市优秀毕业生)</b>, Beijing Municipal Education Commission, 2024</li>
-                    <li><b>Comprehensive Excellence Scholarship (综合奖学金)</b>, Tsinghua University, 2023</li>
-                    <li><b>National Scholarship (国家奖学金)</b>, Ministry of Education of China, 2022</li>
-                    <li><b>Comprehensive Excellence Scholarship (综合奖学金)</b>, Tsinghua University, 2017</li>
-                    <li><b>Comprehensive Excellence Scholarship (综合奖学金)</b>, Tsinghua University, 2016</li>
-                    <li><b>Academic Excellence Scholarship (学业优秀奖学金)</b>, Tsinghua University, 2015</li>
+                    <li><span class="award-year">2024</span><span><b>First Prize, CSIG Natural Science Award</b> · 中国图象图形学会自然科学奖一等奖（第四完成人）</span></li>
+                    <li><span class="award-year">2024</span><span><b>Outstanding Doctoral Dissertation</b> · Tsinghua University</span></li>
+                    <li><span class="award-year">2024</span><span><b>Outstanding Graduate</b> · Tsinghua University</span></li>
+                    <li><span class="award-year">2024</span><span><b>Outstanding Graduate of Beijing</b> · Beijing Municipal Education Commission</span></li>
+                    <li><span class="award-year">2023</span><span><b>Comprehensive Excellence Scholarship</b> · Tsinghua University</span></li>
+                    <li><span class="award-year">2022</span><span><b>National Scholarship</b> · Ministry of Education of China</span></li>
                 </ul>
+                <details class="archive-details">
+                    <summary>Earlier honors</summary>
+                    <ul class="info-list awards-list">
+                        <li><span class="award-year">2017</span><span><b>Comprehensive Excellence Scholarship</b> · Tsinghua University</span></li>
+                        <li><span class="award-year">2016</span><span><b>Comprehensive Excellence Scholarship</b> · Tsinghua University</span></li>
+                        <li><span class="award-year">2015</span><span><b>Academic Excellence Scholarship</b> · Tsinghua University</span></li>
+                    </ul>
+                </details>
             </div>
         </div>
 
         <!-- Contact Section -->
         <div class="section" id="contact">
             <div class="section-card">
-                <h2 class="section-title">
+                <h2 class="section-title" data-index="05">
                     <span class="icon-wrapper"><i class="fas fa-paper-plane"></i></span>
                     Get in Touch
                     <span class="title-line"></span>
                 </h2>
+                <p class="contact-intro">For research discussions and collaborations, feel free to reach out.</p>
                 <div class="contact-grid">
                     <a href="mailto:yizeng38@gmail.com" class="contact-item" style="text-decoration: none;">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
                         <span>yizeng38@gmail.com</span>
                     </a>
                 </div>
@@ -1440,29 +2253,27 @@
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-brand">Yizeng Han</div>
-            <div class="footer-text">Researcher in AI &amp; Computer Vision</div>
-            <div class="footer-social">
-                <a href="mailto:yizeng38@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://scholar.google.com/citations?user=25mubAsAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="https://github.com/yizenghan" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/%E7%9B%8A%E5%A2%9E-%E9%9F%A9-b300492b0/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            </div>
+            <div class="footer-text">Efficient visual generation · Dynamic models · Efficient inference</div>
             <div class="footer-copy">&copy; 2026 Yizeng Han. All rights reserved.</div>
         </div>
     </footer>
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">
-        <i class="fas fa-arrow-up"></i>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
     <script>
         // Tab switching
         function showSection(sectionId, btnElement) {
             document.querySelectorAll('.subsection-content').forEach(c => c.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.remove('active');
+                b.setAttribute('aria-selected', 'false');
+            });
             document.getElementById(sectionId).classList.add('active');
             btnElement.classList.add('active');
+            btnElement.setAttribute('aria-selected', 'true');
         }
 
         // Scroll-triggered animations
@@ -1520,39 +2331,9 @@
         }
 
         window.addEventListener('scroll', updateActiveNav);
+        window.addEventListener('load', updateActiveNav);
+        updateActiveNav();
 
-        // Animate stat numbers on scroll
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const statNumbers = entry.target.querySelectorAll('.stat-number');
-                    statNumbers.forEach(el => {
-                        const text = el.textContent;
-                        const match = text.match(/(\d+)/);
-                        if (match) {
-                            const target = parseInt(match[0]);
-                            const suffix = text.replace(match[0], '');
-                            let count = 0;
-                            const duration = 1500;
-                            const step = target / (duration / 16);
-                            
-                            const timer = setInterval(() => {
-                                count += step;
-                                if (count >= target) {
-                                    count = target;
-                                    clearInterval(timer);
-                                }
-                                el.textContent = Math.floor(count) + suffix;
-                            }, 16);
-                        }
-                    });
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const statsGrid = document.querySelector('.stats-grid');
-        if (statsGrid) statsObserver.observe(statsGrid);
     </script>
 </body>
 </html>
