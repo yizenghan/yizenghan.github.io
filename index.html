@@ -1274,9 +1274,33 @@
         }
 
         #recent-works.active {
+            display: block;
+        }
+
+        .works-group-label {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 0 0 22px;
+            color: var(--primary);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .works-group-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .featured-works-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 22px;
+            margin-bottom: 58px;
         }
 
         #recent-works .paper-item {
@@ -1293,16 +1317,16 @@
             transform: none;
         }
 
-        #recent-works .paper-item:nth-child(-n+3) {
+        #recent-works .featured-works-grid .paper-item {
             border-bottom: 3px solid var(--text-main);
         }
 
-        #recent-works .paper-item:nth-child(-n+3) .paper-img {
+        #recent-works .featured-works-grid .paper-item .paper-img {
             width: 100%;
             margin-bottom: 19px;
         }
 
-        #recent-works .paper-item:nth-child(-n+3) .paper-img img {
+        #recent-works .featured-works-grid .paper-item .paper-img img {
             height: 155px;
             padding: 8px;
             border-radius: 2px;
@@ -1310,8 +1334,7 @@
             background: var(--bg-card);
         }
 
-        #recent-works .paper-item:nth-child(n+4) {
-            grid-column: 1 / -1;
+        #recent-works .recent-works-list .paper-item {
             display: grid;
             grid-template-columns: 185px minmax(0, 1fr);
             gap: 26px;
@@ -1319,11 +1342,11 @@
             border-top: 1px solid var(--border-light);
         }
 
-        #recent-works .paper-item:nth-child(n+4) .paper-img {
+        #recent-works .recent-works-list .paper-item .paper-img {
             width: 185px;
         }
 
-        #recent-works .paper-item:nth-child(n+4) .paper-img img {
+        #recent-works .recent-works-list .paper-item .paper-img img {
             height: 110px;
             padding: 6px;
         }
@@ -1354,7 +1377,7 @@
             letter-spacing: -0.016em;
         }
 
-        #recent-works .paper-item:nth-child(-n+3) .paper-title {
+        #recent-works .featured-works-grid .paper-item .paper-title {
             min-height: 3.9em;
             font-size: 1.23rem;
         }
@@ -1535,16 +1558,12 @@
                 gap: 46px;
             }
 
-            #recent-works.active {
+            .featured-works-grid {
                 grid-template-columns: 1fr;
                 gap: 36px;
             }
 
-            #recent-works .paper-item:nth-child(-n+3) {
-                grid-column: 1;
-            }
-
-            #recent-works .paper-item:nth-child(-n+3) .paper-title {
+            #recent-works .featured-works-grid .paper-item .paper-title {
                 min-height: 0;
             }
         }
@@ -1637,17 +1656,17 @@
                 font-size: 0.78rem;
             }
 
-            #recent-works .paper-item:nth-child(-n+3) .paper-img img {
+            #recent-works .featured-works-grid .paper-item .paper-img img {
                 height: 145px;
             }
 
-            #recent-works .paper-item:nth-child(n+4),
+            #recent-works .recent-works-list .paper-item,
             #representative-publications .paper-item {
                 display: block;
                 padding: 22px 0;
             }
 
-            #recent-works .paper-item:nth-child(n+4) .paper-img,
+            #recent-works .recent-works-list .paper-item .paper-img,
             #representative-publications .paper-img {
                 display: none;
             }
@@ -1864,6 +1883,51 @@
                 <!-- Recent Works -->
                 <div id="recent-works" class="subsection-content active" role="tabpanel">
 
+                    <div class="works-group-label">Featured Works</div>
+                    <div class="featured-works-grid">
+                        <div class="paper-item">
+                            <div class="paper-img"><img loading="lazy" decoding="async" src="figures/DyDiT++.png" alt="DyDiT++"></div>
+                            <div class="paper-content">
+                                <h3 class="paper-title">DyDiT++: Diffusion Transformers with Timestep and Spatial Dynamics for Efficient Visual Generation</h3>
+                                <div class="paper-authors">Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Kai Wang, Hao Luo, Yibing Song, Gao Huang, Fan Wang, Yang You</div>
+                                <div class="paper-venue">IEEE TPAMI, 2026.</div>
+                                <p class="paper-desc">We extend DyDiT to T2I (DyFLUX) and video generation. Moreover, LoRA finetuning is supported.</p>
+                                <div class="tag-links">
+                                    <a href="https://arxiv.org/pdf/2504.06803" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                                    <a href="https://github.com/alibaba-damo-academy/DyDiT" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paper-item">
+                            <div class="paper-img"><img loading="lazy" decoding="async" src="figures/rapid3.png" alt="RAPID^3"></div>
+                            <div class="paper-content">
+                                <h3 class="paper-title">RAPID^3: Tri-Level Reinforced Acceleration Policies for Diffusion Transformer</h3>
+                                <div class="paper-authors">Wangbo Zhao, <b>Yizeng Han</b>, Zhiwei Tang, Jiasheng Tang, Pengfei Zhou, Kai Wang, Bohan Zhuang, Zhangyang Wang, Fan Wang, Yang You</div>
+                                <div class="paper-venue">ICLR, 2026.</div>
+                                <div class="tag-links">
+                                    <a href="https://arxiv.org/abs/2509.22323" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paper-item">
+                            <div class="paper-img"><img loading="lazy" decoding="async" src="figures/SGL.png" alt="SGL"></div>
+                            <div class="paper-content">
+                                <h3 class="paper-title">A Stitch in Time Saves Nine: Small VLM is a Precise Guidance for accelerating Large VLMs</h3>
+                                <div class="paper-authors">Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Zhikai Li, Yibing Song, Kai Wang, Zhangyang Wang, Yang You</div>
+                                <div class="paper-venue">CVPR, 2025.</div>
+                                <div class="tag-links">
+                                    <a href="https://arxiv.org/pdf/2412.03324" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                                    <a href="https://github.com/NUS-HPC-AI-Lab/SGL" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="works-group-label">Recent Works</div>
+                    <div class="recent-works-list">
+
                     <div class="paper-item">
                         <div class="paper-img"><img loading="lazy" decoding="async" src="figures/agent_router.png" alt="Agent-as-a-Router"></div>
                         <div class="paper-content">
@@ -1906,32 +1970,6 @@
                         </div>
                     </div>
                     
-                    <div class="paper-item">
-                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/DyDiT++.png" alt="DyDiT++"></div>
-                        <div class="paper-content">
-                            <h3 class="paper-title">DyDiT++: Diffusion Transformers with Timestep and Spatial Dynamics for Efficient Visual Generation</h3>
-                            <div class="paper-authors">Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Kai Wang, Hao Luo, Yibing Song, Gao Huang, Fan Wang, Yang You</div>
-                            <div class="paper-venue">IEEE TPAMI, 2026.</div>
-                            <p class="paper-desc">We extend DyDiT to T2I (DyFLUX) and video generation. Moreover, LoRA finetuning is supported.</p>
-                            <div class="tag-links">
-                                <a href="https://arxiv.org/pdf/2504.06803" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                                <a href="https://github.com/alibaba-damo-academy/DyDiT" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="paper-item">
-                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/rapid3.png" alt="RAPID^3"></div>
-                        <div class="paper-content">
-                            <h3 class="paper-title">RAPID^3: Tri-Level Reinforced Acceleration Policies for Diffusion Transformer</h3>
-                            <div class="paper-authors">Wangbo Zhao, <b>Yizeng Han</b>, Zhiwei Tang, Jiasheng Tang, Pengfei Zhou, Kai Wang, Bohan Zhuang, Zhangyang Wang, Fan Wang, Yang You</div>
-                            <div class="paper-venue">ICLR, 2026.</div>
-                            <div class="tag-links">
-                                <a href="https://arxiv.org/abs/2509.22323" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="paper-item">
                         <div class="paper-img"><img loading="lazy" decoding="async" src="figures/distillation_guide.png" alt="distillation"></div>
                         <div class="paper-content">
@@ -1998,19 +2036,6 @@
                     </div>
 
                     <div class="paper-item">
-                        <div class="paper-img"><img loading="lazy" decoding="async" src="figures/SGL.png" alt="SGL"></div>
-                        <div class="paper-content">
-                            <h3 class="paper-title">A Stitch in Time Saves Nine: Small VLM is a Precise Guidance for accelerating Large VLMs</h3>
-                            <div class="paper-authors">Wangbo Zhao*, <b>Yizeng Han*</b>, Jiasheng Tang, Zhikai Li, Yibing Song, Kai Wang, Zhangyang Wang, Yang You</div>
-                            <div class="paper-venue">CVPR, 2025.</div>
-                            <div class="tag-links">
-                                <a href="https://arxiv.org/pdf/2412.03324" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                                <a href="https://github.com/NUS-HPC-AI-Lab/SGL" target="_blank"><i class="fab fa-github"></i> Code</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="paper-item">
                         <div class="paper-img"><img loading="lazy" decoding="async" src="figures/DyT.png" alt="DyT"></div>
                         <div class="paper-content">
                             <h3 class="paper-title">Dynamic Tuning Towards Parameter and Inference Efficiency for ViT Adaptation</h3>
@@ -2036,6 +2061,7 @@
                         </div>
                     </div>
 
+                    </div>
                 </div>
 
                 <!-- Representative Publications -->
