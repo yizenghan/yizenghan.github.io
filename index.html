@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Yizeng Han — Researcher at Kling AI</title>
     <meta name="description" content="Yizeng Han is a researcher at Kling AI working on video generation models.">
-    <meta name="theme-color" content="#f7f5f1">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <link rel="canonical" href="https://yizenghan.top/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Yizeng Han — Researcher at Kling AI">
@@ -14,7 +15,56 @@
     <meta property="og:url" content="https://yizenghan.top/">
     <meta property="og:image" content="https://yizenghan.top/figures/hanyz.JPG">
     <meta name="twitter:card" content="summary">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23584294'/%3E%3Cpath d='M15 17h9l8 14 8-14h9L36 39v10h-8V39z' fill='%23f7f5f1'/%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000000'/%3E%3Cpath d='M15 17h9l8 14 8-14h9L36 39v10h-8V39z' fill='%23ffffff'/%3E%3C/svg%3E">
+
+    <script>
+        (() => {
+            const preferenceKey = "homepage-theme";
+            const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+            const page = document.documentElement;
+            const themeColors = document.querySelectorAll('meta[name="theme-color"]');
+
+            function applyPreference(theme) {
+                if (theme !== "light" && theme !== "dark") return;
+                page.dataset.theme = theme;
+                for (const meta of themeColors) {
+                    meta.content = theme === "dark" ? "#000000" : "#ffffff";
+                }
+            }
+
+            try {
+                applyPreference(localStorage.getItem(preferenceKey));
+            } catch {
+                // The system theme still works when browser storage is unavailable.
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const toggle = document.getElementById("theme-toggle");
+                const activeTheme = () => page.dataset.theme || (systemDark.matches ? "dark" : "light");
+
+                function updateToggle() {
+                    const nextTheme = activeTheme() === "dark" ? "Light" : "Dark";
+                    toggle.textContent = nextTheme;
+                    toggle.setAttribute("aria-label", "Switch to " + nextTheme.toLowerCase() + " theme");
+                }
+
+                toggle.addEventListener("click", () => {
+                    const nextTheme = activeTheme() === "dark" ? "light" : "dark";
+                    applyPreference(nextTheme);
+                    try {
+                        localStorage.setItem(preferenceKey, nextTheme);
+                    } catch {
+                        // The selection remains active on the current page.
+                    }
+                    updateToggle();
+                });
+
+                systemDark.addEventListener("change", updateToggle);
+                updateToggle();
+                toggle.parentElement.hidden = false;
+            });
+        })();
+    </script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,27 +72,27 @@
 
     <style>
         :root {
-            color-scheme: light;
-            --page: #f7f5f1;
-            --paper: #fffefa;
-            --ink: #201c2b;
-            --muted: #615b6b;
-            --line: #ded9df;
-            --accent: #584294;
-            --lavender: #eae4f7;
+            color-scheme: light dark;
+            --page: light-dark(#ffffff, #000000);
+            --ink: light-dark(#171717, #f5f5f5);
+            --muted: light-dark(#555555, #b5b5b5);
+            --line: light-dark(#d9d9d9, #363636);
             --gutter: clamp(16px, 4vw, 58px);
             --sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
         }
+
+        :root[data-theme="light"] { color-scheme: light; }
+        :root[data-theme="dark"] { color-scheme: dark; }
 
         *, *::before, *::after { box-sizing: border-box; }
         html { scroll-padding-top: 22px; }
         body { margin: 0; background: var(--page); color: var(--ink); font: 400 16px/1.55 var(--sans); }
         h1, h2, h3, h4, p, ul, figure { margin: 0; }
         ul { padding: 0; list-style: none; }
-        a { color: var(--accent); text-underline-offset: 0.22em; text-decoration-color: #9c8db9; }
+        a { color: var(--ink); text-underline-offset: 0.22em; text-decoration-color: var(--muted); }
         a:hover { text-decoration-color: currentColor; }
-        :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-        ::selection { background: #daccf8; color: var(--ink); }
+        :focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+        ::selection { background: var(--ink); color: var(--page); }
 
         .page { width: min(1170px, calc(100% - 2 * var(--gutter))); margin-inline: auto; }
 
@@ -66,6 +116,19 @@
         .nav-links { gap: 6px clamp(15px, 3vw, 36px); }
         .nav-links a { color: var(--muted); font-size: 0.89rem; font-weight: 600; }
 
+        .theme-toggle {
+            min-inline-size: 3.5rem;
+            padding: 5px 9px;
+            background: var(--page);
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            font: 600 0.82rem/1.4 var(--sans);
+            cursor: pointer;
+        }
+
+        .theme-toggle:hover { border-color: var(--muted); }
+
         .front {
             display: grid;
             grid-template-columns: minmax(0, 1fr) minmax(235px, 27%);
@@ -73,6 +136,11 @@
         }
 
         .hero {
+            --hero-background: light-dark(#eae4f7, #20172e);
+            --hero-line: light-dark(#cbbde5, #48345f);
+            --ink: light-dark(#201c2b, #f6f0ff);
+            --muted: light-dark(#51475f, #d2c4e4);
+            --hero-accent: light-dark(#584294, #ddcaff);
             position: relative;
             isolation: isolate;
             overflow: hidden;
@@ -82,7 +150,9 @@
             gap: clamp(14px, 2.6vw, 36px);
             min-height: 346px;
             padding: clamp(25px, 4vw, 54px);
-            background: var(--lavender);
+            background: var(--hero-background);
+            color: var(--ink);
+            border: 1px solid var(--hero-line);
             border-radius: 20px;
         }
 
@@ -93,16 +163,17 @@
             bottom: -245px;
             width: 480px;
             aspect-ratio: 1;
-            border: 1px solid #cbbde5;
+            border: 1px solid var(--hero-line);
             border-radius: 50%;
-            box-shadow: 0 0 0 18px var(--lavender), 0 0 0 19px #d8cbed;
+            box-shadow: 0 0 0 18px var(--hero-background), 0 0 0 19px var(--hero-line);
             content: "";
             pointer-events: none;
         }
 
         .hero::after { right: -184px; bottom: -276px; width: 545px; }
 
-        .affiliation { margin-bottom: 14px; color: var(--accent); font-size: 0.89rem; font-weight: 650; }
+        .hero a { color: var(--hero-accent); }
+        .affiliation { margin-bottom: 14px; color: var(--hero-accent); font-size: 0.89rem; font-weight: 650; }
         .affiliation a { color: inherit; }
         .name {
             font-size: clamp(3rem, 6.25vw, 6rem);
@@ -113,7 +184,7 @@
 
         .name-cn {
             margin-top: 8px;
-            color: #584c6d;
+            color: var(--muted);
             font-size: 0.94rem;
             letter-spacing: 0.15em;
         }
@@ -127,14 +198,13 @@
             letter-spacing: -0.028em;
         }
 
-        .education-note { max-width: 47ch; margin-top: 13px; color: #51475f; font-size: 0.88rem; }
+        .education-note { max-width: 47ch; margin-top: 13px; color: var(--muted); font-size: 0.88rem; }
         .profile-links { gap: 4px 15px; margin-top: 20px; font-size: 0.79rem; font-weight: 700; }
 
         .hero-photo {
             overflow: hidden;
             align-self: center;
             aspect-ratio: 0.83;
-            background: #d6cce6;
             border-radius: 11px;
         }
 
@@ -148,7 +218,6 @@
 
         .news-panel {
             padding: clamp(17px, 2.5vw, 30px);
-            background: var(--paper);
             border: 1px solid var(--line);
             border-radius: 20px;
         }
@@ -183,25 +252,24 @@
             grid-column: 2;
             grid-row: 1;
             aspect-ratio: 1.65;
-            background: #efedf1;
+            border: 1px solid var(--line);
             border-radius: 7px;
         }
 
         .paper-img img {
             position: absolute;
             inset: 0;
-            width: 100%;
-            height: 100%;
-            padding: 8px;
-            object-fit: contain;
-            mix-blend-mode: multiply;
+            margin: auto;
+            max-width: calc(100% - 12px);
+            max-height: calc(100% - 12px);
+            background: #ffffff;
         }
         .paper-list .paper-content { grid-column: 1; grid-row: 1; }
         .paper-list .paper-content:only-child { grid-column: 1 / -1; }
 
         .paper-title { font-size: 1.02rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.026em; }
         .paper-venue, .news-date, .award-year, .timeline-date {
-            color: var(--accent);
+            color: var(--muted);
             font-size: 0.76rem;
             font-weight: 650;
             font-variant-numeric: tabular-nums;
@@ -237,7 +305,7 @@
             gap: 12px;
             min-height: 46px;
             padding-block: 8px;
-            color: var(--accent);
+            color: var(--ink);
             cursor: pointer;
             font-size: 0.9rem;
             font-weight: 650;
@@ -333,6 +401,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#papers">Research</a></li>
                 <li><a href="#news">News</a></li>
+                <li hidden><button type="button" class="theme-toggle" id="theme-toggle"></button></li>
             </ul>
         </nav>
     </header>
